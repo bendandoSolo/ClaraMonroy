@@ -42,14 +42,14 @@ const MyApp = ({ Component, pageProps }: CustomAppProps) => {
 
 
     return (
-        // <UIProvider>
-        //     <UserProvider>
+        <UIProvider>
+             {/* <UserProvider> */}
                 <Layout {...layoutProps}>
                     <SEO />
                     <Component {...pageProps} />
                 </Layout>
-        //     </UserProvider>
-        // </UIProvider>
+        {/* </UserProvider> */}
+        </UIProvider>
     );
 };
 

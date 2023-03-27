@@ -45,8 +45,8 @@ const Home: PageProps = ({ data }) => {
     return (
         <>
             <SEO title="Course Portal" />
-            {/* <HeroArea data={content?.["hero-area"]} />
-            <BrandArea data={content?.["brand-area"]} />
+            <HeroArea data={content?.["hero-area"]} />
+            {/* <BrandArea data={content?.["brand-area"]} />
             <CourseArea
                 data={{ ...content?.["course-area"], courses: data.courses }}
             />

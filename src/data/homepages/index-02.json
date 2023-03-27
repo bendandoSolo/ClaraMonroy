@@ -6,13 +6,13 @@
             "headings": [
                 {
                     "id":1,
-                    "content":"Distant learning for further expansion"
+                    "content":"Clara Monroy"
                 }
             ],
             "texts": [
                 {
                     "id":1,
-                    "content":"Learning is a life-long journey that in fact we never find the terminate stop. Stop searching, enjoy the process."
+                    "content":"I'm an Existential Life Coach, Community Builder, and Podcaster who is absolutely passionate about making a positive difference in the lives of lesbians and queer women."
                 }
             ],
             "buttons": [
@@ -26,12 +26,12 @@
             "motto": {
                 "text": "Have questions?",
                 "path": "/contact-us",
-                "pathText": "Get Free Form"
+                "pathText": "Get In Touch"
             },  
             "images": [
                 {
                     "id":1,
-                    "src": "/images/contact/contact.jpg"
+                    "src": "/clara-images/hero-image-1.jpg"
                 }
             ]
         },
