@@ -3,10 +3,10 @@ import { useRouter } from "next/router";
 import dynamic from "next/dynamic";
 import clsx from "clsx";
 import Logo from "@components/logo";
-import SearchForm from "@components/forms/search-form";
+// import SearchForm from "@components/forms/search-form";
 import MainMenu from "@components/menu/main-menu";
 import BurgerButton from "@ui/burger-button";
-import Anchor from "@ui/anchor";
+// import Anchor from "@ui/anchor";
 import menu from "@data/menu";
 import { useSticky } from "@hooks";
 
