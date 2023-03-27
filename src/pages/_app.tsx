@@ -23,7 +23,8 @@ interface CustomAppProps extends Omit<AppProps, "Component"> {
 const MyApp = ({ Component, pageProps }: CustomAppProps) => {
     const router = useRouter();
     const Layout = Component.Layout || FallbackLayout;
-    const layoutProps = typeof pageProps.layout === "object" ? pageProps.layout : {};
+    const layoutProps =
+        typeof pageProps.layout === "object" ? pageProps.layout : {};
 
     useEffect(() => {
         // eslint-disable-next-line @typescript-eslint/no-unused-expressions
@@ -34,12 +35,6 @@ const MyApp = ({ Component, pageProps }: CustomAppProps) => {
     useEffect(() => {
         document.body.className = (pageProps.className as string) || "";
     });
-
-    useEffect(() => {
-        console.log("we are sailing");
-        console.log("layoutProps", layoutProps);
-    }, [layoutProps]);
-
 
     return (
         <UIProvider>
