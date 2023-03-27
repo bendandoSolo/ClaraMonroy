@@ -2,14 +2,21 @@ import Link from "next/link";
 import clsx from "clsx";
 
 type TProps = {
-    variant?: "dark" | "light";
+    //variant?: "dark" | "light";
     className?: string;
 };
 
-const Logo = ({ variant, className }: TProps) => {
+const Logo = ({ className }: TProps) => {
     return (
         <Link href="/" className={clsx("tw-inline-block", className)}>
-            {variant === "dark" && (
+            <img
+                src="/clara-images/lil-logo-final-sm.png"
+                alt="Logo"
+                width={64}
+                height={64}
+                style={{ width: '64px', height: '64px' }}
+            />
+            {/* {variant === "dark" && (
                 <img
                     src="/images/logo/dark-logo.png"
                     alt="Logo"
@@ -24,7 +31,7 @@ const Logo = ({ variant, className }: TProps) => {
                     width={158}
                     height={26}
                 />
-            )}
+            )} */}
         </Link>
     );
 };

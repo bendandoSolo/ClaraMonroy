@@ -82,7 +82,7 @@ const Header = ({ shadow, fluid, transparent, mode }: TProps) => {
                             color={mode}
                         />
                         <div className="tw-flex tw-justify-end tw-items-center">
-                            <Anchor
+                            {/* <Anchor
                                 path="/profile"
                                 className={clsx(
                                     "tw-inline-block tw-px-2.5 tw-py-1.5",
@@ -93,12 +93,12 @@ const Header = ({ shadow, fluid, transparent, mode }: TProps) => {
                                 aria-label="User Profile"
                             >
                                 <i className="far fa-user-circle tw-text-lg" />
-                            </Anchor>
-                            <div className="tw-hidden md:tw-block md:tw-max-w-[250px] md:tw-pl-2.5">
+                            </Anchor> */}
+                            {/* <div className="tw-hidden md:tw-block md:tw-max-w-[250px] md:tw-pl-2.5">
                                 <SearchForm
                                     bg={transparent ? "white" : "light"}
                                 />
-                            </div>
+                            </div> */}
                             <div className="md:tw-hidden tw-overflow-hidden">
                                 <button
                                     type="button"
