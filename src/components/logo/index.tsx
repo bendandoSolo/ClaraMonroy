@@ -2,7 +2,7 @@ import Link from "next/link";
 import clsx from "clsx";
 
 type TProps = {
-    variant?: "dark" | "light";
+    //variant?: "dark" | "light";
     className?: string;
 };
 

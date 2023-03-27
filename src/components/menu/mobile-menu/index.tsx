@@ -21,7 +21,7 @@ const MobileMenu = ({ menu, onClose, isOpen }: TProps) => {
     return (
         <Offcanvas isOpen={isOpen} onClose={onClose}>
             <OffcanvasHeader onClose={onClose}>
-                <Logo variant="dark" />
+                <Logo />
             </OffcanvasHeader>
             <OffcanvasBody className="tw-no-scroll">
                 <ul>
