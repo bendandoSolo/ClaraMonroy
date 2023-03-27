@@ -71,7 +71,6 @@ const Header = ({ shadow, fluid, transparent, mode }: TProps) => {
                         )}
                     >
                         <Logo
-                            variant={mode}
                             className="tw-max-w-[120px] sm:tw-max-w-[158px]"
                         />
 
