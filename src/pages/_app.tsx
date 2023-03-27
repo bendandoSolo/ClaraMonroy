@@ -11,7 +11,7 @@ import "@assets/css/swiper.css";
 import "@assets/css/tailwind.css";
 
 import { UIProvider } from "../contexts/ui-context";
-import { UserProvider } from "../contexts/user-context";
+// import { UserProvider } from "../contexts/user-context"; maybe useful later
 
 interface CustomAppProps extends Omit<AppProps, "Component"> {
     Component: AppProps["Component"] & { Layout: ElementType };
