@@ -60,7 +60,6 @@ const Header = ({ shadow, fluid }: TProps) => {
                             className="tw-hidden xl:tw-block"
                         />
                         <Logo
-                            variant="dark"
                             className="tw-max-w-[120px] sm:tw-max-w-[158px]"
                         />
                         <div className="tw-flex tw-justify-end tw-items-center">
