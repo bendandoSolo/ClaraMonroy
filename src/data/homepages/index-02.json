@@ -12,14 +12,14 @@
             "texts": [
                 {
                     "id":1,
-                    "content":"I'm an Existential Life Coach, Community Builder, and Podcaster who is absolutely passionate about making a positive difference in the lives of lesbians and queer women."
+                    "content":"I'm an Existential Life Coach, Community Builder and Podcaster who is absolutely passionate about making a positive difference in the lives of lesbians and queer women."
                 }
             ],
             "buttons": [
                 {
                     "id":1,
-                    "path": "/start-here",
-                    "content":"Download free guide",
+                    "path": "/#About",
+                    "content":"More About Clara",
                     "icon": "far fa-download"
                 }
             ],

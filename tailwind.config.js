@@ -1,5 +1,7 @@
 /* eslint-disable global-require */
 /* eslint-disable import/no-extraneous-dependencies */
+
+// FED800
 module.exports = {
     content: ["./src/**/*.tsx"],
     prefix: "tw-",
@@ -9,7 +11,7 @@ module.exports = {
                 transparent: "transparent",
                 current: "currentColor",
                 primary: {
-                    DEFAULT: "#20AD96",
+                    DEFAULT: "#FED800",
                     light: "#8fd6ca",
                 },
                 secondary: {
