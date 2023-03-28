@@ -304,6 +304,25 @@ module.exports = {
                         maxWidth: "1230px",
                     },
                 },
+                ".menu-container": {
+                    maxWidth: "100%",
+                    marginInline: "auto",
+                    paddingInline: "15px",
+                    position: "relative",
+                    zIndex: 20,
+                    "@screen sm": {
+                        maxWidth: "576px",
+                    },
+                    "@screen md": {
+                        maxWidth: "768px",
+                    },
+                    "@screen lg": {
+                        maxWidth: "992px",
+                    },
+                    "@screen xl": {
+                        maxWidth: "1500px",
+                    },
+                },
             });
         },
     ],

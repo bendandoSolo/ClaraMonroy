@@ -50,7 +50,7 @@ const Header = ({ shadow, fluid, transparent, mode }: TProps) => {
                 <div
                     ref={measuredRef}
                     className={clsx(
-                        "header-inner tw-py-[19px] xl:tw-py-0 tw-z-50 tw-transition-all tw-left-0 tw-top-0 tw-w-full tw-h-auto",
+                        "header-inner tw-py-[19px] xl:tw-py-3 tw-z-50 tw-transition-all tw-left-0 tw-top-0 tw-w-full tw-h-auto",
                         !sticky && "tw-absolute",
                         sticky &&
                             "tw-fixed tw-shadow-3md tw-shadow-black/10 tw-animate-headerSlideDown",
@@ -66,7 +66,7 @@ const Header = ({ shadow, fluid, transparent, mode }: TProps) => {
                 >
                     <div
                         className={clsx(
-                            "tw-container tw-grid tw-grid-flow-col xl:tw-grid-cols-[22%_minmax(56%,_1fr)_22%] tw-items-center",
+                            "tw-menu-container tw-grid tw-grid-flow-col xl:tw-grid-cols-[15%_minmax(70%,_1fr)_15%] tw-items-center",
                             fluid && "tw-max-w-full tw-px-3.8 3xl:tw-px-37"
                         )}
                     >

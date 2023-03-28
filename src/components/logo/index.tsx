@@ -9,11 +9,11 @@ const Logo = ({ className }: TProps) => {
     return (
         <Link href="/" className={clsx("tw-inline-block", className)}>
             <img
-                src="/clara-images/lil-logo-final-sm.png"
+                src="/clara-images/lil-logo-md.png"
                 alt="Logo"
-                width={64}
-                height={64}
-                style={{ width: '64px', height: '64px' }}
+                width={96}
+                height={96}
+                style={{ width: '96px', height: '96px' }}
             />
             {/* {variant === "dark" && (
                 <img
