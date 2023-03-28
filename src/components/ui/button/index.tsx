@@ -93,7 +93,7 @@ const Button = ({
 
     // Primary Button
     const containedPrimaryClass =
-        "tw-bg-primary tw-border-primary tw-text-white";
+        "tw-bg-primary tw-border-primary tw-text-secondary";
     const containedPrimaryHoverClass =
         !disabled &&
         !active &&
