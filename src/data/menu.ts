@@ -25,17 +25,17 @@ export default [
         path: "/",
     },
     {
-        id: 5,
+        id: 6,
         label: "Recommendations",
         path: "/",
     },
     {
-        id: 5,
+        id: 7,
         label: "Patreon",
         path: "/",
     },
     {
-        id: 5,
+        id: 8,
         label: "Contact Me",
         path: "/",
     },
