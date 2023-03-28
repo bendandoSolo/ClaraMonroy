@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Offcanvas from "@ui/offcanvas";
 import OffcanvasHeader from "@ui/offcanvas/header";
 import OffcanvasBody from "@ui/offcanvas/body";
-import Logo from "@components/logo";
+import {LogoMobile} from "@components/logo";
 import { TMenu } from "@utils/types";
 import NavLink from "./nav-link";
 import Submenu from "./submenu";
@@ -21,7 +21,7 @@ const MobileMenu = ({ menu, onClose, isOpen }: TProps) => {
     return (
         <Offcanvas isOpen={isOpen} onClose={onClose}>
             <OffcanvasHeader onClose={onClose}>
-                <Logo />
+                <LogoMobile />
             </OffcanvasHeader>
             <OffcanvasBody className="tw-no-scroll">
                 <ul>

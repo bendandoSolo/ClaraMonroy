@@ -7,13 +7,12 @@ type TProps = {
 
 const Logo = ({ className }: TProps) => {
     return (
-        <Link href="/" className={clsx("tw-inline-block", className)}>
+        <Link href="/" className={clsx("tw-inline-block logo-size", className)}>
             <img
                 src="/clara-images/lil-logo-md.png"
                 alt="Logo"
-                width={96}
-                height={96}
-                style={{ width: '96px', height: '96px' }}
+
+                className="logo-size"
             />
             {/* {variant === "dark" && (
                 <img
@@ -31,6 +30,20 @@ const Logo = ({ className }: TProps) => {
                     height={26}
                 />
             )} */}
+        </Link>
+    );
+};
+
+export const LogoMobile = ({ className }: TProps) => {
+    return (
+        <Link href="/" className={clsx("tw-inline-block logo-size", className)}>
+            <img
+                src="/clara-images/lil-logo-md.png"
+                alt="Logo"
+                width={64}
+                height={64}
+                className="logo-size"
+            />
         </Link>
     );
 };

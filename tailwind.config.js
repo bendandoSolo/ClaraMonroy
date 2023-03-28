@@ -323,6 +323,14 @@ module.exports = {
                         maxWidth: "1500px",
                     },
                 },
+                ".logo-size": {
+                    width: "96px",
+                    height: "96px",
+                    "@screen md": {
+                        width: "64px",
+                        height: "64px",
+                    },
+                }
             });
         },
     ],
