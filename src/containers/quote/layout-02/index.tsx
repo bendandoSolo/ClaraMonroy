@@ -11,7 +11,7 @@ type TProps = {
 
 const QuoteArea = ({ data: { headings, texts } }: TProps) => {
     return (
-        <div className="quote-area tw-pt-15 md:tw-pt-20 lg:tw-pt-[100px]">
+        <div className="quote-area tw-pt-15 md:tw-pt-20 lg:tw-pt-[100px] tw-pb-15">
             <div className="tw-container tw-grid tw-grid-cols-1 md:tw-grid-cols-12 tw-gap-7.5">
                 <motion.div
                     className="md:tw-col-span-5"

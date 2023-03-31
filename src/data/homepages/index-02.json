@@ -36,6 +36,66 @@
             ]
         },
         {
+            "section": "service-area",
+            "section_title": {
+                "title": "Online <span>Coaching Lessons</span> For Remote Learning.",
+                "subtitle":"Education for everyone"
+            },
+            "items": [
+                {
+                    "id": 1,
+                    "icon": "linea-basic-flag2",
+                    "title": "Life Mentoring",
+                    "description": "Get some soul healing and guidance for your future career and vocational directions.",
+                    "path": "/start-here",
+                    "pathText": "Start here"
+                },
+                {
+                    "id": 2,
+                    "icon": "linea-basic-gear",
+                    "title": "Self Development",
+                    "description": "Develop skills for career of various majors including computer science & language competence.",
+                    "path": "/start-here",
+                    "pathText": "Discover now"
+                },
+                {
+                    "id": 3,
+                    "icon": "linea-basic-life-buoy",
+                    "title": "Ask Consultancy",
+                    "description": "Make a reservation with our special consultant to learn what's best for your dream career.",
+                    "path": "/start-here",
+                    "pathText": "Get Free Quote"
+                },
+                {
+                    "id": 4,
+                    "icon": "linea-basic-display",
+                    "title": "Remote Learning",
+                    "description": "Learn from anywhere in the world on desktop, tablet or mobile phone with an Internet connection.",
+                    "path": "/start-here",
+                    "pathText": "Start Now"
+                }
+            ]
+        },
+        {
+            "section": "quote-area",
+            "headings": [
+                {
+                    "id": 1,
+                    "content": "Over the last decade, I've dedicated myself to doing what I love for the community I love and <span>my track record speaks for itself.</span>"
+                }
+            ],
+            "texts": [
+                {
+                    "id": 1,
+                    "content": "My love for women runs deep, and it's what drives me forward every day. I work with brave and courageous women -like you- who are committed to creating a lasting change in their lives. Together, we explore your core values, beliefs, and assumptions about yourself, others and the world. My goal is to support your personal growth and transformation by helping you gain clarity about your purpose, meaning, and direction in life."
+                },
+                {
+                    "id": 2,
+                    "content": "Being a queer woman myself, I know how important it is to embrace all aspects of our existence - the good, the bad, and the ugly. That's why my ultimate objective is to help you make the most of your human experience and increase your sense of fulfilment."
+                }
+            ]
+        },
+        {
             "section": "brand-area",
             "items": [
                 {
@@ -98,8 +158,10 @@
         {
             "section": "service-area",
             "section_title": {
-                "title": "Access <span>Smart Tutoring</span> Program For Benefits.",
-                "subtitle":"Maxcoach available courses"
+                "title": "What <span>Clara</span> offers",
+                "subtitle":"",
+                "_title": "Access <span>Smart Tutoring</span> Program For Benefits.",
+                "_subtitle":"What I offer"
             },
             "items": [
                 {
@@ -109,10 +171,10 @@
                             "src": "/images/learner/h2-learner-01.png"
                         }
                     ],
-                    "title": "Customize Preferences",
+                    "title": "Life Coaching",
                     "description": "Learners are given the right to arrange and customize their study schedule and timetable based on preferences.",
                     "path": "/start-here",
-                    "pathText": "Start here"
+                    "pathText": "Learn more"
                 },
                 {
                     "id": 2,
@@ -121,10 +183,10 @@
                             "src": "/images/learner/learner-02.png"
                         }
                     ],
-                    "title": "Cloud Storage",
+                    "title": "The Lesbitute Podcast",
                     "description": "You can store online lessons via online cloud or download to your device and revise lessons on the way.",
                     "path": "/start-here",
-                    "pathText": "Get Free Quote"
+                    "pathText": "Listen Here"
                 },
                 {
                     "id": 3,
@@ -133,10 +195,10 @@
                             "src": "/images/learner/h2-learner-02.png"
                         }
                     ],
-                    "title": "Multimedia Channels",
+                    "title": "London Lesbians Meetup Group",
                     "description": "We provide study materials with various formats: video, audio, slides, doc, prints, books and applications.",
                     "path": "/start-here",
-                    "pathText": "Start here"
+                    "pathText": "Join Now"
                 }
             ]
         },
