@@ -7,7 +7,7 @@ export default [
     {
         id: 2,
         label: "Life Coaching",
-        path: "/",
+        path: "/life-coaching",
     },
     {
         id: 3,
@@ -37,7 +37,7 @@ export default [
     {
         id: 8,
         label: "Contact Me",
-        path: "/",
+        path: "/contact-me",
     },
 ];
 
