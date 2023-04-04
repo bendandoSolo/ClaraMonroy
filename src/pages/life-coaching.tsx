@@ -12,12 +12,18 @@ import CourseArea from "@containers/course/layout-01";
 import BlogArea from "@containers/blog/layout-01";
 import BrandArea from "@containers/brand/layout-01";
 
+import QuoteArea from "@containers/about/layout-01";
+
+
 import { normalizedData } from "@utils/methods";
 import { IBlog, ICourse } from "@utils/types";
 
 import { getPageData } from "../lib/page";
 import { getAllBlogs } from "../lib/blog";
 import { getallCourses, getFilteredCourse } from "../lib/course";
+import FaqArea from "@containers/faq/layout-03";
+
+
 
 interface PageContent {
     section: string;
@@ -49,7 +55,8 @@ const LifeCoaching: PageProps = ({ data }) => {
                     popularCourse: data.popularCourse,
                 }}
             />
-            <ServiceArea data={content?.["service-area"]} space="none" />
+            <FaqArea data={content?.["faq-area"]} />
+            {/* <ServiceArea data={content?.["service-area"]} space="none" />
             <AboutArea data={content?.["about-area"]} />
             <Wrapper className="tw-py-[100px]">
                 <FunFactArea
@@ -66,7 +73,7 @@ const LifeCoaching: PageProps = ({ data }) => {
                 data={{ ...content?.["course-area"], courses: data.courses }}
             />
             <BlogArea data={{ ...content?.["blog-area"], blogs: data.blogs }} />
-            <BrandArea data={content?.["brand-area"]} />
+            <BrandArea data={content?.["brand-area"]} /> */}
         </>
     );
 };
@@ -74,7 +81,7 @@ const LifeCoaching: PageProps = ({ data }) => {
 LifeCoaching.Layout = Layout;
 
 export const getStaticProps: GetStaticProps = () => {
-    const page = getPageData("home", "index-01");
+    const page = getPageData("home", "life-coaching");
     const courses = getallCourses(
         ["title", "thumbnail", "price", "currency"],
         0,
