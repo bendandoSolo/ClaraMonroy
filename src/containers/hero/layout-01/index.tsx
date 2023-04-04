@@ -30,16 +30,17 @@ const HeroArea = ({
 
     return (
         <div className="tw-h-full md:tw-min-h-[750px] xl:tw-min-h-[820px] tw-py-[50px] tw-relative tw-flex tw-items-center tw-isolate tw-bg-pearl tw-overflow-hidden">
-            <h1 className="tw-sr-only">Home Page</h1>
+            <h1 className="tw-sr-only">Life coaching for gay women</h1>
             <div className="bgimg tw-absolute tw-inset-0 -tw-z-10 tw-hidden md:tw-block">
-                {images?.[0]?.src && (
+                images?.[0]?.src && (
                     <img
                         src={images[0].src}
                         alt={images[0]?.alt || "bg"}
                         loading="eager"
-                        className="tw-w-full tw-h-full tw-object-cover"
+                        style={{width: '100%', height: '100%', objectFit: 'contain', position: 'absolute', top: 0, left: '200px', right: 0, bottom: 0}}
+                        
                     />
-                )}
+                )
             </div>
             <div className="tw-container 3xl:tw-max-w-full 3xl:tw-px-37">
                 <div className="tw-grid md:tw-gap-7.5 md:tw-grid-cols-2">
@@ -85,14 +86,14 @@ const HeroArea = ({
                         viewport={{ once: true, amount: 0.1 }}
                         variants={scrollUpVariants}
                     >
-                        <img
+                        {/* <img
                             className="tw-absolute tw-left-0 -tw-top-7.5 tw-max-w-[100px] tw-z-1 sm:tw-relative sm:tw-left-auto sm:tw-top-auto sm:tw-z-20 sm:tw-self-end sm:tw-flex-auto sm:tw-ml-auto tw-mr-5 sm:tw-mb-[100px] sm:tw-max-w-[120px] md:-tw-mr-7.5 md:-tw-ml-[60px] lg:tw-max-w-[186px]"
                             src="/images/intro/intro1/intro-popular-course.png"
                             alt="popular"
                             width={186}
                             height={157}
-                        />
-                        <CourseCard
+                        /> */}
+                        {/* <CourseCard
                             className="tw-max-w-[370px]"
                             title={popularCourse.title}
                             path={popularCourse.path}
@@ -104,7 +105,7 @@ const HeroArea = ({
                                 ...popularCourse.thumbnail,
                                 loading: "eager",
                             }}
-                        />
+                        /> */}
                         <motion.div
                             className="intro1-scene tw-absolute -tw-z-1 -tw-right-11 -tw-bottom-11 tw-w-[136px]"
                             animate={{

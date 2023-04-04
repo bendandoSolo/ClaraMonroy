@@ -35,22 +35,22 @@ const SuccessStory: PageProps = ({ data }) => {
     return (
         <>
             <SEO title="Success Story" />
-            <Breadcrumb
+            {/* <Breadcrumb
                 pages={[{ path: "/", label: "home" }]}
                 currentPage="Success Story"
                 showTitle={false}
                 className="tw-bg-gray-200"
             />
-            <VideoArea data={content?.["video-area"]} />
-            <QuoteArea data={content?.["quote-area"]} />
-            <FaqArea data={content?.["faq-area"]} />
-            <RelatedCourseArea
+            <VideoArea data={content?.["video-area"]} /> */}
+            {/* <QuoteArea data={content?.["quote-area"]} /> */}
+            <FaqArea data={content?.["faq-area"]} /> 
+            {/* <RelatedCourseArea
                 data={{
                     ...content?.["course-area"],
                     courses: data.courses,
                 }}
             />
-            <GalleryArea data={content?.["gallery-area"]} />
+            <GalleryArea data={content?.["gallery-area"]} /> */}
         </>
     );
 };

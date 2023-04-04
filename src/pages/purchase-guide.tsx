@@ -44,7 +44,7 @@ const PurchaseGuide: PageProps = ({ data }) => {
 PurchaseGuide.Layout = Layout;
 
 export const getStaticProps: GetStaticProps = () => {
-    const page = getPageBySlug("purchage-guide");
+    const page = getPageBySlug("purchase-guide");
     const recentCourses = getallCourses(
         ["title", "thumbnail", "price", "currency"],
         0,

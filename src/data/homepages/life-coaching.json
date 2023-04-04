@@ -6,74 +6,95 @@
             "headings": [
                 {
                     "id":1,
-                    "content":"Clara <span>Monroy</span>"
+                    "content":"Clara Monroe"
                 },
                 {
                     "id":2,
-                    "content":"In Mentoring <br>2B a Better You."
+                    "content":"Life Coaching <br><span>for Gay Women</span>."
                 }
             ],
             "texts": [
                 {
                     "id":1,
-                    "content":"The right mentoring relationship can be a powerful tool for professional growth. Bark up the right tree."
+                    "content":"As your life coach, my mission is to empower you to move forward in a way that feels right for you, honouring your unique identity and acknowledging the challenges you face."
+                },
+                {
+                    "id":2,
+                    "content":"We'll explore all the choices available to you, and I'll be there to support you every step of the way as you take action to create the life you want."
                 }
             ],
             "buttons": [
                 {
                     "id":1,
                     "path": "/start-here",
-                    "content":"Download free guide",
+                    "content":"KEEP ME?",
                     "icon": "far fa-download"
                 }
             ],
             "images": [
                 {
                     "id":1,
-                    "src": "/images/intro/intro1/bg-1.jpg"
+                    "src": "/clara-images/Clara-warm-smile.png"
                 }
             ]
         },
         {
-            "section": "service-area",
-            "section_title": {
-                "title": "Online <span>Coaching Lessons</span> For Remote Learning.",
-                "subtitle":"Education for everyone"
-            },
-            "items": [
+            "section": "faq-area",
+            "images": [
                 {
                     "id": 1,
-                    "icon": "linea-basic-flag2",
-                    "title": "Life Mentoring",
-                    "description": "Get some soul healing and guidance for your future career and vocational directions.",
-                    "path": "/start-here",
-                    "pathText": "Start here"
+                    "src": "/images/faq/success-story-image-01.jpg"
                 },
                 {
                     "id": 2,
-                    "icon": "linea-basic-gear",
-                    "title": "Self Development",
-                    "description": "Develop skills for career of various majors including computer science & language competence.",
-                    "path": "/start-here",
-                    "pathText": "Discover now"
+                    "src": "/images/faq/success-story-image-02.jpg"
+                }
+            ],
+            "items": [
+                {
+                    "id": 1,
+                    "title": "My Qualifications",
+                    "texts": [
+                        {
+                            "id": 1,
+                            "content": "Diploma en Dialogo Existencial (Circulo de Terapia Existencial, Ciudad de Mexico)"
+                        },
+                        {
+                            "id": 2,
+                            "content": "Accredited Diploma in Transformational Coaching (Animas Centre for Coaching, London)"
+                        }
+                    ]
                 },
                 {
-                    "id": 3,
-                    "icon": "linea-basic-life-buoy",
-                    "title": "Ask Consultancy",
-                    "description": "Make a reservation with our special consultant to learn what's best for your dream career.",
-                    "path": "/start-here",
-                    "pathText": "Get Free Quote"
-                },
-                {
-                    "id": 4,
-                    "icon": "linea-basic-display",
-                    "title": "Remote Learning",
-                    "description": "Learn from anywhere in the world on desktop, tablet or mobile phone with an Internet connection.",
-                    "path": "/start-here",
-                    "pathText": "Start Now"
+                    "id": 2,
+                    "title": "Other courses",
+                    "texts": [
+                        {
+                            "id": 1,
+                            "content": "Relationship Coaching"
+                        },
+                        {
+                            "id": 2,
+                            "content": "Mindfulness for Coaching"
+                        },
+                        {
+                            "id": 3,
+                            "content": "Existential Coaching"
+                        },
+                        {
+                            "id": 4,
+                            "content": "Group Coaching and Facilitation"
+                        }
+                    ]
                 }
             ]
+        },
+        {
+            "section": "coaching-courses-area",
+            "section_title": {
+                "title": "My <span>Coaching</span> Services",
+                "subtitle":""
+            }
         },
         {
             "section": "about-area",
@@ -104,7 +125,7 @@
             "images": [
                 {
                     "id": 1,
-                    "src": "/images/others/teracher-quote-1.jpg"
+                    "src": "/images/others/teacher-quote-1.jpg"
                 }
             ]
         }, 

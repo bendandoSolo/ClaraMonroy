@@ -13,7 +13,7 @@ const FaqArea = ({ data: { images, items } }: TProps) => {
     return (
         <div className="faq-area tw-pt-15 md:tw-pt-20 lg:tw-pt-[100px]">
             <div className="tw-container">
-                <motion.div
+                {/* <motion.div
                     className="tw-grid md:tw-grid-cols-[66%_minmax(34%,_1fr)] tw-gap-7.5"
                     initial="offscreen"
                     whileInView="onscreen"
@@ -34,7 +34,7 @@ const FaqArea = ({ data: { images, items } }: TProps) => {
                             className="tw-rounded tw-w-full tw-h-full tw-object-cover"
                         />
                     )}
-                </motion.div>
+                </motion.div> */}
                 {items?.map((item) => (
                     <motion.div
                         key={item.id}
