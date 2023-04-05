@@ -21,12 +21,17 @@
                 {
                     "id":2,
                     "content":"We'll explore all the choices available to you, and I'll be there to support you every step of the way as you take action to create the life you want."
+                  },
+                {
+                    "id":2,
+                    "content":"We'll explore all the choices available to you, and I'll be there to support you every step of the way as you take action to create the life you want."
                 }
             ],
             "buttons": [
                 {
                     "id":1,
                     "path": "/start-here",
+                    "content":"KEEP ME?",
                     "content":"KEEP ME?",
                     "icon": "far fa-download"
                 }
