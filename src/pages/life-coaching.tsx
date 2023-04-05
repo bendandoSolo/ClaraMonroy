@@ -23,6 +23,7 @@ import { getAllBlogs } from "../lib/blog";
 import { getallCourses, getFilteredCourse } from "../lib/course";
 import FaqArea from "@containers/faq/layout-03";
 import LifeCoachingCourses from "@containers/life-coaching-courses";
+import ButtonCentered from "@components/button/button";
 
 
 
@@ -56,8 +57,11 @@ const LifeCoaching: PageProps = ({ data }) => {
                     popularCourse: data.popularCourse,
                 }}
             />
+            {/* <div id="services"></div> */}
+            {/* <FaqArea data={content?.["faq-area"]} /> */}
             <LifeCoachingCourses data={content?.["coaching-courses-area"]} space="none" />
-            <FaqArea data={content?.["faq-area"]} />
+            
+            <ButtonCentered path="/contact-me" buttonText="Contact Me" text="To find out more about how I can help you please get in touch"/>
             
             {/* <LifeCoachingCourses data={content?.["life-coaching-courses"]} /> */}
             {/* <ServiceArea data={content?.["service-area"]} space="none" />

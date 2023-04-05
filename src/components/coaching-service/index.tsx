@@ -1,107 +1,38 @@
+import { motion } from "framer-motion";
+import { scrollUpVariants } from "@utils/variants";
+import {ItemType } from "@utils/types";
+
+interface CoachingServiceProps {
+    object: ItemType;
+    index: number;
+  }
 
 
-const CoachingService = (object: any, index: number) => {
+const CoachingService = ({object, index} : CoachingServiceProps) => {
     const imagePosition = index % 2 === 0 ? 'order-first' : 'order-last';
     return (
-        <div className="bg-white shadow-md rounded-lg overflow-hidden">
-            <div className="md:flex">
-                <div className="md:flex-shrink-0">
+        <motion.div className="bg-white shadow-md rounded-lg overflow-hidden space-y-4 tw-mt-12 tw-mb-15"
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, amount: 0.1 }}
+            variants={scrollUpVariants}
+        >
+            <div className="md:flex my-10">
+                {/* <div className="md:flex-shrink-0">
                     <img className="h-48 w-full object-cover md:w-48 ${imagePosition}" src="${object.image}" alt="${object.title}" />
-                </div>
-                <div className="p-4">
-                    <div className="font-semibold text-xl mb-2">${object.title}</div>
-                    <p className="text-gray-700">${object.text}</p>
-                    <blockquote className="mt-4 italic text-gray-600 border-l-4 pl-4 bg-gray-100 rounded">
-                            <p>${object.quote}</p>
-                        </blockquote>
+                </div> */}
+                <div className="p-4 ">
+                        <h3 className="tw-mb-4 title tw-pb-2 child:tw-text-primary child:tw-font-normal tw-text-secondary tw-border-b tw-border-b-gray-500" style={{fontSize: '1.75rem'}}>{object.title}</h3>
+                    {object.texts?.map((item) => (
+                    <p className="text-gray-700">{item.content}</p>
+                    ))}
+                    <h4 className="tw-mb-0  tw-pb-4 tw-tracking-wider tw-uppercase tw-text-h6 tw-pb-2 tw-border-b tw-border-b-gray-500">
+                            {object.suffix}
+                    </h4>   
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 
-
-
-
-// import clsx from "clsx";
-// import Anchor from "@ui/anchor";
-
-// type TProps = {
-//     className?: string;
-//     pages: Array<{
-//         path: string;
-//         label: string;
-//     }>;
-//     currentPage: string;
-//     showTitle?: boolean;
-//     title?: string;
-// };
-
-// const Breadcrumb = ({
-//     className,
-//     pages,
-//     currentPage,
-//     showTitle,
-//     title,
-// }: TProps) => {
-//     return (
-//         <div
-//             className={clsx(
-//                 "page-title-area tw-relative",
-//                 showTitle &&
-//                     "tw-pt-15 tw-pb-10 md:tw-pt-20 md:tw-pb-15 lg:tw-pt-[100px] lg:tw-pb-20",
-//                 !showTitle && "tw-pb-10 md:tw-pb-15 lg:tw-pb-20",
-//                 className
-//             )}
-//         >
-//             {showTitle && (
-//                 <div className="tw-container">
-//                     <h1 className="title tw-capitalize tw-mt-5 tw-mb-0 tw-text-3xl md:tw-text-4xl lg:tw-text-5xl tw-text-center">
-//                         {title || currentPage}
-//                     </h1>
-//                 </div>
-//             )}
-//             {!showTitle && (
-//                 <h1 className="tw-sr-only">{title || currentPage}</h1>
-//             )}
-
-//             <div
-//                 className={clsx(
-//                     "page-breadcrumb tw-top-0 tw-left-0 tw-w-full",
-//                     showTitle && "tw-absolute"
-//                 )}
-//             >
-//                 <nav className="tw-container" aria-label="breadcrumbs">
-//                     <ul className="breadcrumb tw-flex tw-flex-wrap tw-py-3">
-//                         {pages.map(({ path, label }) => (
-//                             <li
-//                                 key={label}
-//                                 className="tw-text-md first:before:tw-hidden before:tw-content-['/'] before:tw-mx-3.8 before:tw-color-body"
-//                             >
-//                                 <Anchor
-//                                     path={path}
-//                                     className="tw-text-body tw-capitalize tw-relative before:tw-absolute before:tw-content-[''] before:-tw-bottom-1.5 before:tw-right-0 before:tw-w-0 before:tw-h-px before:tw-transition-all before:tw-bg-heading hover:tw-text-heading hover:before:tw-left-0 hover:before:tw-w-full"
-//                                 >
-//                                     {label}
-//                                 </Anchor>
-//                             </li>
-//                         ))}
-
-//                         <li
-//                             className="tw-text-md tw-capitalize tw-text-heading first:before:tw-hidden before:tw-content-['/'] before:tw-mx-3.8 before:tw-color-body"
-//                             aria-current="page"
-//                         >
-//                             {currentPage}
-//                         </li>
-//                     </ul>
-//                 </nav>
-//             </div>
-//         </div>
-//     );
-// };
-
-// Breadcrumb.defaultProps = {
-//     showTitle: true,
-// };
-
-// export default Breadcrumb;
+export default CoachingService;

@@ -3,28 +3,28 @@ import { motion } from "framer-motion";
 import Section from "@ui/section";
 import SectionTitle from "@components/section-title";
 import { scrollUpVariants } from "@utils/variants";
-import { SectionTitleType,  TSection } from "@utils/types";
+import { ItemType, SectionTitleType,  TSection } from "@utils/types";
+import CoachingService from "@components/coaching-service";
 
 const AnimatedSectionTitle = motion(SectionTitle);
+const AnimatedCoachingService = motion(CoachingService);
 
 type TProps = TSection & {
     data: {
         section_title?: SectionTitleType;
+        services?: ItemType[];
     };
 };
 
-
-
-
 const LifeCoachingCourses = ({
-    data: { section_title },
+    data: { section_title, services },
     space,
     bg,
     titleSize,
 }: TProps) => {
     return (
-        <Section space={space} bg={bg} className="service-area">
-        <div className="tw-container tw-relative tw-z-1">
+        <Section space={space} bg={bg} className="service-area" >
+        <div className="tw-container tw-relative tw-z-1 tw-pt-4" id="services">
         {section_title && (
             <AnimatedSectionTitle
                 {...section_title}
@@ -36,11 +36,18 @@ const LifeCoachingCourses = ({
                 variants={scrollUpVariants}
             />
         )}
+            {services?.map((item, index) => (
+                <AnimatedCoachingService 
+                object = {item}
+                index = {index}
+                />
+            ))}
+
             </div>
+
+
         </Section>
-        // <div className="tw-container">
-        //     <div className="section-title tw-relative tw-z-20 tw-text-center tw-mb-7.5 xl:tw-mb-15" style={{opacity: '1', transform: 'none'}}><span className="tw-font-medium tw-text-base tw-leading-none -tw-tracking-tightest tw-block tw-mb-2.5 tw-uppercase tw-text-secondary-light">Education for everyone</span><h2 className="title tw-m-0 child:tw-text-primary child:tw-font-normal tw-text-secondary">Online <span>Coaching Lessons</span> For Remote Learning.</h2></div>
-        // </div>
+
     );
 }
 

@@ -23,12 +23,12 @@ const ServiceArea = ({
 }: TProps) => {
     return (
         <Section space={space} bg={bg} className="service-area">
-            <div className="tw-container tw-relative tw-z-1">
+            <div className="tw-container tw-relative tw-z-1 tw-mt-10">
                 {section_title && (
                     <AnimatedSectionTitle
                         {...section_title}
                         titleSize={titleSize}
-                        className="tw-mb-7.5 xl:tw-mb-15"
+                        className="tw-mb-5 xl:tw-mb-10"
                         initial="offscreen"
                         whileInView="onscreen"
                         viewport={{ once: true, amount: 0.4 }}

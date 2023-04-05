@@ -11,8 +11,8 @@ type TProps = {
 
 const FaqArea = ({ data: { images, items } }: TProps) => {
     return (
-        <div className="faq-area tw-pt-15 md:tw-pt-20 lg:tw-pt-[100px]">
-            <div className="tw-container">
+        <div className="faq-area">
+            <div className="tw-container tw-pb-[80px]">
                 {/* <motion.div
                     className="tw-grid md:tw-grid-cols-[66%_minmax(34%,_1fr)] tw-gap-7.5"
                     initial="offscreen"
@@ -38,20 +38,23 @@ const FaqArea = ({ data: { images, items } }: TProps) => {
                 {items?.map((item) => (
                     <motion.div
                         key={item.id}
-                        className="tw-pt-[47px] tw-pb-[50px] tw-border-b tw-border-b-gray-500 tw-grid md:tw-grid-cols-[40%_minmax(60%,_1fr)] tw-gap-7.5"
+                        className="tw-pt-[20px] tw-pb-[20px] tw-border-b tw-border-b-gray-500 tw-grid md:tw-grid-cols-[40%_minmax(60%,_1fr)] tw-gap-7.5"
                         initial="offscreen"
                         whileInView="onscreen"
                         viewport={{ once: true, amount: 0.1 }}
                         variants={scrollUpVariants}
                     >
                         <h4 className="tw-text-lg tw-font-semibold md:tw-max-w-[310px] tw-relative tw-pl-8">
-                            <i className="fas fa-arrow-right tw-text-primary tw-absolute tw-left-0 tw-top-2" />
+                            {/* <i className="fas fa-arrow-right tw-text-primary tw-absolute tw-left-0 tw-top-2" /> */}
                             {item.title}
                         </h4>
                         <div className="tw-relative tw-pl-8 tw-mt-5 md:tw-mt-0">
-                            <i className="fas fa-check tw-text-primary tw-absolute tw-left-0 tw-top-2" />
+                            
                             {item.texts?.map((text) => (
-                                <p key={text.id}>{text.content}</p>
+                                <div className='tw-flex tw-pb-1'>
+                                    <i className="fas fa-check tw-text-primary tw-pr-2" style={{paddingTop: '6px'}}/>
+                                    <p key={text.id} >{text.content}</p>
+                                </div>
                             ))}
                         </div>
                     </motion.div>

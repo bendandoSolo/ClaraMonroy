@@ -18,8 +18,8 @@
             "buttons": [
                 {
                     "id":1,
-                    "path": "/#About",
-                    "content":"More About Clara",
+                    "path": "/life-coaching",
+                    "content":"Life Coaching",
                     "icon": "far fa-download"
                 }
             ],
@@ -158,7 +158,7 @@
         {
             "section": "service-area",
             "section_title": {
-                "title": "What <span>Clara</span> offers",
+                "title": "What I offer",
                 "subtitle":"",
                 "_title": "Access <span>Smart Tutoring</span> Program For Benefits.",
                 "_subtitle":"What I offer"
@@ -199,6 +199,57 @@
                     "description": "We provide study materials with various formats: video, audio, slides, doc, prints, books and applications.",
                     "path": "/start-here",
                     "pathText": "Join Now"
+                }
+            ]
+        },
+        {
+            "section": "faq-area",
+            "images": [
+                {
+                    "id": 1,
+                    "src": "/images/faq/success-story-image-01.jpg"
+                },
+                {
+                    "id": 2,
+                    "src": "/images/faq/success-story-image-02.jpg"
+                }
+            ],
+            "items": [
+                {
+                    "id": 1,
+                    "title": "My Qualifications",
+                    "texts": [
+                        {
+                            "id": 1,
+                            "content": "Diploma en Dialogo Existencial (Circulo de Terapia Existencial, Ciudad de Mexico)"
+                        },
+                        {
+                            "id": 2,
+                            "content": "Accredited Diploma in Transformational Coaching (Animas Centre for Coaching, London)"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "title": "Coaching Courses",
+                    "texts": [
+                        {
+                            "id": 1,
+                            "content": "Relationship Coaching"
+                        },
+                        {
+                            "id": 2,
+                            "content": "Mindfulness for Coaching"
+                        },
+                        {
+                            "id": 3,
+                            "content": "Existential Coaching"
+                        },
+                        {
+                            "id": 4,
+                            "content": "Group Coaching and Facilitation"
+                        }
+                    ]
                 }
             ]
         },

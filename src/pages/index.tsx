@@ -23,6 +23,7 @@ import { IBlog, ICourse } from "@utils/types";
 import { getPageData } from "../lib/page";
 import { getAllBlogs } from "../lib/blog";
 import { getallCourses } from "../lib/course";
+import FaqArea from "@containers/faq/layout-03";
 
 interface PageContent {
     section: string;
@@ -50,8 +51,9 @@ const Home: PageProps = ({ data }) => {
         <>
             <SEO title="Course Portal" />
             <HeroArea data={content?.["hero-area"]} />
-            <ServiceArea data={content?.["service-area"]} space="top" />
+            <ServiceArea data={content?.["service-area"]} space="none" />
             <QuoteArea data={content?.["quote-area"]} />
+            <FaqArea data={content?.["faq-area"]} />
             {/* <BrandArea data={content?.["brand-area"]} />
             <CourseArea
                 data={{ ...content?.["course-area"], courses: data.courses }}
