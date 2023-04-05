@@ -26,10 +26,10 @@ const ContactInfo = ({ data: { section_title, items, images } }: TProps) => {
                 >
                     {section_title && (
                         <>
-                            <span className="tw-text-lg tw-text-heading tw-leading-none tw-font-medium tw-mb-2.5">
+                            <span className="tw-text-lg tw-text-heading tw-leading-none tw-font-medium tw-mb-2.5 ">
                                 {section_title?.subtitle}
                             </span>
-                            <h2 className="tw-leading-none tw-mb-10">
+                            <h2 className="tw-leading-10 tw-mb-10 " >
                                 {section_title.title}
                             </h2>
                         </>
