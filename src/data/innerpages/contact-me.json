@@ -4,8 +4,8 @@
         {
             "section": "contact-info",
             "section_title": {
-                "title": "Reach me!",
-                "subtitle": "Get excited already?"
+                "title": "Get in touch by phone or email",
+                "subtitle": ""
             },
             "items": [
                 {
@@ -56,7 +56,7 @@
             ],
             "images": [
                 {
-                    "src": "/images/contact/contact.jpg"
+                    "src": "/clara-images/hero-image-1.jpg"
                 }
             ]
         },
