@@ -60,7 +60,7 @@ const LifeCoaching: PageProps = ({ data }) => {
             {/* <div id="services"></div> */}
             {/* <FaqArea data={content?.["faq-area"]} /> */}
             <LifeCoachingCourses data={content?.["coaching-courses-area"]} space="none" />
-            
+            <FaqArea data={content?.["faq-area"]} />
             <ButtonCentered path="/contact-me" buttonText="Contact Me" text="To find out more about how I can help you please get in touch"/>
             
             {/* <LifeCoachingCourses data={content?.["life-coaching-courses"]} /> */}

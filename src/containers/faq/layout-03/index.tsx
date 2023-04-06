@@ -51,9 +51,9 @@ const FaqArea = ({ data: { images, items } }: TProps) => {
                         <div className="tw-relative tw-pl-8 tw-mt-5 md:tw-mt-0">
                             
                             {item.texts?.map((text) => (
-                                <div className='tw-flex tw-pb-1'>
+                                <div key={text.id} className='tw-flex tw-pb-1'>
                                     <i className="fas fa-check tw-text-primary tw-pr-2" style={{paddingTop: '6px'}}/>
-                                    <p key={text.id} >{text.content}</p>
+                                    <p  >{text.content}</p>
                                 </div>
                             ))}
                         </div>
