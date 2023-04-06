@@ -9,6 +9,7 @@ import FaqArea from "@containers/faq/layout-02";
 
 import { normalizedData } from "@utils/methods";
 import { getPageData } from "../lib/page";
+import TheLesbitutePodcast from "@components/lesbitute-podcast";
 
 interface PageContent {
     section: string;
@@ -30,13 +31,14 @@ const LesbitutePodcast: PageProps = ({ data }) => {
     const content = normalizedData<PageContent>(data.page?.content, "section");
     return (
         <>
-            <SEO title="Start Here" />
-            <h1 className="tw-sr-only">Start Here</h1>
-            <HeroArea data={content?.["hero-area"]} />
+            <SEO title="The Lesbitute Podcast | Clara Monroy" />
+            <h1 className="tw-sr-only">The Lesbitute Podcast</h1>
+            <TheLesbitutePodcast />
+            {/* <HeroArea data={content?.["hero-area"]} />
             <TimelineArea data={content?.["timeline-area"]} />
             <CtaArea data={content?.["cta-area"]} space="bottom" />
             <GalleryArea data={content?.["gallery-area"]} />
-            <FaqArea data={content?.["faq-area"]} />
+            <FaqArea data={content?.["faq-area"]} /> */}
         </>
     );
 };

@@ -49,7 +49,7 @@ const Home: PageProps = ({ data }) => {
 
     return (
         <>
-            <SEO title="Course Portal" />
+                <SEO title="Home | Clara Monroy" />
             <HeroArea data={content?.["hero-area"]} />
             <ServiceArea data={content?.["service-area"]} space="none" />
             <QuoteArea data={content?.["quote-area"]} />

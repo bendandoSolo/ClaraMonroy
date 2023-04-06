@@ -24,6 +24,7 @@ import { getallCourses, getFilteredCourse } from "../lib/course";
 import FaqArea from "@containers/faq/layout-03";
 import LifeCoachingCourses from "@containers/life-coaching-courses";
 import ButtonCentered from "@components/button/button";
+import SEO from "@components/seo/page-seo";
 
 
 
@@ -51,6 +52,7 @@ const LifeCoaching: PageProps = ({ data }) => {
 
     return (
         <>
+            <SEO title="Life Coaching | Clara Monroy" />
             <HeroArea
                 data={{
                     ...content?.["hero-area"],
