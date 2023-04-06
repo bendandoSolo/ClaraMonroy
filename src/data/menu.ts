@@ -11,8 +11,8 @@ export default [
     },
     {
         id: 3,
-        label: "Podcast",
-        path: "/",
+        label: "Lesbitute Podcast",
+        path: "/lesbitute-podcast",
     },
     {
         id: 4,

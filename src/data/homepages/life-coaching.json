@@ -70,19 +70,19 @@
                     "title": "Coaching Courses",
                     "texts": [
                         {
-                            "id": 1,
+                            "id": 3,
                             "content": "Relationship Coaching"
                         },
                         {
-                            "id": 2,
+                            "id": 4,
                             "content": "Mindfulness for Coaching"
                         },
                         {
-                            "id": 3,
+                            "id": 5,
                             "content": "Existential Coaching"
                         },
                         {
-                            "id": 4,
+                            "id": 6,
                             "content": "Group Coaching and Facilitation"
                         }
                     ]
