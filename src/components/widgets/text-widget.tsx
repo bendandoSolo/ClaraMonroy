@@ -10,16 +10,16 @@ type TProps = {
 const TextWidget = ({ className, mode }: TProps) => {
     return (
         <div className={clsx(className)}>
-            <WidgetTitle mode={mode}>Address</WidgetTitle>
+            <WidgetTitle mode={mode}>Get In Touch</WidgetTitle>
             <div
                 className={clsx(
                     "content ",
                     mode === "dark" && "tw-text-gray-400"
                 )}
             >
-                <p className="tw-mb-[11px]">
+                {/* <p className="tw-mb-[11px]">
                     382 NE 191st St # 87394 Miami, FL 33179-3899
-                </p>
+                </p> */}
                 <p className="tw-mb-[11px]">
                     +1 (305) 547-9909 (9am - 5pm EST, Monday - Friday){" "}
                 </p>

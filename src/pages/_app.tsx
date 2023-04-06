@@ -40,6 +40,7 @@ const MyApp = ({ Component, pageProps }: CustomAppProps) => {
     return (
         <UIProvider>
              {/* <UserProvider> */}
+                
                 <Layout {...layoutProps}>
                     <SEO />
                     <Component {...pageProps} />
@@ -50,3 +51,4 @@ const MyApp = ({ Component, pageProps }: CustomAppProps) => {
 };
 
 export default MyApp;
+

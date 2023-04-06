@@ -18,22 +18,31 @@ const TwoColumnListWidget = ({ className, mode }: TProps) => {
                 )}
             >
                 <li className="tw-w-1/2 tw-pr-5 tw-mb-[11px]">
-                    <Anchor path="/start-here">Start here</Anchor>
+                    <Anchor path="/">Home</Anchor>
                 </li>
                 <li className="tw-w-1/2 tw-pr-5 tw-mb-[11px]">
-                    <Anchor path="/success-story">Success story</Anchor>
+                    <Anchor path="/life-coaching">Life Coaching</Anchor>
                 </li>
                 <li className="tw-w-1/2 tw-pr-5 tw-mb-[11px]">
-                    <Anchor path="/blogs/blog-grid">Blog</Anchor>
+                    <Anchor path="/lesbitute-podcast">The Lesbitute Podcast</Anchor>
                 </li>
                 <li className="tw-w-1/2 tw-pr-5 tw-mb-[11px]">
-                    <Anchor path="/courses/grid-01">Courses</Anchor>
+                    <Anchor path="/london-lesbian-meetup-group">London Lesbians Meetup Group</Anchor>
                 </li>
                 <li className="tw-w-1/2 tw-pr-5 tw-mb-[11px]">
-                    <Anchor path="/about-us-01">About us</Anchor>
+                    <Anchor path="/blog">Blog</Anchor>
                 </li>
                 <li className="tw-w-1/2 tw-pr-5 tw-mb-[11px]">
-                    <Anchor path="/contact-us">Contact us</Anchor>
+                    <Anchor path="/lesbian-recommended-places-london">Clara Recommends</Anchor>
+                </li>
+                <li className="tw-w-1/2 tw-pr-5 tw-mb-[11px]">
+                    <Anchor path="/clara-monroy-patreon">Patreon</Anchor>
+                </li>
+                <li className="tw-w-1/2 tw-pr-5 tw-mb-[11px]">
+                    <Anchor path="/contact-me">Contact Me</Anchor>
+                </li>
+                <li className="tw-w-1/2 tw-pr-5 tw-mb-[11px]">
+                    <Anchor path="/privacy-policy">Privacy Policy</Anchor>
                 </li>
             </ul>
         </div>

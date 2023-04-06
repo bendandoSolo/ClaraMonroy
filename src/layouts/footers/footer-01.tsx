@@ -11,7 +11,7 @@ const Footer01 = ({ mode }: TProps) => {
     return (
         <footer
             className={clsx(
-                "tw-pt-[70px] tw-pb-[50px]",
+                "tw-pt-[70px] tw-pb-[12px]",
                 mode === "dark" && "tw-bg-dark-100",
                 mode === "light" && "tw-bg-light-100"
             )}
@@ -21,25 +21,25 @@ const Footer01 = ({ mode }: TProps) => {
                 <div className="tw-grid tw-grid-cols-12">
                     <TextWidget
                         mode={mode}
-                        className="tw-col-span-12 lg:tw-col-span-5 xl:tw-col-span-6 tw-mb-[43px]"
+                        className="tw-col-span-12 lg:tw-col-span-12 xl:tw-col-span-6 tw-mb-[43px]"
                     />
                     <TwoColumnListWidget
                         mode={mode}
-                        className="tw-col-span-12 md:tw-col-span-7 lg:tw-col-span-4 xl:tw-col-span-3 tw-mb-[25px]"
+                        className="tw-col-span-12 md:tw-col-span-24 lg:tw-col-span-6 xl:tw-col-span-6 tw-mb-[25px]"
                     />
-                    <ListWidget
+                    {/* <ListWidget
                         mode={mode}
                         className="tw-col-span-12 md:tw-col-span-5 lg:tw-col-span-3 tw-mb-7.5"
-                    />
+                    /> */}
                 </div>
                 <p className="copyright tw-text-center tw-text-md tw-text-gray-400 tw-mt-5">
-                    &copy; {new Date().getFullYear()} Maxcoach.{" "}
+                   
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://themeforest.net/user/bootxperts/portfolio"
+                        href="https://bendando.com"
                     >
-                        All Rights Reserved
+                         Website by Bendando{" "}
                     </a>
                 </p>
             </div>
