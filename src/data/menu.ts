@@ -16,8 +16,8 @@ export default [
     },
     {
         id: 4,
-        label: "Meetup",
-        path: "/",
+        label: "Lesbian Meetup",
+        path: "/london-international-lesbian-meetup-group",
     },
     {
         id: 5,

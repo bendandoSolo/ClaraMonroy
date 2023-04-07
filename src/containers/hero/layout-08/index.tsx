@@ -40,7 +40,6 @@ const HeroArea = ({ data: { images, headings, section_title } }: TProps) => {
 
                 {section_title?.title && <h4 className="tw-max-w-[700px] lg:tw-max-w-[770px] tw-mx-auto tw-text-center tw-text-h3 tw-leading-normal md:tw-text-[18px] lg:tw-text-[18px] lg:tw-leading-[1.4] tw-text-white tw-mb-0">{section_title?.title}</h4>}
 
-
                 {section_title?.subtitle && <p className="tw-mt-15 md:tw-mt-10 tw-max-w-[700px] lg:tw-max-w-[770px] tw-mx-auto tw-text-center tw-text-h3 tw-leading-normal tw-text-[18px]  lg:tw-leading-[1.4] tw-text-white tw-mb-0">{section_title?.subtitle}</p>}
               
             </motion.div>
