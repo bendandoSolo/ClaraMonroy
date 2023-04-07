@@ -15,14 +15,15 @@
                     "content": "The Lesbitute Podcast"
                 }
             ],
-            "sub-heading":{
-                    "id": 1,
-                    "content": "The Lesbitute Podcast"
+            "section_title":{
+                    "title": "Clara Monroy",
+                    "subtitle": "#TheLesbitudePodcast, the podcast for lesbians with attitude! It is fun and irreverent, honest and controversial. Clara, Elaine and Kate are three lesbians who are ready to discuss any topic without any filters.They talk about dating, sex, break ups, and anything that interests lesbians, bisexual, and queer woman. This is genuine lesbian talk among trusted friends."
             },
-            "text": {
+            "texts": [{
                 "id": 1,
                 "content": "The Lesbitute Podcast"
             }
+            ]
         },
         {
             "section": "about-area",

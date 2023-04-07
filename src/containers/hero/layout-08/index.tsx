@@ -1,17 +1,18 @@
 import { motion } from "framer-motion";
-import { ImageType, HeadingType } from "@utils/types";
+import { ImageType, HeadingType, SectionTitleType } from "@utils/types";
 import { scrollUpVariants } from "@utils/variants";
 
 type TProps = {
     data: {
         images?: ImageType[];
         headings?: HeadingType[];
+        section_title?: SectionTitleType;
     };
 };
 
-const HeroArea = ({ data: { images, headings } }: TProps) => {
+const HeroArea = ({ data: { images, headings, section_title } }: TProps) => {
     return (
-        <section className="hero-area tw-relative tw-py-15 md:tw-py-20 lg:tw-py-[100px] xl:tw-py-[200px]">
+        <section className="hero-area tw-relative tw-py-15 md:tw-py-20 lg:tw-py-[120px] xl:tw-pt-[160px]">
             {images?.[0]?.src && (
                 <div className="tw-absolute tw-inset-0 -tw-z-1">
                     <img
@@ -30,11 +31,18 @@ const HeroArea = ({ data: { images, headings } }: TProps) => {
                 viewport={{ once: true, amount: 0.1 }}
                 variants={scrollUpVariants}
             >
+                
                 {headings?.[0]?.content && (
-                    <h1 className="tw-max-w-[700px] lg:tw-max-w-[770px] tw-mx-auto tw-text-center tw-text-h3 tw-leading-normal md:tw-text-[32px] lg:tw-text-[34px] lg:tw-leading-[1.4] tw-text-white tw-mb-0">
+                    <h1 className="tw-max-w-[700px] lg:tw-max-w-[770px] tw-mx-auto tw-text-center tw-text-h3 tw-leading-normal md:tw-text-[36px] lg:tw-text-[38px] lg:tw-leading-[1.4] tw-text-white tw-mb-0">
                         {headings?.[0]?.content}
                     </h1>
                 )}
+
+                {section_title?.title && <h4 className="tw-max-w-[700px] lg:tw-max-w-[770px] tw-mx-auto tw-text-center tw-text-h3 tw-leading-normal md:tw-text-[18px] lg:tw-text-[18px] lg:tw-leading-[1.4] tw-text-white tw-mb-0">{section_title?.title}</h4>}
+
+
+                {section_title?.subtitle && <p className="tw-mt-15 md:tw-mt-10 tw-max-w-[700px] lg:tw-max-w-[770px] tw-mx-auto tw-text-center tw-text-h3 tw-leading-normal tw-text-[18px]  lg:tw-leading-[1.4] tw-text-white tw-mb-0">{section_title?.subtitle}</p>}
+              
             </motion.div>
         </section>
     );

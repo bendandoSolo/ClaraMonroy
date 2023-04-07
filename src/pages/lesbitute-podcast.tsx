@@ -30,7 +30,7 @@ type PageProps = NextPage<TProps> & {
 const LesbitutePodcast: PageProps = ({ data }) => {
     const content = normalizedData<PageContent>(data.page?.content, "section");
     return (
-        <>
+        <div >
             <SEO title="The Lesbitute Podcast | Clara Monroy" />
             <HeroArea data={content?.["hero-area"]} />
             <h1 className="tw-sr-only">The Lesbitute Podcast</h1>
@@ -40,7 +40,7 @@ const LesbitutePodcast: PageProps = ({ data }) => {
             <CtaArea data={content?.["cta-area"]} space="bottom" />
             <GalleryArea data={content?.["gallery-area"]} />
             <FaqArea data={content?.["faq-area"]} /> */}
-        </>
+        </div>
     );
 };
 
