@@ -91,7 +91,7 @@ const LifeCoaching: PageProps = ({ data }) => {
 LifeCoaching.Layout = Layout;
 
 export const getStaticProps: GetStaticProps = () => {
-    const page = getPageData("home", "life-coaching");
+    const page = getPageData("inner", "life-coaching");
     const courses = getallCourses(
         ["title", "thumbnail", "price", "currency"],
         0,

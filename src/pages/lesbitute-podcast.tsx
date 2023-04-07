@@ -1,7 +1,7 @@
 import type { GetStaticProps, NextPage } from "next";
 import SEO from "@components/seo/page-seo";
 import Layout from "@layout/layout-01";
-import HeroArea from "@containers/hero/layout-07";
+import HeroArea from "@containers/hero/layout-08";
 import TimelineArea from "@containers/timeline";
 import CtaArea from "@containers/cta/layout-01";
 import GalleryArea from "@containers/gallery";
@@ -32,6 +32,7 @@ const LesbitutePodcast: PageProps = ({ data }) => {
     return (
         <>
             <SEO title="The Lesbitute Podcast | Clara Monroy" />
+            <HeroArea data={content?.["hero-area"]} />
             <h1 className="tw-sr-only">The Lesbitute Podcast</h1>
             <TheLesbitutePodcast />
             {/* <HeroArea data={content?.["hero-area"]} />
@@ -46,8 +47,7 @@ const LesbitutePodcast: PageProps = ({ data }) => {
 LesbitutePodcast.Layout = Layout;
 
 export const getStaticProps: GetStaticProps = () => {
-    const page = getPageData("inner", "start-here");
-
+    const page = getPageData("inner", "lesbitute-podcast");
     return {
         props: {
             data: {
