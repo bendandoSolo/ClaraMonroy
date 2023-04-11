@@ -36,7 +36,7 @@ const HeroArea = ({ data: { items } }: TProps) => {
                                     }
                                     exit="exit"
                                     variants={fadeInUp}
-                                    className="tw-text-white tw-text-[32px] tw-uppercase tw-mb-0 tw-leading-[1.17] md:tw-text-4xl lg:tw-col-span-4 lg:tw-text-5xl lg:tw-text-right"
+                                    className="tw-text-primary tw-text-[32px] tw-uppercase tw-mb-0 tw-leading-[1.17] md:tw-text-4xl lg:tw-col-span-4 lg:tw-text-5xl lg:tw-text-right"
                                     dangerouslySetInnerHTML={{
                                         __html: headings[0].content,
                                     }}

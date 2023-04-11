@@ -2,13 +2,14 @@ import type { GetStaticProps, NextPage } from "next";
 import SEO from "@components/seo/page-seo";
 import Layout from "@layout/layout-01";
 import HeroArea from "@containers/hero/layout-07-01";
-import TimelineArea from "@containers/timeline";
+//import TimelineArea from "@containers/timeline";
 import CtaArea from "@containers/cta/layout-01";
 import GalleryArea from "@containers/gallery";
 import FaqArea from "@containers/faq/layout-02";
 
 import { normalizedData } from "@utils/methods";
 import { getPageData } from "../lib/page";
+import AlternatingTextBlocks from "@containers/alternating-text-blocks";
 
 interface PageContent {
     section: string;
@@ -33,10 +34,10 @@ const LondonInternationalLesbianMeetupGroup : PageProps = ({ data }) => {
             <SEO title="London Lesbian Meetup Group" />
             <h1 className="tw-sr-only">London Lesbian Meetup Group</h1>
             <HeroArea data={content?.["hero-area"]} />
-            <TimelineArea data={content?.["timeline-area"]} />
+            <AlternatingTextBlocks data={content?.["timeline-area"]} />
             <CtaArea data={content?.["cta-area"]} space="bottom" />
-            <GalleryArea data={content?.["gallery-area"]} />
-            <FaqArea data={content?.["faq-area"]} />
+            {/* <GalleryArea data={content?.["gallery-area"]} />
+            <FaqArea data={content?.["faq-area"]} /> */}
         </>
     );
 };

@@ -9,7 +9,7 @@ type TProps = {
     };
 };
 
-const FaqArea = ({ data: { images, items } }: TProps) => {
+const FaqArea = ({ data: { items } }: TProps) => {
     return (
         <div className="faq-area">
             <div className="tw-container tw-pb-[80px]">

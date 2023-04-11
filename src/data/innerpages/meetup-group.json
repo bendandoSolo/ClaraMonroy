@@ -14,7 +14,7 @@
                     "headings": [
                         {
                             "id": 1,
-                            "content": "London International Lesbian Meetup Group"
+                            "content": "<span>London International Lesbian Meetup Group</span>"
                         }, 
                         {
                             "id": 2,
@@ -31,10 +31,16 @@
             ]
         },
         {
+            "section_title": {
+                "title": "London International Lesbians Meetup Group",
+                "subtitle": "Over 7000 members and growing"
+            }
+        },
+        {
             "section": "timeline-area",
             "section_title": {
-                "title": "Best chances for expanding your <br> success to the max",
-                "subtitle": "Four major Steps to Success"
+                "title": "London International Lesbians Meetup Group",
+                "subtitle": "Over 7000 members and growing"
             },
             "items": [
                 {
@@ -47,17 +53,17 @@
                     "headings": [
                         {
                             "id": 1,
-                            "content": "Broadening"
+                            "content": "What we're about"
                         }, 
                         {
                             "id": 2,
-                            "content": "#1 Career advancement and hobbies"
+                            "content": "Welcome to the International Lesbians Community"
                         }
                     ],
                     "texts": [
                         {
                             "id": 1,
-                            "content": "Studying online gives you more flexibility. You can work and fit your work schedule around your coursework more easily; even more so if you are taking an asynchronous class: an online class where you can study and interact with your instructor and fellow classmates at your own pace."
+                            "content": "The London International Lesbians Meetup is a group for women who love women, the internationals are women with attitude, open, curious and interested in meeting a wide range of women. The aim of the group is to keep you connected to the Lesbian Community and to share our life experiences and stories!"
                         }
                     ]
                 },
@@ -71,17 +77,25 @@
                     "headings": [
                         {
                             "id": 1,
-                            "content": "Scheduling"
+                            "content": "The serious part"
                         }, 
                         {
                             "id": 2,
-                            "content": "#2 Flexible schedule & environment"
+                            "content": "Becoming one of our members"
                         }
                     ],
                     "texts": [
                         {
                             "id": 1,
-                            "content": "Taking an online course also means that you don’t have to commute to class, which means less time spent on the bus and more study time sitting on your couch, the sound of a crackling fireplace in the background. You no longer have to worry about missing an important class!"
+                            "content": "At the LIL we would like you to know that by becoming one of our members you will be joining a community of very caring women who will welcome and support you as much as we possibly can."
+                        },
+                        {
+                            "id": 2,
+                            "content": "London International Lesbians is a community that works hard at preventing social isolation!- we want to help you make friends, we provide you with safe spaces where you can be yourself, socialize and find a support network to share your concerns and worries with other like minded women."
+                        },
+                        {
+                            "id": 3,
+                            "content": "It seems like we are back to some sort of normality and we'll make sure you have safe spaces to meet other women who love women."
                         }
                     ]
                 },
@@ -95,7 +109,7 @@
                     "headings": [
                         {
                             "id": 1,
-                            "content": "Self-discipline"
+                            "content": "Now the fun stuff..."
                         }, 
                         {
                             "id": 2,
@@ -105,7 +119,15 @@
                     "texts": [
                         {
                             "id": 1,
-                            "content": "Who says that having to be more self-disciplined is a disadvantage? It is true that studying online requires more time-management skills, because you will spend a lot of time on your own without someone physically close to keep you focused on deadlines."
+                            "content": "You are joining the warmest and most welcoming community of women who love women in the world..! We haven’t done the survey yet but we have met our members and they are amazing people…  We are here to help you fulfil as many of your social needs as we can a -lot of of our members also fulfill romantic needs- ;)- "
+                        },
+                        {
+                            "id": 2,
+                            "content": "Would you like to meet and mingle with some like minded women? Are you an international* lesbian** or interested in socialising with an international mixture of lesbians?  Are you feeling disconnected from the lesbian scene in this time of social distancing? Are you willing to join us and attend our social events? If you’ve answered “yes” to at least one of these questions then you should join the International Lesbians Meetup group NOW :)"
+                        },
+                        {
+                            "id": 3,
+                            "content": "We welcome all nationalities -YES, including British!- and encourage you to join us from wherever you are in the world. We will meet regularly for socials, [food], drinks, culture, [sporting events] and trips. If you’re looking for like minded women from all over the world, this is the group for you and you may even get to practise a new language or just broaden your horizons in a fun and relaxed environment, and now we can do it in real life!"
                         }
                     ]
                 },
@@ -119,17 +141,25 @@
                     "headings": [
                         {
                             "id": 1,
-                            "content": "Investment"
+                            "content": "Let us keep you connected to other women!!"
                         }, 
                         {
                             "id": 2,
-                            "content": "#4 Investment"
+                            "content": "A group of women representing the international community."
                         }
                     ],
                     "texts": [
                         {
                             "id": 1,
-                            "content": "Studying online means that you pay the tuition fee, possibly book supplies, an online application fee, and few other items. You don’t, however, incur the costs of housing (which can range up to $12,000 per year) and transportation, which translates to lower debts and more savings."
+                            "content": "Our members are from many different countries, yes including Britain!! We love the British and they are about 40% of our members :)"
+                        },
+                        {
+                            "id": 2,
+                            "content": "The word Lesbian in this context is used in its widest possible meaning and it includes Bi, Trans, Queer or any other woman who loves women. The internationals is a very inclusive group and we will always welcome any woman who identifies as a woman (and who lives as a woman) who loves women. Dear Bi, Trans, Queer, NB women who love women you are very welcome to our group and any haters will be almost literally &ldquo;kicked out&rdquo; by Clara herself (me) and banned from the group."
+                        },
+                        {
+                            "id": 3,
+                            "content": "Our members are from many different countries, yes including Britain!! We love the British and they are about 40% of our members :)"
                         }
                     ]
                 }
@@ -138,14 +168,14 @@
         {
             "section": "cta-area",
             "section_title": {
-                "title": "Take your interest and register an online class <br> today to enjoy life fully",
-                "subtitle":"Get yourself a <strong>MaxCoach</strong> ID?"
+                "title": "Join the International Lesbians now! Warmest Wishes, Clara",
+                "subtitle":"Haven't you joined yet? What are you waiting for!"
             },
             "buttons": [
                 {
                     "id": 1,
-                    "path": "/contact-us",
-                    "content": "Get started for free"
+                    "path": "https://www.meetup.com/london-international-lesbians-meetup/",
+                    "content": "Join Now"
                 }
             ]
         },
