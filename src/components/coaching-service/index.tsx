@@ -8,8 +8,8 @@ interface CoachingServiceProps {
   }
 
 
-const CoachingService = ({object, index} : CoachingServiceProps) => {
-    const imagePosition = index % 2 === 0 ? 'order-first' : 'order-last';
+const CoachingService = ({object} : CoachingServiceProps) => {
+    // const imagePosition = index % 2 === 0 ? 'order-first' : 'order-last';
     return (
         <motion.div className="bg-white shadow-md rounded-lg overflow-hidden space-y-4 tw-mt-12 tw-mb-15"
             initial="offscreen"
