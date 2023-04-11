@@ -4,7 +4,7 @@ import {ItemType } from "@utils/types";
 
 interface CoachingServiceProps {
     object: ItemType;
-    index: number;
+    // index: number;
   }
 
 
