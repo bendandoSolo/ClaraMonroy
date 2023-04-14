@@ -37,7 +37,7 @@ type TProps = {
             content: PageContent[];
         };
         courses: ICourse[];
-        popularCourse: ICourse;
+        // popularCourse: ICourse;
         blogs: IBlog[];
     };
 };
@@ -55,7 +55,7 @@ const LifeCoaching: PageProps = ({ data }) => {
             <HeroArea
                 data={{
                     ...content?.["hero-area"],
-                    popularCourse: data.popularCourse,
+                    // popularCourse: data.popularCourse,
                 }}
             />
             {/* <div id="services"></div> */}

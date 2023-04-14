@@ -3,6 +3,11 @@
 
 // //really  a section title needs to be within a section for better SEO
 
+const AnimatedSectionTitle = () => {
+    <p>Animated Section Title not implemented</p>
+}
+
+
 // const AnimatSectionTitle = motion(SectionTitle);
 
 
@@ -23,4 +28,4 @@
 //     );
 // };
 
-// export default AnimatedSectionTitle;
+export default AnimatedSectionTitle;
