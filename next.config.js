@@ -1,4 +1,7 @@
 /** @type {import('next').NextConfig} */
+// eslint-disable-next-line import/no-extraneous-dependencies
+const ESLintWebpackPlugin = require('eslint-webpack-plugin');
+
 const runtimeCaching = require("next-pwa/cache");
 const withPWA = require("next-pwa")({
     disable: process.env.NODE_ENV === "development",
@@ -25,8 +28,20 @@ module.exports = withPWA(
         images: {
             formats: ['image/avif', 'image/webp']
         },
-        webpack(config) {
+        webpack: (config, { dev, isServer }) => {
+            // Only enable the ESLint plugin for development builds and only for the client-side
+            if (dev && !isServer) {
+              config.plugins.push(
+                new ESLintWebpackPlugin({
+                  failOnError: true, // Make ESLint errors fatal for the build process
+                  extensions: ['js', 'jsx', 'ts', 'tsx'], // Specify the file extensions you want to check
+                  context: '.', // Root directory for your source files
+                  exclude: 'node_modules', // Exclude the node_modules folder
+                })
+              );
+            }
+        
             return config;
-        },
+          },
     })
 );

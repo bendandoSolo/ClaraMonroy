@@ -35,7 +35,7 @@ const AlternatingTextBlock = ({ isEven, title, image, heading, texts }: TProps) 
                             {title.content}
                         </h3>
                     )}
-                    {/*image?.src && (
+                    {/* image?.src && (
                         <figure>
                             <img
                                 src={image.src}
@@ -43,7 +43,7 @@ const AlternatingTextBlock = ({ isEven, title, image, heading, texts }: TProps) 
                                 className="tw-rounded tw-object-cover tw-h-full tw-w-full"
                             />
                         </figure>
-                    )*/}
+                    ) */}
                 </div>
             </motion.div>
             <motion.div
