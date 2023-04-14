@@ -15,7 +15,7 @@ We respect your privacy and to this end do not collect any of your personal data
 
 We do use Google Search Console to track interest and visits to the website. However none of this data is personal, we only
 know how many people have visited the website, the country of the websites users and the pages or articles that
-are of most interest to people. We use this data to ensure we are providing the best service and information to the websites' users.
+are of most interest to people. We use this data to ensure we are providing the best service and information to the websites users.
 
 ### Should you get in touch with Clara Monroy
 

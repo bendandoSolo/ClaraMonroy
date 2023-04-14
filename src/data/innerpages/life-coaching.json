@@ -149,7 +149,20 @@
                 }
             ]
         },
-        
+        {
+            "section": "cta-area",
+            "section_title": {
+                "title": "Please get in touch to find out more about how I can help",
+                "subtitle":""
+            },
+            "buttons": [
+                {
+                    "id": 1,
+                    "path": "/contact-me",
+                    "content": "Get In Touch"
+                }
+            ]
+        },
         {
             "section": "about-area",
             "section_title": {

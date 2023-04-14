@@ -5,6 +5,7 @@ import Layout from "@layout/layout-01";
 import HeroArea from "@containers/hero/layout-02";
 import QuoteArea from "@containers/quote/layout-02";
 import ServiceArea from "@containers/service/layout-01";
+import FaqArea from "@containers/faq/layout-03";
 // import FaqArea from "@containers/faq/layout-03";
 
 // import BrandArea from "@containers/brand/layout-01";
@@ -52,6 +53,7 @@ const Home: PageProps = ({ data }) => {
             <HeroArea data={content?.["hero-area"]} />
             <ServiceArea data={content?.["service-area"]} space="none" />
             <QuoteArea data={content?.["quote-area"]} />
+            <FaqArea data={content?.["faq-area"]} />
             {/* <FaqArea data={content?.["faq-area"]} /> */}
             {/* <BrandArea data={content?.["brand-area"]} />
             <CourseArea

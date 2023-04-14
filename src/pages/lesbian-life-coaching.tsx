@@ -2,6 +2,8 @@ import type { NextPage } from "next";
 import { GetStaticProps } from "next";
 import Layout from "@layout/layout-01";
 import HeroArea from "@containers/hero/layout-01";
+import CtaArea from "@containers/cta/layout-01";
+
 // import Wrapper from "@ui/wrapper/wrapper-01";
 
 // import ServiceArea from "@containers/service/layout-01";
@@ -19,7 +21,8 @@ import { IBlog, ICourse } from "@utils/types";
 
 import FaqArea from "@containers/faq/layout-03";
 import LifeCoachingCourses from "@containers/life-coaching-courses";
-import ButtonCentered from "@components/button/button";
+// import ButtonCentered from "@components/button/button"; small CTA button
+
 import SEO from "@components/seo/page-seo";
 import { getallCourses, getFilteredCourse } from "../lib/course";
 import { getAllBlogs } from "../lib/blog";
@@ -62,7 +65,8 @@ const LifeCoaching: PageProps = ({ data }) => {
             {/* <FaqArea data={content?.["faq-area"]} /> */}
             <LifeCoachingCourses data={content?.["coaching-courses-area"]} space="none" />
             <FaqArea data={content?.["faq-area"]} />
-            <ButtonCentered path="/contact-me" buttonText="Contact Me" text="To find out more about how I can help you please get in touch"/>
+            <CtaArea data={content?.["cta-area"]} space="bottom" />
+            {/* <ButtonCentered path="/contact-me" buttonText="Contact Me" text="To find out more about how I can help you please get in touch"/> */}
             
             {/* <LifeCoachingCourses data={content?.["life-coaching-courses"]} /> */}
             {/* <ServiceArea data={content?.["service-area"]} space="none" />
