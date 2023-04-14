@@ -21,13 +21,13 @@ const TwoColumnListWidget = ({ className, mode }: TProps) => {
                     <Anchor path="/">Home</Anchor>
                 </li>
                 <li className="tw-w-1/2 tw-pr-5 tw-mb-[11px]">
-                    <Anchor path="/life-coaching">Life Coaching</Anchor>
+                    <Anchor path="/lesbian-life-coaching">Life Coaching</Anchor>
                 </li>
                 <li className="tw-w-1/2 tw-pr-5 tw-mb-[11px]">
                     <Anchor path="/lesbitute-podcast">The Lesbitute Podcast</Anchor>
                 </li>
                 <li className="tw-w-1/2 tw-pr-5 tw-mb-[11px]">
-                    <Anchor path="/london-international-lesbian-meetup-group">London Lesbians Meetup Group</Anchor>
+                    <Anchor path="/london-international-lesbians-meetup-group">London Lesbians Meetup Group</Anchor>
                 </li>
                 <li className="tw-w-1/2 tw-pr-5 tw-mb-[11px]">
                     <Anchor path="/blog">Blog</Anchor>

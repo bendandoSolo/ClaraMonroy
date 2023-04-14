@@ -26,7 +26,7 @@
             "buttons": [
                 {
                     "id":1,
-                    "path": "/life-coaching/#services",
+                    "path": "/lesbian-life-coaching/#services",
                     "content":"Explore Services",
                     "icon": "far fa-download"
                 }
