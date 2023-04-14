@@ -1,12 +1,13 @@
 import type { GetStaticProps, NextPage } from "next";
 import SEO from "@components/seo/page-seo";
 import Layout from "@layout/layout-01";
-import Breadcrumb from "@components/breadcrumb";
-import VideoArea from "@containers/video/layout-05";
-import QuoteArea from "@containers/quote/layout-02";
 import FaqArea from "@containers/faq/layout-03";
-import RelatedCourseArea from "@containers/course/layout-02";
-import GalleryArea from "@containers/gallery";
+// import Breadcrumb from "@components/breadcrumb";
+// import VideoArea from "@containers/video/layout-05";
+// import QuoteArea from "@containers/quote/layout-02";
+
+// import RelatedCourseArea from "@containers/course/layout-02";
+// import GalleryArea from "@containers/gallery";
 
 import { normalizedData } from "@utils/methods";
 import { ICourse } from "@utils/types";

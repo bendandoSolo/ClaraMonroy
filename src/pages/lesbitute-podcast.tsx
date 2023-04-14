@@ -2,10 +2,10 @@ import type { GetStaticProps, NextPage } from "next";
 import SEO from "@components/seo/page-seo";
 import Layout from "@layout/layout-01";
 import HeroArea from "@containers/hero/layout-08";
-import TimelineArea from "@containers/timeline";
-import CtaArea from "@containers/cta/layout-01";
-import GalleryArea from "@containers/gallery";
-import FaqArea from "@containers/faq/layout-02";
+// import TimelineArea from "@containers/timeline";
+// import CtaArea from "@containers/cta/layout-01";
+// import GalleryArea from "@containers/gallery";
+// import FaqArea from "@containers/faq/layout-02";
 
 import { normalizedData } from "@utils/methods";
 import TheLesbitutePodcast from "@components/lesbitute-podcast";

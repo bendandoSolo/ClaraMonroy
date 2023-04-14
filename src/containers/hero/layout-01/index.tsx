@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { motion } from "framer-motion";
 import Button from "@ui/button";
-import CourseCard from "@components/course-card/course-01";
+// import CourseCard from "@components/course-card/course-01";
 import BottomShape from "@ui/bottom-shape/shape-01";
 import { scrollUpVariants } from "@utils/variants";
 import { useUI } from "@contexts/ui-context";
@@ -10,7 +10,7 @@ import {
     TextType,
     ButtonType,
     ImageType,
-    ICourse,
+    // ICourse,
 } from "@utils/types";
 
 type TProps = {
@@ -19,12 +19,12 @@ type TProps = {
         texts?: TextType[];
         buttons?: ButtonType[];
         images?: ImageType[];
-        popularCourse: ICourse;
+        // popularCourse: ICourse;
     };
 };
 
 const HeroArea = ({
-    data: { headings, texts, buttons, images, popularCourse },
+    data: { headings, texts, buttons, images },  // , popularCourse
 }: TProps) => {
     const { trans1 } = useUI();
 

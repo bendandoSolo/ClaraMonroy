@@ -1,17 +1,17 @@
 import { motion } from "framer-motion";
 import clsx from "clsx";
-import { HeadingType, ImageType, TextType } from "@utils/types";
+import { HeadingType, TextType } from "@utils/types"; // ImageType, 
 import { scrollLeftVariants, scrollRightVariants } from "@utils/variants";
 
 type TProps = {
     isEven: boolean;
     title: HeadingType;
-    image: ImageType;
+    // image: ImageType;
     texts: TextType[];
     heading: HeadingType;
 };
 
-const AlternatingTextBlock = ({ isEven, title, image, heading, texts }: TProps) => {
+const AlternatingTextBlock = ({ isEven, title, heading, texts }: TProps) => {
     return (
         <li className="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 tw-relative tw-mb-10 lg:tw-mb-[68px] tw-pl-[45px] tw-w-full md:tw-pl-0 last:tw-mb-0">
             {/* <div className="tw-absolute tw-top-0.5 tw-left-0 md:tw-left-1/2 md:-tw-translate-x-1/2 tw-w-7.5 tw-h-7.5 tw-text-primary before:tw-absolute before:tw-content-[''] before:tw-border before:tw-border-current before:tw-inset-0 before:tw-rounded-full before:tw-opacity-20">

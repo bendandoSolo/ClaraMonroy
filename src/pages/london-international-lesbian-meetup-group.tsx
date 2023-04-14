@@ -4,8 +4,8 @@ import Layout from "@layout/layout-01";
 import HeroArea from "@containers/hero/layout-07-01";
 // import TimelineArea from "@containers/timeline";
 import CtaArea from "@containers/cta/layout-01";
-import GalleryArea from "@containers/gallery";
-import FaqArea from "@containers/faq/layout-02";
+// import GalleryArea from "@containers/gallery";
+// import FaqArea from "@containers/faq/layout-02";
 
 import { normalizedData } from "@utils/methods";
 import AlternatingTextBlocks from "@containers/alternating-text-blocks";
