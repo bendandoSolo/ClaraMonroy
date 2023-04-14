@@ -37,7 +37,7 @@ const AlternatingTextBlocks = ({
                 {items && items.length > 0 && (
                     <ul className="tw-relative  tw-pb-[65px]">
                         <li className="tw-absolute tw-top-0 tw-left-3.8 md:tw-left-1/2 -tw-ml-px tw-h-full tw-border-l-2 tw-border-l-mishcka" />
-                        {items.map(({ id, headings, images, texts }, idx) => (
+                        {items.map(({ id, headings,  texts }, idx) => ( // images,
                             <AlternatingTextBlock
                                 key={id}
                                 title={headings[0]}
