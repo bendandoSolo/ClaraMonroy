@@ -32,15 +32,16 @@ const HeroArea = ({
         <div className="tw-h-full md:tw-min-h-[750px] xl:tw-min-h-[820px] tw-py-[50px] tw-relative tw-flex tw-items-center tw-isolate tw-bg-pearl tw-overflow-hidden">
             <h1 className="tw-sr-only">Life coaching for gay women</h1>
             <div className="bgimg tw-absolute tw-inset-0 -tw-z-10 tw-hidden md:tw-block">
-                images?.[0]?.src && (
+                {images?.[0]?.src ? ( 
                     <img
-                        src={images[0].src}
+
+                        src={images[0].src || ""}
                         alt={images[0]?.alt || "bg"}
                         loading="eager"
                         style={{width: '100%', height: '100%', objectFit: 'contain', position: 'absolute', top: 0, left: '200px', right: 0, bottom: 0}}
                         
                     />
-                )
+                ) : null }
             </div>
             <div className="tw-container 3xl:tw-max-w-full 3xl:tw-px-37">
                 <div className="tw-grid md:tw-gap-7.5 md:tw-grid-cols-2">
