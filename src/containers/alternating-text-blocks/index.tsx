@@ -41,7 +41,7 @@ const AlternatingTextBlocks = ({
                             <AlternatingTextBlock
                                 key={id}
                                 title={headings[0]}
-                                image={images[0]}
+                                // image={images[0]}
                                 texts={texts}
                                 heading={headings[1]}
                                 isEven={idx % 2 === 0}
