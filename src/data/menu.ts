@@ -36,7 +36,7 @@ export default [
     },
     {
         id: 8,
-        label: "Contact Me",
+        label: "Contact",
         path: "/contact-me",
     },
 ];
