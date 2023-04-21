@@ -11,11 +11,18 @@ type TProps = {
     className?: string;
 };
 
+type JsonResponse = {
+    message: string;
+  };
+
+
 interface IFormValues {
     name: string;
     email: string;
-    subject: string;
+    phone: string;
     message: string;
+    to: string;
+    website: string;
 }
 
 const ContactForm = forwardRef<HTMLFormElement, TProps>(
@@ -27,11 +34,39 @@ const ContactForm = forwardRef<HTMLFormElement, TProps>(
             formState: { errors },
         } = useForm<IFormValues>();
 
-        const onSubmit: SubmitHandler<IFormValues> = (data) => {
+        const onSubmit: SubmitHandler<IFormValues> = async (emailData) => {
             // eslint-disable-next-line no-console
-            console.log(data);
+            console.log(emailData);
             setMessage("Thank you for your message!");
+             // eslint-disable-next-line no-console
+            console.log("sending animation, error animation, success animation required");
+            
+            emailData.to = "enquiries@bendando.com";
+            emailData.website = "bendando.com";
+            const response = await fetch(
+            "https://sendgridcsharp.azurewebsites.net/api/sendemail",
+                {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(emailData),
+                }
+            );
+            try {
+                const bodyresponse: JsonResponse = (await response.json()) as JsonResponse;
+                if (
+                    response.status === 200 &&
+                    bodyresponse.message != null &&
+                    bodyresponse.message === "Email Sent"
+                ) {
+                    // responseSuccessAnimation();
+                } else {
+                    // responseErrorAnimation();
+                }
+                } catch (err) {
+                // responseErrorAnimation();
+            }
         };
+
         return (
             <form
                 className={clsx(className)}
@@ -80,18 +115,18 @@ const ContactForm = forwardRef<HTMLFormElement, TProps>(
                     </div>
                 </div>
                 <div className="tw-mb-5 md:tw-mb-7.5">
-                    <label htmlFor="subject" className="tw-sr-only">
-                        Subject
+                    <label htmlFor="phone" className="tw-sr-only">
+                     Phone
                     </label>
                     <Input
-                        id="subject"
-                        placeholder="Subject *"
+                        id="phone"
+                        placeholder="phone number *"
                         bg="light"
-                        feedbackText={errors?.subject?.message}
-                        state={hasKey(errors, "subject") ? "error" : "success"}
-                        showState={!!hasKey(errors, "subject")}
-                        {...register("subject", {
-                            required: "Subject is required",
+                        feedbackText={errors?.phone?.message}
+                        state={hasKey(errors, "phone") ? "error" : "success"}
+                        showState={!!hasKey(errors, "phone")}
+                        {...register("phone", {
+                            
                         })}
                     />
                 </div>
