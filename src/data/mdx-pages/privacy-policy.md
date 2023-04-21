@@ -2,6 +2,21 @@
 
 This Privacy Policy describes how your personal information is collected, used, and shared when you visit https://www.claramonroy.com/ (the “Site”).
 
+
+
+## A Message from Clara
+
+![I respect your privacy completely - Clara Monroy](/clara-images/Clara-Monroy-monochrome-headshot-sm.png)****
+
+All to often websites collect personal data and it's make it difficult to opt out of the use of cookies to track your data and browsing habits.
+This will never be the case with me.
+All the information I provide on this website is free and part of my continuing mission to support this wonderful community that I am proud to be part of.
+It bring me a great sense of fulfillment to think that the I can help the personal growth and transformation of gay women. So please fell free to read my articles, listen to my podcast, join my community group and know that you have the same respect and anonymity as you would have in one of my life coaching sessions.
+
+Be Joyful !
+
+Clara Monroy
+
 ### We Don't Collect any of your data
 
 We respect your privacy and to this end do not collect any of your personal data.
@@ -10,7 +25,7 @@ We respect your privacy and to this end do not collect any of your personal data
 
 2. We do not use any analytics scripts such as Google Analytics to measure your use of this website.
 
-
+****
 ### We do collect general information about the use of the website
 
 We do use Google Search Console to track interest and visits to the website. However none of this data is personal, we only
