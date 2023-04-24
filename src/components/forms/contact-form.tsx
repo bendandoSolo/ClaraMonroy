@@ -81,10 +81,9 @@ const ContactForm = forwardRef<HTMLFormElement, TProps>(
         const onSubmit: SubmitHandler<IFormValues> = async (emailData) => {
             // should debounce and reset form
             sendingAnimation();
-            emailData.to = "enquiries@bendando.com";
-            emailData.website = "bendando.com";
-            const response = await fetch(
-            "https://sendgridcsharp.azurewebsites.net/api/sendemail",
+            emailData.to = "hello@claramonroy.com";
+            emailData.website = "claramonroy.com";
+            const response = await fetch('https://csharpsendgridwithresponse.azurewebsites.net/api/SendGridWithResponseCSharp',
                 {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
@@ -107,9 +106,6 @@ const ContactForm = forwardRef<HTMLFormElement, TProps>(
                     responseAnimation("fail");
                 }
         };
-
-        
-
 
         return (
             <form
