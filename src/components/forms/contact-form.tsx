@@ -1,20 +1,14 @@
-/* eslint-disable */
 import { forwardRef, useRef } from "react";
 import clsx from "clsx";
 import { useForm, SubmitHandler } from "react-hook-form";
 import Input from "@ui/form-elements/input";
 import Textarea from "@ui/form-elements/textarea";
- //import Feedback from "@ui/form-elements/feedback";
 import Button from "@ui/button";
 import { hasKey } from "@utils/methods";
 
 type TProps = {
     className?: string;
 };
-
-// type JsonResponse = {
-//     message: string;
-//   };
 
 interface IFormValues {
     name: string;
@@ -25,15 +19,18 @@ interface IFormValues {
     website: string;
 }
 
+type JsonResponse = {
+    message: string;
+  };
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-// function parseJsonResponse(json: any): JsonResponse {
-//     // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-//     if (typeof json.message === "string") {
-//       // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-//       return json;
-//     }
-//     throw new Error("Invalid JSON response");
-//   }
+function parseJsonResponse(json: any): JsonResponse {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+    if (typeof json.message === "string") {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-return
+      return json;
+    }
+    throw new Error("Invalid JSON response");
+  }
 
 const ContactForm = forwardRef<HTMLFormElement, TProps>(
     ({ className }, ref) => {
@@ -81,53 +78,34 @@ const ContactForm = forwardRef<HTMLFormElement, TProps>(
             }
           }
 
-          
-
-
-        const onSubmit: SubmitHandler<IFormValues> = (emailData) => {
+        const onSubmit: SubmitHandler<IFormValues> = async (emailData) => {
+            // should debounce and reset form
             sendingAnimation();
-            
-            responseAnimation("success");
-            
-            // eslint-disable-next-line no-console
-             console.log(emailData);
-            // setMessage("Thank you for your message!");
-            //  // eslint-disable-next-line no-console
-            // console.log("sending animation, error animation, success animation required");
-            
-            // emailData.to = "enquiries@bendando.com";
-            // emailData.website = "bendando.com";
-            // const response = await fetch(
-            // "https://sendgridcsharp.azurewebsites.net/api/sendemail",
-            //     {
-            //     method: "POST",
-            //     headers: { "Content-Type": "application/json" },
-            //     body: JSON.stringify(emailData),
-            //     }
-            // );
-            // try {
-            //     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-            //     const jsonResponse = await response.json();
-            //     const bodyresponse = parseJsonResponse(jsonResponse);
-            //     // const bodyresponse = (await response.json()) as JsonResponse;
-
-            //      // eslint-disable-next-line no-console
-            //      console.log(bodyresponse.message);
-            //     // if (
-            //     //     response.status === 200 &&
-            //     //     bodyresponse.message != null &&
-            //     //     bodyresponse.message === "Email Sent"
-            //     // ) {
-            //     //     // responseSuccessAnimation();
-            //     // } else {
-            //     //     // responseErrorAnimation();
-            //     // }
-            //     } catch (err) {
-
-            //         // eslint-disable-next-line no-console
-            //      console.log(message);
-            //     // // responseErrorAnimation();
-            // }
+            emailData.to = "enquiries@bendando.com";
+            emailData.website = "bendando.com";
+            const response = await fetch(
+            "https://sendgridcsharp.azurewebsites.net/api/sendemail",
+                {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(emailData),
+                }
+            );
+            try {
+                // const jsonResponse = ;
+                const bodyresponse = parseJsonResponse(await response.json());
+                if (
+                    response.status === 200 &&
+                    bodyresponse.message != null &&
+                    bodyresponse.message === "Email Sent"
+                ) {
+                    responseAnimation("success");
+                } else {
+                    responseAnimation("fail");
+                }
+                } catch (err) {
+                    responseAnimation("fail");
+                }
         };
 
         
@@ -229,4 +207,3 @@ const ContactForm = forwardRef<HTMLFormElement, TProps>(
 );
 
 export default ContactForm;
-/* eslint-disable */
