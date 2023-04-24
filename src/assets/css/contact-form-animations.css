@@ -20,8 +20,10 @@
   }
   
   #feedback {
+    border-radius: 4px;
     margin-top: 1rem;
-    background: #ff6f00;
+    /* background: set by tailwind class on element */
+    /* background: #ff6f00;  */
     height: 0;
     display: flex;
     align-items: center;
@@ -33,17 +35,20 @@
     display: flex;
     align-items: center;
     margin: 0 !important;
+    padding-bottom: 20px;  /* space above the send button */
   }
   
   #feedback-text,
   #response-text {
+    border-radius: 4px;
     opacity: 0;
     visibility: hidden;
     color: white;
     position: absolute;
-    margin-top: 15px;
+    margin-top: 0;
     margin-left: 15px;
     font-weight: 500;
+    line-height: 50px;
   }
   
   @keyframes pop-down {

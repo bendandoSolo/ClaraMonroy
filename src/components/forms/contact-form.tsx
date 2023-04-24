@@ -1,4 +1,5 @@
-import { forwardRef, useState } from "react";
+/* eslint-disable */
+import { forwardRef, useState, useRef } from "react";
 import clsx from "clsx";
 import { useForm, SubmitHandler } from "react-hook-form";
 import Input from "@ui/form-elements/input";
@@ -33,7 +34,7 @@ function parseJsonResponse(json: any): JsonResponse {
     }
     throw new Error("Invalid JSON response");
   }
-  
+
 const ContactForm = forwardRef<HTMLFormElement, TProps>(
     ({ className }, ref) => {
         const [message, setMessage] = useState("");
@@ -43,64 +44,66 @@ const ContactForm = forwardRef<HTMLFormElement, TProps>(
             formState: { errors },
         } = useForm<IFormValues>();
 
+      const feedback = useRef<HTMLDivElement>(null);
+      const feedbackText = useRef<HTMLParagraphElement>(null);
+
         function sendingAnimation() {
-            const feedback = document.getElementById("feedback");
-            const feedbackText = document.getElementById("feedback-text");
-            feedback?.classList.add("pop-down");
-            feedbackText?.classList.add("fade-in");
+            if (feedback.current && feedbackText.current) {
+            feedback.current?.classList.add("pop-down");
+            feedbackText.current?.classList.add("fade-in");
             setTimeout( () => {
-                feedback?.classList.remove("pop-down");
-                feedbackText?.classList.add("fade-out");
-                feedback?.classList.add("pop-up");
+                feedback.current?.classList.remove("pop-down");
+                feedbackText.current?.classList.add("fade-out");
+                feedback.current?.classList.add("pop-up");
             }, 1500);
-            // eslint-disable-next-line func-names
             setTimeout( () => {
-              feedback?.classList.remove("pop-up");
-              feedbackText?.classList.remove("fade-out", "fade-in");
+              feedback.current?.classList.remove("pop-up");
+              feedbackText.current?.classList.remove("fade-out", "fade-in");
             }, 2500);
+            }
           }
 
-        const onSubmit: SubmitHandler<IFormValues> = async (emailData) => {
+        const onSubmit: SubmitHandler<IFormValues> = (emailData) => {
             sendingAnimation();
             // eslint-disable-next-line no-console
-            console.log(emailData);
-            setMessage("Thank you for your message!");
-             // eslint-disable-next-line no-console
-            console.log("sending animation, error animation, success animation required");
+            // console.log(emailData);
+            // setMessage("Thank you for your message!");
+            //  // eslint-disable-next-line no-console
+            // console.log("sending animation, error animation, success animation required");
             
-            emailData.to = "enquiries@bendando.com";
-            emailData.website = "bendando.com";
-            const response = await fetch(
-            "https://sendgridcsharp.azurewebsites.net/api/sendemail",
-                {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(emailData),
-                }
-            );
-            try {
-                // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-                const jsonResponse = await response.json();
-                const bodyresponse = parseJsonResponse(jsonResponse);
-                // const bodyresponse = (await response.json()) as JsonResponse;
+            // emailData.to = "enquiries@bendando.com";
+            // emailData.website = "bendando.com";
+            // const response = await fetch(
+            // "https://sendgridcsharp.azurewebsites.net/api/sendemail",
+            //     {
+            //     method: "POST",
+            //     headers: { "Content-Type": "application/json" },
+            //     body: JSON.stringify(emailData),
+            //     }
+            // );
+            // try {
+            //     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+            //     const jsonResponse = await response.json();
+            //     const bodyresponse = parseJsonResponse(jsonResponse);
+            //     // const bodyresponse = (await response.json()) as JsonResponse;
 
-                 // eslint-disable-next-line no-console
-                 console.log(bodyresponse.message);
-                // if (
-                //     response.status === 200 &&
-                //     bodyresponse.message != null &&
-                //     bodyresponse.message === "Email Sent"
-                // ) {
-                //     // responseSuccessAnimation();
-                // } else {
-                //     // responseErrorAnimation();
-                // }
-                } catch (err) {
+            //      // eslint-disable-next-line no-console
+            //      console.log(bodyresponse.message);
+            //     // if (
+            //     //     response.status === 200 &&
+            //     //     bodyresponse.message != null &&
+            //     //     bodyresponse.message === "Email Sent"
+            //     // ) {
+            //     //     // responseSuccessAnimation();
+            //     // } else {
+            //     //     // responseErrorAnimation();
+            //     // }
+            //     } catch (err) {
 
-                    // eslint-disable-next-line no-console
-                 console.log(message);
-                // // responseErrorAnimation();
-            }
+            //         // eslint-disable-next-line no-console
+            //      console.log(message);
+            //     // // responseErrorAnimation();
+            // }
         };
 
         
@@ -169,7 +172,7 @@ const ContactForm = forwardRef<HTMLFormElement, TProps>(
                         })}
                     />
                 </div>
-                <div className="tw-mb-5 md:tw-mb-7.5">
+                <div className="tw-mb-5 md:tw-mb-5">
                     <label htmlFor="message" className="tw-sr-only">
                         comment
                     </label>
@@ -185,9 +188,16 @@ const ContactForm = forwardRef<HTMLFormElement, TProps>(
                         })}
                     />
                 </div>
+                <div ref={feedback} id="feedback" className='tw-bg-secondary'>
+                    <p ref={feedbackText} id="feedback-text" >Sending...</p>
+                </div>
+                <div id="response">
+                    <p id="response-text" />
+                </div>
                 <Button type="submit" className="tw-w-[180px]">
                     Submit
                 </Button>
+               
                 {message && <Feedback state="success">{message}</Feedback>}
             </form>
         );
@@ -195,3 +205,4 @@ const ContactForm = forwardRef<HTMLFormElement, TProps>(
 );
 
 export default ContactForm;
+/* eslint-disable */
