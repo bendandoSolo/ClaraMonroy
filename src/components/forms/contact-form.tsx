@@ -15,7 +15,6 @@ type JsonResponse = {
     message: string;
   };
 
-
 interface IFormValues {
     name: string;
     email: string;
@@ -25,6 +24,16 @@ interface IFormValues {
     website: string;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function parseJsonResponse(json: any): JsonResponse {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+    if (typeof json.message === "string") {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-return
+      return json;
+    }
+    throw new Error("Invalid JSON response");
+  }
+  
 const ContactForm = forwardRef<HTMLFormElement, TProps>(
     ({ className }, ref) => {
         const [message, setMessage] = useState("");
@@ -34,7 +43,25 @@ const ContactForm = forwardRef<HTMLFormElement, TProps>(
             formState: { errors },
         } = useForm<IFormValues>();
 
+        function sendingAnimation() {
+            const feedback = document.getElementById("feedback");
+            const feedbackText = document.getElementById("feedback-text");
+            feedback?.classList.add("pop-down");
+            feedbackText?.classList.add("fade-in");
+            setTimeout( () => {
+                feedback?.classList.remove("pop-down");
+                feedbackText?.classList.add("fade-out");
+                feedback?.classList.add("pop-up");
+            }, 1500);
+            // eslint-disable-next-line func-names
+            setTimeout( () => {
+              feedback?.classList.remove("pop-up");
+              feedbackText?.classList.remove("fade-out", "fade-in");
+            }, 2500);
+          }
+
         const onSubmit: SubmitHandler<IFormValues> = async (emailData) => {
+            sendingAnimation();
             // eslint-disable-next-line no-console
             console.log(emailData);
             setMessage("Thank you for your message!");
@@ -52,20 +79,32 @@ const ContactForm = forwardRef<HTMLFormElement, TProps>(
                 }
             );
             try {
-                const bodyresponse: JsonResponse = (await response.json()) as JsonResponse;
-                if (
-                    response.status === 200 &&
-                    bodyresponse.message != null &&
-                    bodyresponse.message === "Email Sent"
-                ) {
-                    // responseSuccessAnimation();
-                } else {
-                    // responseErrorAnimation();
-                }
+                // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+                const jsonResponse = await response.json();
+                const bodyresponse = parseJsonResponse(jsonResponse);
+                // const bodyresponse = (await response.json()) as JsonResponse;
+
+                 // eslint-disable-next-line no-console
+                 console.log(bodyresponse.message);
+                // if (
+                //     response.status === 200 &&
+                //     bodyresponse.message != null &&
+                //     bodyresponse.message === "Email Sent"
+                // ) {
+                //     // responseSuccessAnimation();
+                // } else {
+                //     // responseErrorAnimation();
+                // }
                 } catch (err) {
-                // responseErrorAnimation();
+
+                    // eslint-disable-next-line no-console
+                 console.log(message);
+                // // responseErrorAnimation();
             }
         };
+
+        
+
 
         return (
             <form
