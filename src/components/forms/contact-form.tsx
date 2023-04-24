@@ -1,10 +1,10 @@
 /* eslint-disable */
-import { forwardRef, useState, useRef } from "react";
+import { forwardRef, useRef } from "react";
 import clsx from "clsx";
 import { useForm, SubmitHandler } from "react-hook-form";
 import Input from "@ui/form-elements/input";
 import Textarea from "@ui/form-elements/textarea";
-import Feedback from "@ui/form-elements/feedback";
+ //import Feedback from "@ui/form-elements/feedback";
 import Button from "@ui/button";
 import { hasKey } from "@utils/methods";
 
@@ -12,9 +12,9 @@ type TProps = {
     className?: string;
 };
 
-type JsonResponse = {
-    message: string;
-  };
+// type JsonResponse = {
+//     message: string;
+//   };
 
 interface IFormValues {
     name: string;
@@ -26,47 +26,71 @@ interface IFormValues {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-function parseJsonResponse(json: any): JsonResponse {
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-    if (typeof json.message === "string") {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-      return json;
-    }
-    throw new Error("Invalid JSON response");
-  }
+// function parseJsonResponse(json: any): JsonResponse {
+//     // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+//     if (typeof json.message === "string") {
+//       // eslint-disable-next-line @typescript-eslint/no-unsafe-return
+//       return json;
+//     }
+//     throw new Error("Invalid JSON response");
+//   }
 
 const ContactForm = forwardRef<HTMLFormElement, TProps>(
     ({ className }, ref) => {
-        const [message, setMessage] = useState("");
+        // const [message, setMessage] = useState("");
         const {
             register,
             handleSubmit,
             formState: { errors },
         } = useForm<IFormValues>();
 
-      const feedback = useRef<HTMLDivElement>(null);
+      const feedbackDiv = useRef<HTMLDivElement>(null);
       const feedbackText = useRef<HTMLParagraphElement>(null);
+      const responseDiv = useRef<HTMLDivElement>(null);
+      const responseText = useRef<HTMLParagraphElement>(null);
 
         function sendingAnimation() {
-            if (feedback.current && feedbackText.current) {
-            feedback.current?.classList.add("pop-down");
+            if (feedbackDiv.current && feedbackText.current) {
+            feedbackDiv.current?.classList.add("pop-down");
             feedbackText.current?.classList.add("fade-in");
             setTimeout( () => {
-                feedback.current?.classList.remove("pop-down");
+                feedbackDiv.current?.classList.remove("pop-down");
                 feedbackText.current?.classList.add("fade-out");
-                feedback.current?.classList.add("pop-up");
+                feedbackDiv.current?.classList.add("pop-up");
             }, 1500);
             setTimeout( () => {
-              feedback.current?.classList.remove("pop-up");
+              feedbackDiv.current?.classList.remove("pop-up");
               feedbackText.current?.classList.remove("fade-out", "fade-in");
             }, 2500);
             }
           }
 
+          function responseAnimation(response: string): void {
+            if (responseDiv.current && responseText.current) {
+                responseDiv.current.classList.add("pop-down", "message-sent");
+                responseText.current.classList.add("fade-in");
+                if (response === "success")
+                {
+                    responseDiv.current.classList.add("tw-bg-success");
+                    responseText.current.innerHTML = `Message Sent Successfully <i class="fas fa-check ms-2"></i>`;
+                }
+                else{
+                    responseDiv.current.classList.add("tw-bg-danger");
+                    responseText.current.innerHTML = `Error - Please Try Again <i class="fas fa-undo ms-2"></i>`;
+                }
+            }
+          }
+
+          
+
+
         const onSubmit: SubmitHandler<IFormValues> = (emailData) => {
             sendingAnimation();
+            
+            responseAnimation("success");
+            
             // eslint-disable-next-line no-console
-            // console.log(emailData);
+             console.log(emailData);
             // setMessage("Thank you for your message!");
             //  // eslint-disable-next-line no-console
             // console.log("sending animation, error animation, success animation required");
@@ -172,7 +196,7 @@ const ContactForm = forwardRef<HTMLFormElement, TProps>(
                         })}
                     />
                 </div>
-                <div className="tw-mb-5 md:tw-mb-5">
+                <div className="tw-mb-3 md:tw-mb-3">
                     <label htmlFor="message" className="tw-sr-only">
                         comment
                     </label>
@@ -188,17 +212,17 @@ const ContactForm = forwardRef<HTMLFormElement, TProps>(
                         })}
                     />
                 </div>
-                <div ref={feedback} id="feedback" className='tw-bg-secondary'>
+                <div ref={feedbackDiv} id="feedback" className='tw-bg-secondary'>
                     <p ref={feedbackText} id="feedback-text" >Sending...</p>
                 </div>
-                <div id="response">
-                    <p id="response-text" />
+                <div ref={responseDiv} id="response">
+                    <p ref={responseText} id="response-text" />
                 </div>
                 <Button type="submit" className="tw-w-[180px]">
                     Submit
                 </Button>
                
-                {message && <Feedback state="success">{message}</Feedback>}
+                {/* {message && <Feedback state="success">{message}</Feedback>} */}
             </form>
         );
     }

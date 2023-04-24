@@ -31,16 +31,18 @@
   }
   
   #response {
+    border-radius: 4px;
     height: 0;
     display: flex;
     align-items: center;
-    margin: 0 !important;
-    padding-bottom: 20px;  /* space above the send button */
+    margin: 12px 0 !important;
+    
+    /* padding-bottom: 20px;   */
+    /* space above the send button */
   }
   
   #feedback-text,
   #response-text {
-    border-radius: 4px;
     opacity: 0;
     visibility: hidden;
     color: white;
@@ -107,11 +109,11 @@
     animation: 1s fade-out both;
   }
   
-  .message-sent {
+  /* .message-sent {
     background-color: #18dca8;
   }
   
   .message-error {
     background-color: #dc3c18;
   }
-  
+   */
