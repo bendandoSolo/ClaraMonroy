@@ -40,6 +40,7 @@ const LifeCoachingCourses = ({
                 <AnimatedCoachingService 
                 object = {item}
                 index = {index}
+                key={item.id}
                 />
             ))}
 
