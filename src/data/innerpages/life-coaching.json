@@ -98,6 +98,7 @@
             "services": [
                 {
                     "title": "Coming Out",
+                    "id": 1,
                     "texts": [
                         { "id": 1, "content": "Navigating your sexual orientation can be challenging, whether you're questioning your identity or have come to terms with being lesbian, bi, queer. It can be difficult to accept and you may feel scared about how your loved ones will react."},
                         { "id": 2, "content": "That's where my coaching services come in. With warmth and professionalism, we can work together to explore what your sexuality means to you and determine the best way for you to come out -if you decide to do so-. We'll work on exploring your experience and finding out how you can live authentically as your true self."},
@@ -107,42 +108,45 @@
                 },
                 {
                     "title": "Self-Empowerment",
+                    "id": 2,
                     "texts": [
-                        { "id": 1, "content": "Life can throw many unpredictable challenges our way, leaving us feeling stuck or frustrated with where we're at. If you find yourself constantly thinking about how to fix everything around you but not sure where to start, then it's time to take action and work on self empowerment."},
-                        { "id": 2, "content": "Together, we'll delve into your inner world and uncover what truly matters to you. We'll identify your values and purpose, and explore any limiting beliefs that may be holding you back. From there, we'll work together to widen your perspective and create empowering beliefs that will push you towards the life you desire."},
-                        { "id": 3, "content": "Taking responsibility for your life and embracing self-empowerment will help you overcome obstacles, get unstuck and live in alignment with your true self. So, are you ready to create the change you want to see in your life? Let's get started!"}
+                        { "id": 4, "content": "Life can throw many unpredictable challenges our way, leaving us feeling stuck or frustrated with where we're at. If you find yourself constantly thinking about how to fix everything around you but not sure where to start, then it's time to take action and work on self empowerment."},
+                        { "id": 5, "content": "Together, we'll delve into your inner world and uncover what truly matters to you. We'll identify your values and purpose, and explore any limiting beliefs that may be holding you back. From there, we'll work together to widen your perspective and create empowering beliefs that will push you towards the life you desire."},
+                        { "id": 6, "content": "Taking responsibility for your life and embracing self-empowerment will help you overcome obstacles, get unstuck and live in alignment with your true self. So, are you ready to create the change you want to see in your life? Let's get started!"}
                     ],
                     "suffix": "FEELING STUCK IN AN UNFULFILLING RELATIONSHIP? LET'S WORK TOGETHER TO FIND A WAY FORWARD THAT ALIGNS WITH YOUR AUTHENTIC SELF AND LEADS TO THE HAPPINESS YOU DESERVE!"
                 },
                 {
                     "title": "Relationship Break-Up",
+                    "id": 3,
                     "texts": [
                         {
-                          "id": 1, "content": "Relationships can be complicated and it's not uncommon to feel a sense of unease and dissatisfaction at times. Sometimes, despite our best efforts, we may find ourselves in an unfulfilling partnership that leaves us feeling stuck and disconnected."
+                          "id": 7, "content": "Relationships can be complicated and it's not uncommon to feel a sense of unease and dissatisfaction at times. Sometimes, despite our best efforts, we may find ourselves in an unfulfilling partnership that leaves us feeling stuck and disconnected."
                         },
                         {
-                          "id": 2, "content": "If you're feeling trapped in a relationship that no longer serves you, it may be time to take a step back and reflect on your situation from an existential perspective. By examining your values, needs, and desires, you can gain a deeper understanding of what truly matters to you and what you want out of life."
+                          "id": 8, "content": "If you're feeling trapped in a relationship that no longer serves you, it may be time to take a step back and reflect on your situation from an existential perspective. By examining your values, needs, and desires, you can gain a deeper understanding of what truly matters to you and what you want out of life."
                         },
                         {
-                          "id": 3, "content": "Together, we can explore the reasons why you feel like leaving and what may be holding you back. We'll work to identify any fears or anxieties that may be keeping you stuck in a relationship that no longer aligns with your authentic self."
+                          "id": 9, "content": "Together, we can explore the reasons why you feel like leaving and what may be holding you back. We'll work to identify any fears or anxieties that may be keeping you stuck in a relationship that no longer aligns with your authentic self."
                         },
                         {
-                          "id": 4,"content": "If leaving is truly what you desire, we can work together to develop a plan of action and provide support as you navigate this difficult transition. It's okay to prioritise your own needs and happiness. By taking responsibility for your life and making the decision to move on, you can open yourself up to new opportunities and the possibility of a more fulfilling future."
+                          "id": 10,"content": "If leaving is truly what you desire, we can work together to develop a plan of action and provide support as you navigate this difficult transition. It's okay to prioritise your own needs and happiness. By taking responsibility for your life and making the decision to move on, you can open yourself up to new opportunities and the possibility of a more fulfilling future."
                         }
                       ],
                     "suffix": "STUCK IN AN UNFULFILLING RELATIONSHIP? LET'S WORK TOGETHER TO FIND A WAY FORWARD THAT ALIGNS WITH YOUR AUTHENTIC SELF AND LEADS TO THE HAPPINESS YOU DESERVE!"
                 },
                 {
                     "title": "Late Blooming and Sexual Fluidity",
+                    "id": 4,
                     "texts": [
                         {
-                          "id": 1, "content": "Do you find yourself grappling with your sexuality? Perhaps you're a woman over 40 who has always identified as straight, but now you find yourself drawn to another woman? Let's talk and explore the depths of what this means for you."
+                          "id": 11, "content": "Do you find yourself grappling with your sexuality? Perhaps you're a woman over 40 who has always identified as straight, but now you find yourself drawn to another woman? Let's talk and explore the depths of what this means for you."
                         },
                         {
-                          "id": 2, "content": "We'll delve into the existential questions that arise, such as who we are, what defines us, and how we change. And we'll navigate through any confusion or uncertainty, so you can fully embrace yourself and your evolving sexuality."
+                          "id": 12, "content": "We'll delve into the existential questions that arise, such as who we are, what defines us, and how we change. And we'll navigate through any confusion or uncertainty, so you can fully embrace yourself and your evolving sexuality."
                         },
                         {
-                          "id": 3,"content": "Life is a beautiful journey of growth and discovery and you have all the power to shape your own path."
+                          "id": 13,"content": "Life is a beautiful journey of growth and discovery and you have all the power to shape your own path."
                         }
                       ],
                     "suffix": "LET'S EXPLORE YOUR EVOLVING SEXUALITY TOGETHER AND NAVIGATE ANY CONFUSION OR UNCERTAINTY. YOU HAVE THE POWER TO SHAPE YOUR OWN PATH IN THIS BEAUTIFUL JOURNEY OF GROWTH AND DISCOVERY!"
