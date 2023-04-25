@@ -1,5 +1,5 @@
 export default {
-    name: "MaxCoach",
-    titleTemplate: "Online Learning React Education Template",
-    description: "Online Learning and Education React NextJS Template",
+    name: "Clara Monroy",
+    titleTemplate: "Services for Lesbian Women in London",
+    description: "Life coaching, the lesbitute podcast and London Lesbian Meetup Group",
 };

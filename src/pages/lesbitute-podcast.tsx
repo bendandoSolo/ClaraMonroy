@@ -31,7 +31,7 @@ const LesbitutePodcast: PageProps = ({ data }) => {
     const content = normalizedData<PageContent>(data.page?.content, "section");
     return (
         <div >
-            <SEO title="The Lesbitute Podcast | Clara Monroy" />
+            <SEO title="The Lesbitute Podcast" />
             <HeroArea data={content?.["hero-area"]} />
             <h1 className="tw-sr-only">The Lesbitute Podcast</h1>
             <TheLesbitutePodcast />

@@ -54,7 +54,7 @@ const LifeCoaching: PageProps = ({ data }) => {
 
     return (
         <>
-            <SEO title="Life Coaching | Clara Monroy" />
+            <SEO title="Life Coaching" />
             <HeroArea
                 data={{
                     ...content?.["hero-area"],

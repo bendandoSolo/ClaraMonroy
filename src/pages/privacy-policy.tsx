@@ -20,7 +20,7 @@ type PageProps = NextPage<TProps> & {
 const PrivacyPolicy: PageProps = ({ data}) => {
     return (
         <>
-            <SEO title="Privacy Policy | Clara Monroy" />
+            <SEO title="Privacy Policy" />
             <Breadcrumb
                 pages={[{ path: "/", label: "home" }]}
                 currentPage="Privacy Policy"
