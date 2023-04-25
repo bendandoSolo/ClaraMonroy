@@ -59,7 +59,7 @@
           "unnamedComponents": "arrow-function"
         }
       ],
-      "prettier/prettier": "0",
+      "prettier/prettier": "off",
       "jsx-a11y/anchor-is-valid": [ "error", {
         "components": [ "Link" ],
         "specialLink": [ "hrefLeft", "hrefRight" ],
