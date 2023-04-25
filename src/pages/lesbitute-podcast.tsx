@@ -8,8 +8,8 @@ import GalleryArea from "@containers/gallery";
 import FaqArea from "@containers/faq/layout-02";
 
 import { normalizedData } from "@utils/methods";
-import { getPageData } from "../lib/page";
 import TheLesbitutePodcast from "@components/lesbitute-podcast";
+import { getPageData } from "../lib/page";
 
 interface PageContent {
     section: string;
