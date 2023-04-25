@@ -31,7 +31,7 @@ const TermsOfService: PageProps = ({ data }) => {
             />
             <div className="tw-container tw-pb-15 md:tw-pb-20 lg:tw-pb-[100px] tw-grid tw-grid-cols-3 tw-gap-7.5 lg:tw-gap-15">
                 <div className="tw-col-span-full tw-order-2 lg:tw-order-1 lg:tw-col-[1/1]">
-                    <PageSidebar recentCourses={data.recentCourses} />
+                    <PageSidebar  />  {/* recentCourses={data.recentCourses} */}
                 </div>
                 <div className="tw-col-span-full tw-order-1 lg:tw-order-2 lg:tw-col-[2/-1]">
                     <MarkdownRenderer content={data.page} />

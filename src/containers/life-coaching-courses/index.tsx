@@ -51,5 +51,4 @@ const LifeCoachingCourses = ({
     );
 }
 
-
 export default LifeCoachingCourses;

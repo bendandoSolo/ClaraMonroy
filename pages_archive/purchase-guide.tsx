@@ -7,8 +7,8 @@ import MarkdownRenderer from "@components/markdown-renderer";
 
 import { ICourse } from "@utils/types";
 
-import { getallCourses } from "../lib/course";
-import { getPageBySlug } from "../lib/mdx-pages";
+import { getallCourses } from "../src/lib/course";
+import { getPageBySlug } from "../src/lib/mdx-pages";
 
 type TProps = {
     data: {
@@ -44,7 +44,7 @@ const PurchaseGuide: PageProps = ({ data }) => {
 PurchaseGuide.Layout = Layout;
 
 export const getStaticProps: GetStaticProps = () => {
-    const page = getPageBySlug("purchage-guide");
+    const page = getPageBySlug("purchase-guide");
     const recentCourses = getallCourses(
         ["title", "thumbnail", "price", "currency"],
         0,

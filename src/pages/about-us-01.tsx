@@ -10,6 +10,7 @@ import CtaArea from "@containers/cta/layout-02";
 import TeamArea from "@containers/team/layout-02";
 import NewsletterArea from "@containers/newsletter/layout-01";
 
+
 import { normalizedData } from "@utils/methods";
 
 import { getPageData } from "../lib/page";

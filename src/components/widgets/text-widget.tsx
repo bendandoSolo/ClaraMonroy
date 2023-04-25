@@ -21,17 +21,26 @@ const TextWidget = ({ className, mode }: TProps) => {
                     382 NE 191st St # 87394 Miami, FL 33179-3899
                 </p> */}
                 <p className="tw-mb-[11px]">
-                    +1 (305) 547-9909 (9am - 5pm EST, Monday - Friday){" "}
-                </p>
-                <p className="tw-mb-[11px]">
-                    <a
-                        href="#!"
+                <a
+                        href="tel:+44 7984 287 136"
                         className={clsx(
                             "hover:tw-text-primary",
                             mode === "dark" && "tw-text-gray-400"
                         )}
                     >
-                        info@example.com{" "}
+                        07984 287 136{" "}
+                    </a>
+                     (9am - 6pm , Monday - Friday){" "}
+                </p>
+                <p className="tw-mb-[11px]">
+                    <a
+                        href="mailto:hello@claramonroy.com"
+                        className={clsx(
+                            "hover:tw-text-primary",
+                            mode === "dark" && "tw-text-gray-400"
+                        )}
+                    >
+                        hello@claramonroy.com{" "}
                     </a>
                 </p>
             </div>
@@ -39,16 +48,16 @@ const TextWidget = ({ className, mode }: TProps) => {
                 color={mode === "dark" ? "white" : "light"}
                 className="tw-gap-6.1 tw-mt-6.1"
             >
-                <SocialLink href="https://facebook.com" label="Facebook lnik">
+                <SocialLink href="https://www.facebook.com/profile.php?id=100091616842995" label="Facebook link">
                     <i className="fab fa-facebook-square" />
                 </SocialLink>
-                <SocialLink href="https://twitter.com" label="twitter lnik">
+                <SocialLink href="https://twitter.com/clarathedyke" label="twitter link">
                     <i className="fab fa-twitter" />
                 </SocialLink>
-                <SocialLink href="https://instagram.com" label="instagram lnik">
+                <SocialLink href="https://www.instagram.com/clarathedyke/" label="instagram link">
                     <i className="fab fa-instagram" />
                 </SocialLink>
-                <SocialLink href="https://linkedin.com" label="linkedin lnik">
+                <SocialLink href="https://www.linkedin.com/in/clara-monroy-66245160/" label="linkedin link">
                     <i className="fab fa-linkedin" />
                 </SocialLink>
             </Social>

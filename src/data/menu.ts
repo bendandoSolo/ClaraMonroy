@@ -7,7 +7,7 @@ export default [
     {
         id: 2,
         label: "Life Coaching",
-        path: "/life-coaching",
+        path: "/lesbian-life-coaching",
     },
     {
         id: 3,
@@ -16,8 +16,8 @@ export default [
     },
     {
         id: 4,
-        label: "Meetup",
-        path: "/",
+        label: "Lesbian Meetup",
+        path: "/london-international-lesbians-meetup-group",
     },
     {
         id: 5,
@@ -36,7 +36,7 @@ export default [
     },
     {
         id: 8,
-        label: "Contact Me",
+        label: "Contact",
         path: "/contact-me",
     },
 ];

@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { motion } from "framer-motion";
 import Button from "@ui/button";
-import CourseCard from "@components/course-card/course-01";
+// import CourseCard from "@components/course-card/course-01";
 import BottomShape from "@ui/bottom-shape/shape-01";
 import { scrollUpVariants } from "@utils/variants";
 import { useUI } from "@contexts/ui-context";
@@ -10,7 +10,7 @@ import {
     TextType,
     ButtonType,
     ImageType,
-    ICourse,
+    // ICourse,
 } from "@utils/types";
 
 type TProps = {
@@ -19,12 +19,12 @@ type TProps = {
         texts?: TextType[];
         buttons?: ButtonType[];
         images?: ImageType[];
-        popularCourse: ICourse;
+        // popularCourse: ICourse;
     };
 };
 
 const HeroArea = ({
-    data: { headings, texts, buttons, images, popularCourse },
+    data: { headings, texts, buttons, images },  // , popularCourse
 }: TProps) => {
     const { trans1 } = useUI();
 
@@ -32,15 +32,16 @@ const HeroArea = ({
         <div className="tw-h-full md:tw-min-h-[750px] xl:tw-min-h-[820px] tw-py-[50px] tw-relative tw-flex tw-items-center tw-isolate tw-bg-pearl tw-overflow-hidden">
             <h1 className="tw-sr-only">Life coaching for gay women</h1>
             <div className="bgimg tw-absolute tw-inset-0 -tw-z-10 tw-hidden md:tw-block">
-                images?.[0]?.src && (
+                {images?.[0]?.src ? ( 
                     <img
-                        src={images[0].src}
+
+                        src={images[0].src || ""}
                         alt={images[0]?.alt || "bg"}
                         loading="eager"
                         style={{width: '100%', height: '100%', objectFit: 'contain', position: 'absolute', top: 0, left: '200px', right: 0, bottom: 0}}
                         
                     />
-                )
+                ) : null }
             </div>
             <div className="tw-container 3xl:tw-max-w-full 3xl:tw-px-37">
                 <div className="tw-grid md:tw-gap-7.5 md:tw-grid-cols-2">

@@ -1,0 +1,297 @@
+{
+    "name": "meetup-group",
+    "content": [
+        {
+            "section": "hero-area",
+            "items": [
+                {
+                    "id": 1,
+                    "images": [
+                        {
+                            "src": "/clara-images/london-international-lesbians-meetup-group-dark.jpg"
+                        }
+                    ],
+                    "headings": [
+                        {
+                            "id": 1,
+                            "content": "<span>London International Lesbian Meetup Group</span>"
+                        }, 
+                        {
+                            "id": 2,
+                            "content": ""
+                        }
+                    ],
+                    "texts": [
+                        {
+                            "id": 1,
+                            "content": "The London International Lesbians Meetup is a group for women who love women, the internationals are women with attitude, open, curious and interested in meeting a wide range of women."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "section_title": {
+                "title": "London International Lesbians Meetup Group",
+                "subtitle": "Over 7000 members and growing"
+            }
+        },
+        {
+            "section": "timeline-area",
+            "section_title": {
+                "title": "London International Lesbians Meetup Group",
+                "subtitle": "Over 7000 members and growing"
+            },
+            "items": [
+                {
+                    "id": 1,
+                    "images": [
+                        {
+                            "src": "/images/timeline/start-here-timeline-photo-01.jpg"
+                        }
+                    ],
+                    "headings": [
+                        {
+                            "id": 1,
+                            "content": "What we're about"
+                        }, 
+                        {
+                            "id": 2,
+                            "content": "Welcome to the International Lesbians Community"
+                        }
+                    ],
+                    "texts": [
+                        {
+                            "id": 1,
+                            "content": "The London International Lesbians Meetup is a group for women who love women, the internationals are women with attitude, open, curious and interested in meeting a wide range of women. The aim of the group is to keep you connected to the Lesbian Community and to share our life experiences and stories!"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "images": [
+                        {
+                            "src": "/images/timeline/start-here-timeline-photo-02.jpg"
+                        }
+                    ],
+                    "headings": [
+                        {
+                            "id": 1,
+                            "content": "The serious part"
+                        }, 
+                        {
+                            "id": 2,
+                            "content": "Becoming one of our members"
+                        }
+                    ],
+                    "texts": [
+                        {
+                            "id": 1,
+                            "content": "At the LIL we would like you to know that by becoming one of our members you will be joining a community of very caring women who will welcome and support you as much as we possibly can."
+                        },
+                        {
+                            "id": 2,
+                            "content": "London International Lesbians is a community that works hard at preventing social isolation!- we want to help you make friends, we provide you with safe spaces where you can be yourself, socialize and find a support network to share your concerns and worries with other like minded women."
+                        },
+                        {
+                            "id": 3,
+                            "content": "It seems like we are back to some sort of normality and we'll make sure you have safe spaces to meet other women who love women."
+                        }
+                    ]
+                },
+                {
+                    "id": 3,
+                    "images": [
+                        {
+                            "src": "/images/timeline/start-here-timeline-photo-03.jpg"
+                        }
+                    ],
+                    "headings": [
+                        {
+                            "id": 1,
+                            "content": "Now the fun stuff..."
+                        }, 
+                        {
+                            "id": 2,
+                            "content": "#3 Self-discipline & responsibility"
+                        }
+                    ],
+                    "texts": [
+                        {
+                            "id": 1,
+                            "content": "You are joining the warmest and most welcoming community of women who love women in the world..! We haven’t done the survey yet but we have met our members and they are amazing people…  We are here to help you fulfil as many of your social needs as we can a -lot of of our members also fulfill romantic needs- ;)- "
+                        },
+                        {
+                            "id": 2,
+                            "content": "Would you like to meet and mingle with some like minded women? Are you an international* lesbian** or interested in socialising with an international mixture of lesbians?  Are you feeling disconnected from the lesbian scene in this time of social distancing? Are you willing to join us and attend our social events? If you’ve answered “yes” to at least one of these questions then you should join the International Lesbians Meetup group NOW :)"
+                        },
+                        {
+                            "id": 3,
+                            "content": "We welcome all nationalities -YES, including British!- and encourage you to join us from wherever you are in the world. We will meet regularly for socials, [food], drinks, culture, [sporting events] and trips. If you’re looking for like minded women from all over the world, this is the group for you and you may even get to practise a new language or just broaden your horizons in a fun and relaxed environment, and now we can do it in real life!"
+                        }
+                    ]
+                },
+                {
+                    "id": 4,
+                    "images": [
+                        {
+                            "src": "/images/timeline/start-here-timeline-photo-03.jpg"
+                        }
+                    ],
+                    "headings": [
+                        {
+                            "id": 1,
+                            "content": "Let us keep you connected to other women!!"
+                        }, 
+                        {
+                            "id": 2,
+                            "content": "A group of women representing the international community."
+                        }
+                    ],
+                    "texts": [
+                        {
+                            "id": 1,
+                            "content": "Our members are from many different countries, yes including Britain!! We love the British and they are about 40% of our members :)"
+                        },
+                        {
+                            "id": 2,
+                            "content": "The word Lesbian in this context is used in its widest possible meaning and it includes Bi, Trans, Queer or any other woman who loves women. The internationals is a very inclusive group and we will always welcome any woman who identifies as a woman (and who lives as a woman) who loves women. Dear Bi, Trans, Queer, NB women who love women you are very welcome to our group and any haters will be almost literally &ldquo;kicked out&rdquo; by Clara herself (me) and banned from the group."
+                        },
+                        {
+                            "id": 3,
+                            "content": "Our members are from many different countries, yes including Britain!! We love the British and they are about 40% of our members :)"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "section": "cta-area",
+            "section_title": {
+                "title": "Join the International Lesbians now! Warmest Wishes, Clara",
+                "subtitle":"Haven't you joined yet? What are you waiting for!"
+            },
+            "buttons": [
+                {
+                    "id": 1,
+                    "path": "https://www.meetup.com/london-international-lesbians-meetup/",
+                    "content": "Join Now"
+                }
+            ]
+        },
+        {
+            "section": "gallery-area",
+            "items": [
+                {
+                    "id": 1,
+                    "name": "Lonnie Marks",
+                    "designation": "Tutor",
+                    "images": [
+                        {
+                            "src": "/images/gallery/start-here-gallery-image-01.jpg"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Britney Salker",
+                    "designation": "Educator",
+                    "images": [
+                        {
+                            "src": "/images/gallery/start-here-gallery-image-02.jpg"
+                        }
+                    ]
+                },
+                {
+                    "id": 3,
+                    "name": "Bronnies Wallz",
+                    "designation": "Alumnis",
+                    "images": [
+                        {
+                            "src": "/images/gallery/start-here-gallery-image-03.jpg"
+                        }
+                    ]
+                },
+                {
+                    "id": 4,
+                    "name": "Mia Paulo",
+                    "designation": "Writer",
+                    "images": [
+                        {
+                            "src": "/images/gallery/start-here-gallery-image-04.jpg"
+                        }
+                    ]
+                },
+                {
+                    "id": 5,
+                    "name": "Lina Esthers",
+                    "designation": "Author",
+                    "images": [
+                        {
+                            "src": "/images/gallery/start-here-gallery-image-05.jpg"
+                        }
+                    ]
+                },
+                {
+                    "id": 6,
+                    "name": "Lorean McPhils",
+                    "designation": "Designer",
+                    "images": [
+                        {
+                            "src": "/images/gallery/start-here-gallery-image-06.jpg"
+                        }
+                    ]
+                },
+                {
+                    "id": 7,
+                    "name": "Anna Muray",
+                    "designation": "Writer",
+                    "images": [
+                        {
+                            "src": "/images/gallery/start-here-gallery-image-07.jpg"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "section": "faq-area",
+            "section_title": {
+                "title": "Best chances for expanding your <br> success to the max",
+                "subtitle":"Four major Steps to Success"
+            },
+            "items": [
+                {
+                    "id": 1,
+                    "title": "How to register online?",
+                    "description": "Enrolling in an online class is easy. At MaxCoach, we serve several categories of online learners. Select the student category that you identify with to get started."
+                },
+                {
+                    "id": 2,
+                    "title": "How do I customize my account?",
+                    "description": "In order to customize your account’s information, just log in with the provided passcode and change the info."
+                },
+                {
+                    "id": 3,
+                    "title": "How do you process my information?",
+                    "description": "Your data will be kept private and secure on our database. No illegal use without prior notice."
+                },
+                {
+                    "id": 4,
+                    "title": "How do I contact support?",
+                    "description": "You can contact our help center or any contact method (phone call, email or appear at our office) to get help."
+                },
+                {
+                    "id": 5,
+                    "title": "How to cancel my membership?",
+                    "description": "You just need to submit a membership termination request, we’ll proceed within 24 hours."
+                },
+                {
+                    "id": 6,
+                    "title": "How can I get a discount?",
+                    "description": "Learners can get a discount by coupon or voucher. If you have one, fill in the code box before making any payment."
+                }
+            ]
+        }
+    ]
+}

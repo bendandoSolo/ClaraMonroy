@@ -29,7 +29,7 @@ type TProps = {
             content: PageContent[];
         };
         courses: ICourse[];
-        popularCourse: ICourse;
+        // popularCourse: ICourse;
         blogs: IBlog[];
     };
 };
@@ -46,7 +46,7 @@ const Home: PageProps = ({ data }) => {
             <HeroArea
                 data={{
                     ...content?.["hero-area"],
-                    popularCourse: data.popularCourse,
+                    // popularCourse: data.popularCourse,
                 }}
             />
             <ServiceArea data={content?.["service-area"]} space="none" />

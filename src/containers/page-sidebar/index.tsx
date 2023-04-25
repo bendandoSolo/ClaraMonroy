@@ -1,17 +1,18 @@
 import SidebarMenu from "@components/menu/sidebar-menu";
-import RecentCoursesWidget from "@widgets/recent-courses-widget";
+// import RecentCoursesWidget from "@widgets/recent-courses-widget";
 import menu from "@data/sidebar-menu";
-import { ICourse } from "@utils/types";
+// import { ICourse } from "@utils/types";
 
-type TProps = {
-    recentCourses: ICourse[];
-};
+// type TProps = {
+//     recentCourses: ICourse[];
+// };
 
-const PageSidebar = ({ recentCourses }: TProps) => {
+// const PageSidebar = ({ recentCourses }: TProps) => {
+const PageSidebar = () => {
     return (
         <>
             <SidebarMenu menu={menu} className="tw-mb-[45px]" />
-            <RecentCoursesWidget recentCourses={recentCourses} />
+            {/* <RecentCoursesWidget recentCourses={recentCourses} /> */}
         </>
     );
 };

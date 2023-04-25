@@ -18,7 +18,7 @@
             "buttons": [
                 {
                     "id":1,
-                    "path": "/life-coaching",
+                    "path": "/lesbian-life-coaching",
                     "content":"Life Coaching",
                     "icon": "far fa-download"
                 }
@@ -96,6 +96,57 @@
             ]
         },
         {
+            "section": "faq-area",
+            "images": [
+                {
+                    "id": 1,
+                    "src": "/images/faq/success-story-image-01.jpg"
+                },
+                {
+                    "id": 2,
+                    "src": "/images/faq/success-story-image-02.jpg"
+                }
+            ],
+            "items": [
+                {
+                    "id": 1,
+                    "title": "My Qualifications",
+                    "texts": [
+                        {
+                            "id": 1,
+                            "content": "Diploma en Dialogo Existencial (Circulo de Terapia Existencial, Ciudad de Mexico)"
+                        },
+                        {
+                            "id": 2,
+                            "content": "Accredited Diploma in Transformational Coaching (Animas Centre for Coaching, London)"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "title": "Coaching Courses",
+                    "texts": [
+                        {
+                            "id": 3,
+                            "content": "Relationship Coaching"
+                        },
+                        {
+                            "id": 4,
+                            "content": "Mindfulness for Coaching"
+                        },
+                        {
+                            "id": 5,
+                            "content": "Existential Coaching"
+                        },
+                        {
+                            "id": 6,
+                            "content": "Group Coaching and Facilitation"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "section": "brand-area",
             "items": [
                 {
@@ -160,7 +211,7 @@
             "section_title": {
                 "title": "What I offer",
                 "subtitle":"",
-                "_title": "Access <span>Smart Tutoring</span> Program For Benefits.",
+                "_title": "Lesbian life coaching, the lesbitute podcast and lesbian meetup group London",
                 "_subtitle":"What I offer"
             },
             "items": [
@@ -172,8 +223,8 @@
                         }
                     ],
                     "title": "Life Coaching",
-                    "description": "Learners are given the right to arrange and customize their study schedule and timetable based on preferences.",
-                    "path": "/start-here",
+                    "description": "Helping gay women with coming out, self-empowerment, relationship breakups, sexual fluidity and more.",
+                    "path": "/lesbian-life-coaching",
                     "pathText": "Learn more"
                 },
                 {
@@ -184,8 +235,8 @@
                         }
                     ],
                     "title": "The Lesbitute Podcast",
-                    "description": "You can store online lessons via online cloud or download to your device and revise lessons on the way.",
-                    "path": "/start-here",
+                    "description": "The podcast for lesbians with attitude! It is fun and irreverent, honest and controversial.",
+                    "path": "/lesbitute-podcast",
                     "pathText": "Listen Here"
                 },
                 {
@@ -196,8 +247,8 @@
                         }
                     ],
                     "title": "London Lesbians Meetup Group",
-                    "description": "We provide study materials with various formats: video, audio, slides, doc, prints, books and applications.",
-                    "path": "/start-here",
+                    "description": "A group for women who love women, regularly meeting in London.",
+                    "path": "/london-international-lesbians-meetup-group",
                     "pathText": "Join Now"
                 }
             ]

@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import TwoColumnListWidget from "@widgets/two-col-list-widget";
 import TextWidget from "@widgets/text-widget";
-import ListWidget from "@components/widgets/list-widget";
+// import ListWidget from "@components/widgets/list-widget";
 
 type TProps = {
     mode?: "light" | "dark";
