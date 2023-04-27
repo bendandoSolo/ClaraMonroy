@@ -22,7 +22,7 @@ export default [
     {
         id: 5,
         label: "Blog",
-        path: "/",
+        path: "/blogs/blog-classic",
     },
     {
         id: 6,
