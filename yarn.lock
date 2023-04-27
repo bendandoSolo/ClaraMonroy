@@ -1284,6 +1284,20 @@
   resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.25.24.tgz#8c7688559979f7079aacaf31aa881c3aa410b718"
   integrity sha512-XJfwUVUKDHF5ugKwIcxEgc9k8b7HbznCp6eUfWgu710hMPNIO4aw4/zB5RogDQz8nd6gyCDpU9O/m6qYEWY6yQ==
 
+"@storyblok/js@^2.1.3":
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/@storyblok/js/-/js-2.1.3.tgz#e3b47656d6cb4a50e06ba2c63ba63264627bd017"
+  integrity sha512-lUnCygXMmw3VJQldM5JyEFwraKz2OYN+rt1FvvlWn/55DQfbB/DIgnoQ1mpRw4tJoBqGPRgEQJGOH8e/Q1Vm7Q==
+  dependencies:
+    storyblok-js-client "^5.10.2"
+
+"@storyblok/react@^2.0.18":
+  version "2.0.18"
+  resolved "https://registry.yarnpkg.com/@storyblok/react/-/react-2.0.18.tgz#f198d6c2f24f0e28a95ea71402e4603cd54313de"
+  integrity sha512-GPoZpwrI72h/TXMN35EmPq5CmVGopz2nFA5HcC1metwQ7TViYdMY1oTKHHtnYAn59Wj3WwauCGHpYZjhYRA/8g==
+  dependencies:
+    "@storyblok/js" "^2.1.3"
+
 "@surma/rollup-plugin-off-main-thread@^2.2.3":
   version "2.2.3"
   resolved "https://registry.yarnpkg.com/@surma/rollup-plugin-off-main-thread/-/rollup-plugin-off-main-thread-2.2.3.tgz#ee34985952ca21558ab0d952f00298ad2190c053"
@@ -4709,6 +4723,11 @@ stop-iteration-iterator@^1.0.0:
   integrity sha512-iCGQj+0l0HOdZ2AEeBADlsRC+vsnDsZsbdSiH1yNSjcfKM7fdpCMfqAL/dwF5BLiw/XhRft/Wax6zQbhq2BcjQ==
   dependencies:
     internal-slot "^1.0.4"
+
+storyblok-js-client@^5.10.2:
+  version "5.10.2"
+  resolved "https://registry.yarnpkg.com/storyblok-js-client/-/storyblok-js-client-5.10.2.tgz#049e9637c9a37924093309eb4cdce90c2965d438"
+  integrity sha512-Im/xN9PApDvZbONPYv3SpzjfIfXK63uPf6/eYJPvdIWnzCiWY5hlc2UYkoCR4YoaQBBOEBP1UUcGr5QjesOULg==
 
 string-argv@^0.3.1:
   version "0.3.1"

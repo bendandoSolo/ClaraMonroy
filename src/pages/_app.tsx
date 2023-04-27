@@ -11,8 +11,21 @@ import "@assets/css/swiper.css";
 import "@assets/css/tailwind.css";
 import "@assets/css/contact-form-animations.css";
 
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { storyblokInit, apiPlugin } from "@storyblok/react";
+
 import { UIProvider } from "../contexts/ui-context";
 // import { UserProvider } from "../contexts/user-context"; maybe useful later
+
+
+storyblokInit({
+  accessToken: "baAvqHAR7V25EUZ81m933gtt",
+  use: [apiPlugin],
+  apiOptions: {
+    region: "eu",
+  }
+});
+
 
 interface CustomAppProps extends Omit<AppProps, "Component"> {
     Component: AppProps["Component"] & { Layout: ElementType };
