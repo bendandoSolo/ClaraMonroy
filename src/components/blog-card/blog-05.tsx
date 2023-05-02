@@ -13,7 +13,6 @@ type TProps = Pick<
     | "path"
     | "title"
     | "postedAt"
-    | "category"
     | "excerpt"
 > & {
     className?: string;
@@ -27,7 +26,6 @@ const BlogCard = forwardRef<HTMLDivElement, TProps>(
             path,
             title,
             postedAt,
-            category,
             excerpt,
         },
         ref
@@ -59,12 +57,12 @@ const BlogCard = forwardRef<HTMLDivElement, TProps>(
                 </div>
 
                 <div className="tw-pt-8 tw-pb-[50px]">
-                    <Anchor
+                    {/* <Anchor
                         path={category.path}
                         className="tw-block tw-text-body tw-font-medium tw-uppercase -tw-tracking-tightest tw-leading-[1.4] tw-mb-[17px]"
                     >
                         {category.title}
-                    </Anchor>
+                    </Anchor> */}
                     <h3 className="tw-mb-0 tw-text-[26px] xl:tw-text-[34px] tw-leading-[1.42]">
                         <Anchor path={path}>{title}</Anchor>
                     </h3>

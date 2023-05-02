@@ -1,16 +1,16 @@
-import Anchor from "@ui/anchor";
-import { BlogMetaType } from "@utils/types";
+// import Anchor from "@ui/anchor";
+// import { BlogMetaType } from "@utils/types";
 
-type TProps = {
-    tags: BlogMetaType[];
-};
+// type TProps = {
+//     tags: BlogMetaType[];
+// };
 
-const PopularTagsWidget = ({ tags }: TProps) => {
+const PopularTagsWidget = () => {
     return (
         <div className="tw-mt-[45px]">
             <h3 className="tw-mb-7.5">Popular Tags</h3>
             <div className="-tw-m-[5px]">
-                {tags.map((tag) => (
+                {/* {tags.map((tag) => (
                     <Anchor
                         key={tag.slug}
                         path={`/blogs/tag/${tag.slug}`}
@@ -18,7 +18,7 @@ const PopularTagsWidget = ({ tags }: TProps) => {
                     >
                         {tag.title}
                     </Anchor>
-                ))}
+                ))} */}
             </div>
         </div>
     );

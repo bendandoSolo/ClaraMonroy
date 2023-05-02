@@ -29,10 +29,10 @@ const BlogSearch: PageProps = ({ data }) => {
         if (s) {
             const search = (s as string).toLowerCase();
             const filteredCourses = data.blogs?.filter((blog) => {
-                const { title, category, content } = blog;
+                const { title, content } = blog;
                 return (
                     title.toLowerCase().includes(search) ||
-                    category.title === search ||
+                    // category.title === search ||
                     content.toLowerCase().includes(search)
                 );
             });
@@ -75,7 +75,6 @@ export const getStaticProps: GetStaticProps = () => {
     const { blogs } = getAllBlogs([
         "title",
         "image",
-        "category",
         "postedAt",
         "content",
     ]);

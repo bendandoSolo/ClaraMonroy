@@ -8,7 +8,10 @@ type SbParamsType = {
   };
    
 
-const LesbianRecommendationsLondon = ({ story }: any ) : JSX.Element => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type NewType = any;
+
+const LesbianRecommendationsLondon = ({ story }: NewType ) : JSX.Element => {
 // export default function Home(props) {
   return (
     <div >

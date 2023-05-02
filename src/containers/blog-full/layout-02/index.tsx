@@ -3,7 +3,7 @@ import Section from "@ui/section";
 import BlogCard from "@components/blog-card/blog-04";
 import BlogSidebar from "@containers/blog-details/blog-sidebar";
 import Pagination from "@components/pagination/pagination-01";
-import { BlogMetaType, IBlog } from "@utils/types";
+import { IBlog } from "@utils/types";
 import { scrollUpVariants } from "@utils/variants";
 
 const AnimatedBlogCard = motion(BlogCard);
@@ -12,7 +12,7 @@ type TProps = {
     data: {
         blogs: IBlog[];
         recentPosts: IBlog[];
-        tags: BlogMetaType[];
+        // tags: BlogMetaType[];
         pagiData?: {
             currentPage: number;
             numberOfPages: number;
@@ -21,7 +21,7 @@ type TProps = {
     };
 };
 
-const BlogArea = ({ data: { blogs, recentPosts, tags, pagiData } }: TProps) => {
+const BlogArea = ({ data: { blogs, recentPosts, pagiData } }: TProps) => {
     return (
         <Section className="blog-area" space="bottom">
             <h2 className="tw-sr-only">Blog Section</h2>
@@ -55,7 +55,7 @@ const BlogArea = ({ data: { blogs, recentPosts, tags, pagiData } }: TProps) => {
                     )}
                 </div>
                 <aside className="tw-col-span-full lg:tw-col-[3/-1]">
-                    <BlogSidebar recentPosts={recentPosts} tags={tags} />
+                    <BlogSidebar recentPosts={recentPosts} />
                 </aside>
             </div>
         </Section>

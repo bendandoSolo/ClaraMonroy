@@ -1,15 +1,15 @@
 import { forwardRef } from "react";
 import clsx from "clsx";
 import Anchor from "@ui/anchor";
-import { BlogMetaType, IBlog } from "@utils/types";
+import { IBlog } from "@utils/types";
 
 type TProps = Pick<IBlog, "image" | "path" | "title" | "postedAt"> & {
     className?: string;
-    category?: BlogMetaType;
+    // category?: BlogMetaType;
 };
 
 const BlogCard = forwardRef<HTMLDivElement, TProps>(
-    ({ className, image, path, title, postedAt, category }, ref) => {
+    ({ className, image, path, title, postedAt }, ref) => {
         return (
             <div
                 className={clsx(
@@ -37,14 +37,14 @@ const BlogCard = forwardRef<HTMLDivElement, TProps>(
                 </div>
 
                 <div className="info tw-py-[26px] tw-px-5">
-                    {category && (
+                    {/* {category && (
                         <Anchor
                             path={category.path}
                             className="tw-block tw-text-body tw-font-medium tw-uppercase -tw-tracking-tightest tw-leading-[1.4] tw-mb-[17px]"
                         >
                             {category.title}
                         </Anchor>
-                    )}
+                    )} */}
                     <h3 className="tw-mb-0 tw-text-xl tw-leading-normal">
                         <Anchor path={path}>{title}</Anchor>
                     </h3>

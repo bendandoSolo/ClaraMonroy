@@ -5,13 +5,13 @@ import { IBlog } from "@utils/types";
 
 type TProps = Pick<
     IBlog,
-    "title" | "path" | "category" | "postedAt" | "image"
+    "title" | "path" | "postedAt" | "image"
 > & {
     className?: string;
 };
 
 const BlogCard = forwardRef<HTMLDivElement, TProps>(
-    ({ title, path, category, postedAt, image, className }, ref) => (
+    ({ title, path, postedAt, image, className }, ref) => (
         <div
             className={clsx(
                 "blog-card tw-grid tw-relative tw-overflow-hidden tw-transition-all tw-rounded tw-bg-white tw-shadow-xl tw-shadow-black/5 tw-group",
@@ -38,12 +38,12 @@ const BlogCard = forwardRef<HTMLDivElement, TProps>(
             )}
 
             <div className="tw-py-6.1 tw-px-7.5 lg:tw-pt-5 lg:tw-pb-[54px] lg:tw-px-[38px] tw-row-span-full tw-col-span-full tw-z-10 tw-flex tw-flex-col tw-justify-end">
-                <Anchor
+                {/* <Anchor
                     path={category.path}
                     className="tw-font-medium tw-block tw-mb-1 -tw-tracking-tightest tw-uppercase tw-text-white hover:tw-text-white"
                 >
                     {category.title}
-                </Anchor>
+                </Anchor> */}
                 <h3 className="tw-text-xl tw-leading-normal lg:tw-text-[34px] lg:tw-leading-[1.42] tw-text-white tw-mb-0">
                     <Anchor className="hover:tw-text-white" path={path}>
                         {title}

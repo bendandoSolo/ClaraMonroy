@@ -7,7 +7,7 @@ import BlogDetailsArea from "@containers/blog-details";
 import BlogNavLinks from "@containers/blog-details/nav-links";
 import DisqusComment from "@components/disqus-comment";
 import BlogSidebar from "@containers/blog-details/blog-sidebar";
-import { BlogMetaType, IBlog } from "@utils/types";
+import { IBlog } from "@utils/types";
 import { toCapitalize } from "@utils/methods";
 import {
     getPostBySlug,
@@ -24,7 +24,7 @@ type TProps = {
             nextPost: IBlog;
         };
         recentPosts: IBlog[];
-        tags: BlogMetaType[];
+        // tags: BlogMetaType[];
     };
 };
 
@@ -33,7 +33,7 @@ type PageProps = NextPage<TProps> & {
 };
 
 const BlogDetails: PageProps = ({
-    data: { blog, prevAndNextPost, recentPosts, tags },
+    data: { blog, prevAndNextPost, recentPosts},
 }) => {
     return (
         <>
@@ -44,7 +44,7 @@ const BlogDetails: PageProps = ({
                 article={{
                     publishedTime: blog.postedAt,
                     modifiedTime: blog.postedAt,
-                    tags: tags.map((tag) => tag.title),
+                    // tags: tags.map((tag) => tag.title),
                 }}
                 image={`https://maxcoach-react.pages.dev${blog.image.src}`}
             />
@@ -66,7 +66,7 @@ const BlogDetails: PageProps = ({
                     <DisqusComment id={blog.slug} title={blog.title} />
                 </div>
                 <div className="tw-col-span-full lg:tw-col-[3/-1]">
-                    <BlogSidebar recentPosts={recentPosts} tags={tags} />
+                    <BlogSidebar recentPosts={recentPosts}  />
                 </div>
             </div>
         </>

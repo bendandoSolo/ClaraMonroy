@@ -4,14 +4,14 @@ import SEO from "@components/seo/page-seo";
 import Layout01 from "@layout/layout-01";
 import Breadcrumb from "@components/breadcrumb";
 import BlogArea from "@containers/blog-full/layout-02";
-import { BlogMetaType, IBlog } from "@utils/types";
+import {  IBlog } from "@utils/types";
 import { getAllBlogs, getTags } from "../../../../lib/blog";
 
 type TProps = {
     data: {
         blogs: IBlog[];
         recentPosts: IBlog[];
-        tags: BlogMetaType[];
+        // tags: BlogMetaType[];
         currentPage: number;
         numberOfPages: number;
     };
@@ -24,7 +24,7 @@ type PageProps = NextPage<TProps> & {
 const POSTS_PER_PAGE = 8;
 
 const BlogGridSidebar: PageProps = ({
-    data: { blogs, recentPosts, tags, currentPage, numberOfPages },
+    data: { blogs, recentPosts, currentPage, numberOfPages },
 }) => {
     return (
         <>
@@ -37,7 +37,6 @@ const BlogGridSidebar: PageProps = ({
                 data={{
                     blogs,
                     recentPosts,
-                    tags,
                     pagiData: {
                         currentPage,
                         numberOfPages,
@@ -81,7 +80,7 @@ export const getStaticProps: GetStaticProps<TProps, Params> = ({ params }) => {
     const currentPage = !page || Number.isNaN(+page) ? 1 : +page;
     const skip = (currentPage - 1) * POSTS_PER_PAGE;
     const { blogs, count } = getAllBlogs(
-        ["title", "slug", "image", "category", "postedAt"],
+        ["title", "slug", "image", "postedAt"],
         skip,
         POSTS_PER_PAGE
     );

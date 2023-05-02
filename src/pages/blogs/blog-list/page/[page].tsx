@@ -80,7 +80,6 @@ export const getStaticProps: GetStaticProps<TProps, Params> = ({ params }) => {
         [
             "title",
             "image",
-            "category",
             "postedAt",
             "excerpt",
         ],

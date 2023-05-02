@@ -1,18 +1,18 @@
 import dayjs from "dayjs";
-import Anchor from "@ui/anchor";
+// import Anchor from "@ui/anchor";
 import BlogMetaItem from "@components/blog-meta/meta-item";
 import SocialShare from "@components/social-share/layout-03";
-import TagMeta from "@components/blog-meta/tags";
+// import TagMeta from "@components/blog-meta/tags";
 import MarkdownRenderer from "@components/markdown-renderer";
 import { IBlog } from "@utils/types";
 
 const BlogDetails = ({
     image,
     title,
-    category,
+    // category,
     postedAt,
     content,
-    tags,
+    // tags,
 }: IBlog) => {
     return (
         <article className="blog-details tw-pb-7.5 tw-mb-10 tw-border-b tw-border-b-gray-500">
@@ -28,9 +28,9 @@ const BlogDetails = ({
                     </figure>
                 )}
 
-                <div className="tw-font-medium tw-uppercase -tw-tracking-tightest tw-mb-4">
+                {/* <div className="tw-font-medium tw-uppercase -tw-tracking-tightest tw-mb-4">
                     <Anchor path={category.path}>{category.title}</Anchor>
-                </div>
+                </div> */}
 
                 <h2 className="tw-mb-5">{title}</h2>
                 <div className="tw-text-md tw-mt-5 tw-text-gray-300 tw-flex tw-items-center tw-flex-wrap">
@@ -60,7 +60,7 @@ const BlogDetails = ({
                 content={content}
             />
             <div className="entry-footer tw-flex tw-items-center tw-justify-center sm:tw-justify-between tw-flex-wrap">
-                <TagMeta tags={tags} />
+                {/* <TagMeta tags={tags} /> */}
                 <SocialShare
                     label="Share this post"
                     className="tw-mt-5 sm:tw-mt-0"

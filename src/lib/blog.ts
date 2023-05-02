@@ -2,8 +2,8 @@ import fs from "fs";
 import { join } from "path";
 import matter from "gray-matter";
 import dayjs from "dayjs";
-import { IBlog, BlogMetaType, IDType } from "@utils/types";
-import { slugify, flatDeep } from "@utils/methods";
+import { IBlog, IDType } from "@utils/types";
+// import { slugify, flatDeep } from "@utils/methods";
 import { getSlugs } from "./util";
 // import { getAuthorByID } from "./author";
 
@@ -43,16 +43,16 @@ export function getPostBySlug(
         blog = {
             ...blogData,
             content,
-            category: {
-                title: blogData.category,
-                slug: slugify(blogData.category),
-                path: `/blogs/category/${slugify(blogData.category)}`,
-            },
-            tags: blogData.tags.map((tag) => ({
-                title: tag,
-                slug: slugify(tag),
-                path: `/blogs/tag/${slugify(tag)}`,
-            })),
+            // category: {
+            //     title: blogData.category,
+            //     slug: slugify(blogData.category),
+            //     path: `/blogs/category/${slugify(blogData.category)}`,
+            // },
+            // tags: blogData.tags.map((tag) => ({
+            //     title: tag,
+            //     slug: slugify(tag),
+            //     path: `/blogs/tag/${slugify(tag)}`,
+            // })),
             slug: realSlug,
             excerpt: makeExcerpt(content, 150),
             // author: getAuthorByID(blogData.author, "all"),
@@ -72,26 +72,26 @@ export function getPostBySlug(
             //     const author = getAuthorByID(blogData.author, "all");
             //     return { ...acc, author };
             // }
-            if (field === "category") {
-                return {
-                    ...acc,
-                    category: {
-                        title: blogData.category,
-                        slug: slugify(blogData.category),
-                        path: `/blogs/category/${slugify(blogData.category)}`,
-                    },
-                };
-            }
-            if (field === "tags") {
-                return {
-                    ...acc,
-                    tags: blogData.tags.map((tag) => ({
-                        title: tag,
-                        slug: slugify(tag),
-                        path: `/blogs/tag/${slugify(tag)}`,
-                    })),
-                };
-            }
+            // if (field === "category") {
+            //     return {
+            //         ...acc,
+            //         category: {
+            //             title: blogData.category,
+            //             slug: slugify(blogData.category),
+            //             path: `/blogs/category/${slugify(blogData.category)}`,
+            //         },
+            //     };
+            // }
+            // if (field === "tags") {
+            //     return {
+            //         ...acc,
+            //         tags: blogData.tags.map((tag) => ({
+            //             title: tag,
+            //             slug: slugify(tag),
+            //             path: `/blogs/tag/${slugify(tag)}`,
+            //         })),
+            //     };
+            // }
             if (typeof data[field] !== "undefined") {
                 return { ...acc, [field]: blogData[field] };
             }
@@ -136,50 +136,52 @@ export function getPrevNextPost(
 }
 
 export function getTags() {
-    const { blogs } = getAllBlogs(["tags"]);
-    const tags = flatDeep<BlogMetaType>(blogs.map((post) => post.tags));
-    const result: BlogMetaType[] = [];
+    // const { blogs } = getAllBlogs(["tags"]);
+    // const tags = flatDeep<BlogMetaType>(blogs.map((post) => post.tags));
+    // const result: BlogMetaType[] = [];
 
-    tags.forEach((tag) => {
-        if (!result.find((t) => t.title === tag.title)) {
-            result.push(tag);
-        }
-    });
+    // tags.forEach((tag) => {
+    //     if (!result.find((t) => t.title === tag.title)) {
+    //         result.push(tag);
+    //     }
+    // });
 
-    return result;
+    // return result;
 }
 
-export function getPostsByCategory(
-    category: string,
-    fields: Array<keyof IBlog> | "all" = [],
-    skip = 0,
-    limit?: number
-) {
-    const postFields =
-        fields === "all"
-            ? "all"
-            : ([...fields, "category"] as Array<keyof IBlog>);
-    const { blogs } = getAllBlogs(postFields);
-    let result = blogs.filter((post) => post.category.slug === category);
-    const totalPosts = result.length;
-    if (limit) result = result.slice(skip, skip + limit);
-    return { posts: result, count: totalPosts };
-}
+// export function getPostsByCategory(
+//     // category: string,
+//     fields: Array<keyof IBlog> | "all" = [],
+//     skip = 0,
+//     limit?: number
+// ) {
+//     const postFields =
+//         fields === "all"
+//             ? "all"
+//             : ([...fields, "category"] as Array<keyof IBlog>);
+//     // const { blogs } = getAllBlogs(postFields);
+//     // let result = blogs.filter((post) => post.category.slug === category);
 
-export function getPostsByTag(
-    tag: string,
-    fields: Array<keyof IBlog> | "all" = [],
-    skip = 0,
-    limit?: number
-) {
-    const postFields =
-        fields === "all" ? "all" : ([...fields, "tags"] as Array<keyof IBlog>);
-    const { blogs } = getAllBlogs(postFields);
-    let result = blogs.filter((post) => post.tags.some((t) => t.slug === tag));
-    const totalPosts = result.length;
-    if (limit) result = result.slice(skip, skip + limit);
-    return { posts: result, count: totalPosts };
-}
+//     let result = [undefined];
+//     const totalPosts = result.length;
+//     if (limit) result = result.slice(skip, skip + limit);
+//     return { posts: result, count: totalPosts };
+// }
+
+// export function getPostsByTag(
+//     tag: string,
+//     fields: Array<keyof IBlog> | "all" = [],
+//     skip = 0,
+//     limit?: number
+// ) {
+//     const postFields =
+//         fields === "all" ? "all" : ([...fields, "tags"] as Array<keyof IBlog>);
+//     const { blogs } = getAllBlogs(postFields);
+//     let result = blogs.filter((post) => post.tags.some((t) => t.slug === tag));
+//     const totalPosts = result.length;
+//     if (limit) result = result.slice(skip, skip + limit);
+//     return { posts: result, count: totalPosts };
+// }
 
 // export function getPostsByAuthor(
 //     authorID: IDType,

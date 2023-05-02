@@ -66,7 +66,7 @@ const BlogArea = ({
                         <BlogCard01
                             title={blogs[0].title}
                             path={blogs[0].path}
-                            category={blogs[0].category}
+                            // category={blogs[0].category}
                             postedAt={blogs[0].postedAt}
                             image={blogs[0].image}
                             // views={blogs[0].views}
@@ -82,7 +82,7 @@ const BlogArea = ({
                         <BlogCard02
                             title={blogs[1].title}
                             path={blogs[1].path}
-                            category={blogs[1].category}
+                            // category={blogs[1].category}
                             postedAt={blogs[1].postedAt}
                             image={blogs[1].image}
                         />
@@ -97,7 +97,7 @@ const BlogArea = ({
                         <BlogCard01
                             title={blogs[2].title}
                             path={blogs[2].path}
-                            category={blogs[2].category}
+                            // category={blogs[2].category}
                             postedAt={blogs[2].postedAt}
                             image={blogs[2].image}
                         />

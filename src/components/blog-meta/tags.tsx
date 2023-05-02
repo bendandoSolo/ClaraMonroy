@@ -1,17 +1,17 @@
 import clsx from "clsx";
-import Anchor from "@ui/anchor";
-import { BlogMetaType } from "@utils/types";
+// import Anchor from "@ui/anchor";
+// import { BlogMetaType } from "@utils/types";
 
 type TProps = {
     className?: string;
-    tags: BlogMetaType[];
+    // tags: BlogMetaType[];
 };
 
-const TagMeta = ({ className, tags }: TProps) => {
+const TagMeta = ({ className }: TProps) => {
     return (
         <div className={clsx("tags tw-inline-flex", className)}>
             <span className="tw-text-lg tw-mr-1 far fa-tags" />
-            {tags.map((tag, i, arr) => (
+            {/* {tags.map((tag, i, arr) => (
                 <Anchor
                     key={tag.slug}
                     path={tag.path}
@@ -20,7 +20,7 @@ const TagMeta = ({ className, tags }: TProps) => {
                     {tag.title}
                     {i !== arr.length - 1 && ", "}
                 </Anchor>
-            ))}
+            ))} */}
         </div>
     );
 };

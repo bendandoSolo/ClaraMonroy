@@ -171,11 +171,11 @@ export interface ICourse {
     curriculum: IDType[];
 }
 
-export interface BlogMetaType {
-    title: string;
-    slug: string;
-    path: string;
-}
+// export interface BlogMetaType {
+//     title: string;
+//     slug: string;
+//     path: string;
+// }
 
 export interface IBlogOriginal {
     title: string;
@@ -183,8 +183,8 @@ export interface IBlogOriginal {
     path: string;
     postedAt: string;
     image: ImageType;
-    category: BlogMetaType;
-    tags: BlogMetaType[];
+    // category: BlogMetaType;
+    // tags: BlogMetaType[];
     // views: number;
     // author: IInstructor;
     content: string;
@@ -197,17 +197,13 @@ export interface IBlog {
     path: string;
     postedAt: string;
     image: ImageType;
-    category: BlogMetaType;
-    tags: BlogMetaType[];
+    // category: BlogMetaType;
+    // tags: BlogMetaType[];
     // views: number;
     // author: IInstructor;
     content: string;
     excerpt: string;
 }
-
-
-
-
 
 export interface ISocial {
     label: string;
