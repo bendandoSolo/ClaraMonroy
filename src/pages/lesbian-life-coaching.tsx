@@ -17,15 +17,15 @@ import CtaArea from "@containers/cta/layout-01";
 
 
 import { normalizedData } from "@utils/methods";
-import { IBlog, ICourse } from "@utils/types";
+import { ICourse } from "@utils/types";
 
 import FaqArea from "@containers/faq/layout-03";
 import LifeCoachingCourses from "@containers/life-coaching-courses";
 // import ButtonCentered from "@components/button/button"; small CTA button
 
 import SEO from "@components/seo/page-seo";
-import { getallCourses, getFilteredCourse } from "../lib/course";
-import { getAllBlogs } from "../lib/blog";
+import { getallCourses} from "../lib/course";
+// import { getAllBlogs } from "../lib/blog";
 import { getPageData } from "../lib/page";
 
 
@@ -41,7 +41,7 @@ type TProps = {
         };
         courses: ICourse[];
         // popularCourse: ICourse;
-        blogs: IBlog[];
+        // blogs: IBlog[];
     };
 };
 
@@ -100,31 +100,30 @@ export const getStaticProps: GetStaticProps = () => {
         0,
         3
     );
-    const popularCourse = getFilteredCourse(
-        [
-            "title",
-            "published_at",
-            "thumbnail",
-            "price",
-            "currency",
-            "excerpt",
-            "isPopular",
-        ],
-        "isPopular",
-        true
-    );
-    const { blogs } = getAllBlogs(
-        ["title", "image", "category", "postedAt", "views"],
-        0,
-        3
-    );
+    // const popularCourse = getFilteredCourse(
+    //     [
+    //         "title",
+    //         "published_at",
+    //         "thumbnail",
+    //         "price",
+    //         "currency",
+    //         "excerpt",
+    //         "isPopular",
+    //     ],
+    //     "isPopular",
+    //     true
+    // );
+    // const { blogs } = getAllBlogs(
+    //     ["title", "image", "category", "postedAt","views"],
+    //     0,
+    //     3
+    // );
     return {
         props: {
             data: {
                 page,
                 courses,
-                popularCourse,
-                blogs,
+                // popularCourse,
             },
         },
     };

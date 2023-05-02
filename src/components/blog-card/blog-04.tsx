@@ -3,13 +3,13 @@ import clsx from "clsx";
 import Anchor from "@ui/anchor";
 import { BlogMetaType, IBlog } from "@utils/types";
 
-type TProps = Pick<IBlog, "image" | "path" | "title" | "postedAt" | "views"> & {
+type TProps = Pick<IBlog, "image" | "path" | "title" | "postedAt"> & {
     className?: string;
     category?: BlogMetaType;
 };
 
 const BlogCard = forwardRef<HTMLDivElement, TProps>(
-    ({ className, image, path, title, postedAt, views, category }, ref) => {
+    ({ className, image, path, title, postedAt, category }, ref) => {
         return (
             <div
                 className={clsx(
@@ -54,10 +54,10 @@ const BlogCard = forwardRef<HTMLDivElement, TProps>(
                             <i className="far fa-calendar tw-mr-2.5" />
                             {postedAt}
                         </li>
-                        <li className="tw-mt-3.8">
+                        {/* <li className="tw-mt-3.8">
                             <i className="far fa-eye tw-mr-2.5" />
                             {views} views
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
             </div>

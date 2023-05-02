@@ -72,7 +72,7 @@ export const getStaticProps: GetStaticProps<TProps, Params> = ({ params }) => {
     const currentPage = !page || Number.isNaN(+page) ? 1 : +page;
     const skip = (currentPage - 1) * POSTS_PER_PAGE;
     const { blogs, count } = getAllBlogs(
-        ["title", "slug", "image", "category", "postedAt", "views"],
+        ["title", "slug", "image", "category", "postedAt"],
         skip,
         POSTS_PER_PAGE
     );

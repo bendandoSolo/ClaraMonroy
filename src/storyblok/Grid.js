@@ -2,6 +2,7 @@ import { storyblokEditable, StoryblokComponent } from "@storyblok/react";
  
 const Grid = ({ blok }) => {
   return (
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     <div className="grid" {...storyblokEditable(blok)}>
       {blok.columns.map((nestedBlok) => (
         <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />

@@ -13,7 +13,6 @@ type TProps = Pick<
     | "path"
     | "title"
     | "postedAt"
-    | "views"
     | "category"
     | "author"
     | "excerpt"
@@ -29,7 +28,6 @@ const BlogCard = forwardRef<HTMLDivElement, TProps>(
             path,
             title,
             postedAt,
-            views,
             category,
             author,
             excerpt,
@@ -83,11 +81,11 @@ const BlogCard = forwardRef<HTMLDivElement, TProps>(
                             text={postedAt}
                             icon="far fa-calendar"
                         />
-                        <BlogMetaItem
+                        {/* <BlogMetaItem
                             className="tw-pr-5 md:tw-pr-8"
                             text={`${views} views`}
                             icon="far fa-eye"
-                        />
+                        /> */}
                     </div>
                     <p
                         className="tw-mt-4"

@@ -77,7 +77,6 @@ export const getStaticProps: GetStaticProps = () => {
         "image",
         "category",
         "postedAt",
-        "views",
         "content",
     ]);
 

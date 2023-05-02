@@ -82,7 +82,6 @@ export const getStaticProps: GetStaticProps<TProps, Params> = ({ params }) => {
             "image",
             "category",
             "postedAt",
-            "views",
             "author",
             "excerpt",
         ],

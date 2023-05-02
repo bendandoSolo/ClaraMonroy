@@ -5,13 +5,13 @@ import { IBlog } from "@utils/types";
 
 type TProps = Pick<
     IBlog,
-    "title" | "path" | "category" | "postedAt" | "image" | "views"
+    "title" | "path" | "category" | "postedAt" | "image"
 > & {
     className?: string;
 };
 
 const BlogCard = forwardRef<HTMLDivElement, TProps>(
-    ({ title, path, category, postedAt, image, views, className }, ref) => (
+    ({ title, path, category, postedAt, image, className }, ref) => (
         <div
             className={clsx(
                 "blog-card tw-relative tw-overflow-hidden tw-transition-all tw-rounded tw-bg-white tw-shadow-xl tw-shadow-black/5 tw-group",
@@ -50,10 +50,10 @@ const BlogCard = forwardRef<HTMLDivElement, TProps>(
                         <i className="far fa-calendar tw-mr-2.5" />
                         {postedAt}
                     </li>
-                    <li className="tw-text-md tw-mt-3.8">
+                    {/* <li className="tw-text-md tw-mt-3.8">
                         <i className="far fa-eye tw-mr-2.5" />
                         {views} views
-                    </li>
+                    </li> */}
                 </ul>
             </div>
         </div>

@@ -11,15 +11,17 @@ import "@assets/css/swiper.css";
 import "@assets/css/tailwind.css";
 import "@assets/css/contact-form-animations.css";
 
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { storyblokInit, apiPlugin } from "@storyblok/react";
+
 import { UIProvider } from "../contexts/ui-context";
 // import { UserProvider } from "../contexts/user-context"; maybe useful later
 
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { storyblokInit, apiPlugin } from "@storyblok/react";
-import Feature from "../storyblok/Feature";
-import Grid from "../storyblok/Grid";
-import Page from "../storyblok/Page";
-import Teaser from "../storyblok/Teaser";
+
+import Feature from "../storyblok/Feature.js";
+import Grid from "../storyblok/Grid.js";
+import Page from "../storyblok/Page.js";
+import Teaser from "../storyblok/Teaser.js";
  
 const components = {
   feature: Feature,

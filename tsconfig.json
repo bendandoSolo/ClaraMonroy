@@ -33,6 +33,6 @@
       "@widgets/*": ["components/widgets/*"],
     }
   },
-  "include": ["next-env.d.ts", "next.config.js", "src/**/*.ts", "src/**/*.tsx", "tailwind.config.js", "postcss.config.js", "next-sitemap.config.js"],
+  "include": ["next-env.d.ts", "next.config.js", "src/**/*.ts", "src/**/*.tsx", "tailwind.config.js", "postcss.config.js", "next-sitemap.config.js", "pages_archive/index-old.tsx"],
   "exclude": ["node_modules", "public"]
 }

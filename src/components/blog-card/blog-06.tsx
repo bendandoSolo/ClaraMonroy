@@ -9,14 +9,14 @@ import SocialShare from "@components/social-share/layout-03";
 
 type TProps = Pick<
     IBlog,
-    "image" | "path" | "title" | "postedAt" | "views" | "author" | "excerpt"
+    "image" | "path" | "title" | "postedAt" | "author" | "excerpt"
 > & {
     className?: string;
 };
 
 const BlogCard = forwardRef<HTMLDivElement, TProps>(
     (
-        { className, image, path, title, postedAt, views, author, excerpt },
+        { className, image, path, title, postedAt, author, excerpt },
         ref
     ) => {
         return (
@@ -60,11 +60,11 @@ const BlogCard = forwardRef<HTMLDivElement, TProps>(
                             text={postedAt}
                             icon="far fa-calendar"
                         />
-                        <BlogMetaItem
+                        {/* <BlogMetaItem
                             className="tw-pr-5 md:tw-pr-8"
                             text={`${views} views`}
                             icon="far fa-eye"
-                        />
+                        /> */}
                     </div>
                     <p
                         className="tw-mt-4"

@@ -177,7 +177,7 @@ export interface BlogMetaType {
     path: string;
 }
 
-export interface IBlog {
+export interface IBlogOriginal {
     title: string;
     slug: string;
     path: string;
@@ -190,6 +190,24 @@ export interface IBlog {
     content: string;
     excerpt: string;
 }
+
+export interface IBlog {
+    title: string;
+    slug: string;
+    path: string;
+    postedAt: string;
+    image: ImageType;
+    category: BlogMetaType;
+    tags: BlogMetaType[];
+    // views: number;
+    author: IInstructor;
+    content: string;
+    excerpt: string;
+}
+
+
+
+
 
 export interface ISocial {
     label: string;
