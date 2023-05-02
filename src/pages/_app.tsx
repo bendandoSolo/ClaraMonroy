@@ -11,19 +11,30 @@ import "@assets/css/swiper.css";
 import "@assets/css/tailwind.css";
 import "@assets/css/contact-form-animations.css";
 
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { storyblokInit, apiPlugin } from "@storyblok/react";
-
 import { UIProvider } from "../contexts/ui-context";
 // import { UserProvider } from "../contexts/user-context"; maybe useful later
 
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { storyblokInit, apiPlugin } from "@storyblok/react";
+import Feature from "../storyblok/Feature";
+import Grid from "../storyblok/Grid";
+import Page from "../storyblok/Page";
+import Teaser from "../storyblok/Teaser";
+ 
+const components = {
+  feature: Feature,
+  grid: Grid,
+  teaser: Teaser,
+  page: Page,
+};
 
 storyblokInit({
   accessToken: "baAvqHAR7V25EUZ81m933gtt",
   use: [apiPlugin],
   apiOptions: {
     region: "eu",
-  }
+  },
+  components
 });
 
 
