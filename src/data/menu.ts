@@ -27,7 +27,7 @@ export default [
     {
         id: 6,
         label: "Recommendations",
-        path: "/",
+        path: "/lesbian-recommendations-london",
     },
     {
         id: 7,
