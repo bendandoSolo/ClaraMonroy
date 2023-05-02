@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { NextSeo, NextSeoProps, ArticleJsonLd, CourseJsonLd } from "next-seo";
+import { NextSeo, NextSeoProps, ArticleJsonLd } from "next-seo";
 import siteConfig from "@data/site-config";
 
 interface SeoProps extends NextSeoProps {
@@ -8,14 +8,14 @@ interface SeoProps extends NextSeoProps {
     article?: {
         publishedTime: string;
         modifiedTime: string;
-        authors: string[];
+        // authors: string[];
         tags: string[];
     };
     image?: string;
-    instructor?: {
-        name: string;
-        path: string;
-    };
+    // instructor?: {
+    //     name: string;
+    //     path: string;
+    // };
 }
 
 const PageSeo = ({
@@ -26,7 +26,6 @@ const PageSeo = ({
     jsonLdType,
     article,
     image,
-    instructor,
 }: SeoProps) => {
     const [href, setHref] = useState("");
     useEffect(() => {
@@ -78,11 +77,10 @@ const PageSeo = ({
                     images={[image as string]}
                     datePublished={article.publishedTime}
                     dateModified={article.modifiedTime}
-                    authorName={article.authors[0]}
                     description={description as string}
                 />
             )}
-            {jsonLdType === "course" && instructor && (
+            {/* {jsonLdType === "course" && instructor && (
                 <CourseJsonLd
                     courseName={title as string}
                     description="Introductory CS course laying out the basics."
@@ -91,7 +89,7 @@ const PageSeo = ({
                         url: href,
                     }}
                 />
-            )}
+            )} */}
         </>
     );
 };

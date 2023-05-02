@@ -37,7 +37,6 @@ const BlogArea = ({ data: { blogs, recentPosts, tags, pagiData } }: TProps) => {
                             postedAt={blog.postedAt}
                             // views={blog.views}
                             category={blog.category}
-                            author={blog.author}
                             excerpt={blog.excerpt}
                             initial="offscreen"
                             whileInView="onscreen"

@@ -1,10 +1,10 @@
-import Social, { SocialLink } from "@ui/social";
-import { IInstructor } from "@utils/types";
+// import Social, { SocialLink } from "@ui/social";
+// import { IInstructor } from "@utils/types";
 
-const BlogAuthor = ({ name, image, bio, socials }: IInstructor) => {
+const BlogAuthor = () => {
     return (
         <div className="blog-author tw-mt-10 tw-flex tw-flex-wrap tw-justify-center md:tw-justify-start">
-            <div className="tw-text-center tw-max-w-[140px] tw-min-w-[100px] tw-shrink-0">
+            {/* <div className="tw-text-center tw-max-w-[140px] tw-min-w-[100px] tw-shrink-0">
                 {image?.src && (
                     <img
                         alt={image?.alt || name}
@@ -38,7 +38,7 @@ const BlogAuthor = ({ name, image, bio, socials }: IInstructor) => {
                     {name}
                 </h3>
                 <p className="tw-mb-0">{bio}</p>
-            </div>
+            </div> */}
         </div>
     );
 };

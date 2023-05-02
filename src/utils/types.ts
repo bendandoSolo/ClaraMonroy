@@ -185,8 +185,8 @@ export interface IBlogOriginal {
     image: ImageType;
     category: BlogMetaType;
     tags: BlogMetaType[];
-    views: number;
-    author: IInstructor;
+    // views: number;
+    // author: IInstructor;
     content: string;
     excerpt: string;
 }
@@ -200,7 +200,7 @@ export interface IBlog {
     category: BlogMetaType;
     tags: BlogMetaType[];
     // views: number;
-    author: IInstructor;
+    // author: IInstructor;
     content: string;
     excerpt: string;
 }
@@ -215,17 +215,17 @@ export interface ISocial {
     url: string;
 }
 
-export interface IInstructor {
-    id: IDType;
-    name: string;
-    slug: string;
-    path: string;
-    url: string;
-    image: ImageType;
-    designation: string;
-    bio: string;
-    socials: ISocial[];
-}
+// export interface IInstructor {
+//     id: IDType;
+//     name: string;
+//     slug: string;
+//     path: string;
+//     url: string;
+//     image: ImageType;
+//     designation: string;
+//     bio: string;
+//     socials: ISocial[];
+// }
 
 export type FieldType<T> = Array<keyof T> | "all";
 

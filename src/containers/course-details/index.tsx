@@ -1,21 +1,20 @@
 import { TabContainer, TabNav, TabPane, TabList, TabContent } from "@ui/tab";
-import { ICourse, ICurriculum, IInstructor } from "@utils/types";
-import CourseInfo from "@widgets/course-info";
+import { ICourse, ICurriculum } from "@utils/types";
+// import CourseInfo from "@widgets/course-info";
 import OverviewPanel from "./overview-panel";
 import CurriculamPanel from "./curriculam-panel";
-import InstructorPanel from "./instructor-panel";
+// import InstructorPanel from "./instructor-panel";
 import ReviewPanel from "./review-panel";
 
 type TProps = {
     data: {
         course: ICourse;
         curriculum: ICurriculum[];
-        instructor: IInstructor;
     };
 };
 
 const CourseDetails = ({
-    data: { course, curriculum, instructor },
+    data: { course, curriculum },
 }: TProps) => {
     return (
         <section className="course-details">
@@ -44,9 +43,9 @@ const CourseDetails = ({
                                     />
                                 )}
                             </TabPane>
-                            <TabPane>
+                            {/* <TabPane>
                                 <InstructorPanel {...instructor} />
-                            </TabPane>
+                            </TabPane> */}
                             <TabPane>
                                 {course?.reviews && (
                                     <ReviewPanel {...course.reviews} />
@@ -55,14 +54,13 @@ const CourseDetails = ({
                         </TabContent>
                     </TabContainer>
                 </div>
-                <div className="lg:tw-col-[3/-1]">
+                {/* <div className="lg:tw-col-[3/-1]">
                     <div className="tw-sticky tw-top-24">
                         <CourseInfo
                             lessonLink={curriculum[0].lessons[0].path}
                             slug={course.slug}
                             price={course.price}
                             currency={course.currency}
-                            instructor={instructor.name}
                             duration={course.duration}
                             lectures={course.total_lectures}
                             students={course.total_students}
@@ -70,7 +68,7 @@ const CourseDetails = ({
                             published_at={course.published_at}
                         />
                     </div>
-                </div>
+                </div> */}
             </div>
         </section>
     );

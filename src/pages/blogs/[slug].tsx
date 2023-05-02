@@ -3,11 +3,11 @@ import SEO from "@components/seo/page-seo";
 import Layout01 from "@layout/layout-01";
 import Breadcrumb from "@components/breadcrumb";
 import BlogDetailsArea from "@containers/blog-details";
-import BlogAuthor from "@containers/blog-details/blog-author";
+// import BlogAuthor from "@containers/blog-details/blog-author";
 import BlogNavLinks from "@containers/blog-details/nav-links";
 import DisqusComment from "@components/disqus-comment";
 import BlogSidebar from "@containers/blog-details/blog-sidebar";
-import { BlogMetaType, IBlog, IInstructor } from "@utils/types";
+import { BlogMetaType, IBlog } from "@utils/types";
 import { toCapitalize } from "@utils/methods";
 import {
     getPostBySlug,
@@ -19,7 +19,6 @@ import {
 type TProps = {
     data: {
         blog: IBlog;
-        author: IInstructor;
         prevAndNextPost: {
             prevPost: IBlog;
             nextPost: IBlog;
@@ -45,7 +44,6 @@ const BlogDetails: PageProps = ({
                 article={{
                     publishedTime: blog.postedAt,
                     modifiedTime: blog.postedAt,
-                    authors: [blog.author.name],
                     tags: tags.map((tag) => tag.title),
                 }}
                 image={`https://maxcoach-react.pages.dev${blog.image.src}`}
@@ -64,7 +62,6 @@ const BlogDetails: PageProps = ({
             <div className="tw-container tw-pb-15 md:tw-pb-20 lg:tw-pb-[100px] tw-grid tw-grid-cols-3 tw-gap-7.5 lg:tw-gap-15">
                 <div className="tw-col-span-full lg:tw-col-[1/3]">
                     <BlogDetailsArea {...blog} />
-                    <BlogAuthor {...blog.author} />
                     <BlogNavLinks {...prevAndNextPost} />
                     <DisqusComment id={blog.slug} title={blog.title} />
                 </div>

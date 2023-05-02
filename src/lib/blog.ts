@@ -5,7 +5,7 @@ import dayjs from "dayjs";
 import { IBlog, BlogMetaType, IDType } from "@utils/types";
 import { slugify, flatDeep } from "@utils/methods";
 import { getSlugs } from "./util";
-import { getAuthorByID } from "./author";
+// import { getAuthorByID } from "./author";
 
 interface BlogType extends Omit<IBlog, "category" | "tags" | "author"> {
     category: string;
@@ -55,7 +55,7 @@ export function getPostBySlug(
             })),
             slug: realSlug,
             excerpt: makeExcerpt(content, 150),
-            author: getAuthorByID(blogData.author, "all"),
+            // author: getAuthorByID(blogData.author, "all"),
         };
     } else {
         blog = fields.reduce((acc: IBlog, field: keyof IBlog) => {
@@ -68,10 +68,10 @@ export function getPostBySlug(
             if (field === "excerpt") {
                 return { ...acc, excerpt: makeExcerpt(content, 150) };
             }
-            if (field === "author") {
-                const author = getAuthorByID(blogData.author, "all");
-                return { ...acc, author };
-            }
+            // if (field === "author") {
+            //     const author = getAuthorByID(blogData.author, "all");
+            //     return { ...acc, author };
+            // }
             if (field === "category") {
                 return {
                     ...acc,
@@ -181,19 +181,19 @@ export function getPostsByTag(
     return { posts: result, count: totalPosts };
 }
 
-export function getPostsByAuthor(
-    authorID: IDType,
-    fields: Array<keyof IBlog> | "all" = [],
-    skip = 0,
-    limit?: number
-) {
-    const postFields =
-        fields === "all"
-            ? "all"
-            : ([...fields, "author"] as Array<keyof IBlog>);
-    const { blogs } = getAllBlogs(postFields);
-    let result = blogs.filter((post) => post.author.id === authorID);
-    const totalPosts = result.length;
-    if (limit) result = result.slice(skip, skip + limit);
-    return { posts: result, count: totalPosts };
-}
+// export function getPostsByAuthor(
+//     authorID: IDType,
+//     fields: Array<keyof IBlog> | "all" = [],
+//     skip = 0,
+//     limit?: number
+// ) {
+//     const postFields =
+//         fields === "all"
+//             ? "all"
+//             : ([...fields, "author"] as Array<keyof IBlog>);
+//     const { blogs } = getAllBlogs(postFields);
+//     // let result = blogs.filter((post) => post.author.id === authorID);
+//     const totalPosts = result.length;
+//     if (limit) result = result.slice(skip, skip + limit);
+//     return { posts: result, count: totalPosts };
+// }

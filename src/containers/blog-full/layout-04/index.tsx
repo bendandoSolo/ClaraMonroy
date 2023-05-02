@@ -32,7 +32,7 @@ const BlogArea = ({ data: { blogs, pagiData } }: TProps) => {
                         image={blog.image}
                         postedAt={blog.postedAt}
                         // views={blog.views}
-                        author={blog.author}
+                        // author={blog.author}
                         excerpt={blog.excerpt}
                         initial="offscreen"
                         whileInView="onscreen"

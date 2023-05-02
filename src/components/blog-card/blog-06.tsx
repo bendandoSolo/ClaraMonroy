@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
 import clsx from "clsx";
 import Anchor from "@ui/anchor";
-import AuthorMeta from "@components/blog-meta/author";
+// import AuthorMeta from "@components/blog-meta/author";
 import BlogMetaItem from "@components/blog-meta/meta-item";
 import { IBlog } from "@utils/types";
 import Button from "@components/ui/button";
@@ -9,14 +9,14 @@ import SocialShare from "@components/social-share/layout-03";
 
 type TProps = Pick<
     IBlog,
-    "image" | "path" | "title" | "postedAt" | "author" | "excerpt"
+    "image" | "path" | "title" | "postedAt" | "excerpt"
 > & {
     className?: string;
 };
 
 const BlogCard = forwardRef<HTMLDivElement, TProps>(
     (
-        { className, image, path, title, postedAt, author, excerpt },
+        { className, image, path, title, postedAt, excerpt },
         ref
     ) => {
         return (
@@ -51,10 +51,10 @@ const BlogCard = forwardRef<HTMLDivElement, TProps>(
                     </h3>
 
                     <div className="tw-text-md tw-mt-5 tw-text-gray-300 tw-flex tw-items-center tw-flex-wrap">
-                        <AuthorMeta
+                        {/* <AuthorMeta
                             author={author}
                             className="tw-pr-5 md:tw-pr-8"
-                        />
+                        /> */}
                         <BlogMetaItem
                             className="tw-pr-5 md:tw-pr-8"
                             text={postedAt}

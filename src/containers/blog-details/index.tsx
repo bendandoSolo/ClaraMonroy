@@ -1,6 +1,5 @@
 import dayjs from "dayjs";
 import Anchor from "@ui/anchor";
-import AuthorMeta from "@components/blog-meta/author";
 import BlogMetaItem from "@components/blog-meta/meta-item";
 import SocialShare from "@components/social-share/layout-03";
 import TagMeta from "@components/blog-meta/tags";
@@ -11,7 +10,6 @@ const BlogDetails = ({
     image,
     title,
     category,
-    author,
     postedAt,
     content,
     tags,
@@ -36,10 +34,10 @@ const BlogDetails = ({
 
                 <h2 className="tw-mb-5">{title}</h2>
                 <div className="tw-text-md tw-mt-5 tw-text-gray-300 tw-flex tw-items-center tw-flex-wrap">
-                    <AuthorMeta
+                    {/* <AuthorMeta
                         author={author}
                         className="tw-pr-5 md:tw-pr-8"
-                    />
+                    /> */}
                     <BlogMetaItem
                         className="tw-pr-5 md:tw-pr-8"
                         text={dayjs(postedAt).format("MMM DD, YYYY")}

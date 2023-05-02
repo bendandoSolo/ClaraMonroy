@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
 import clsx from "clsx";
 import Anchor from "@ui/anchor";
-import AuthorMeta from "@components/blog-meta/author";
+// import AuthorMeta from "@components/blog-meta/author";
 import BlogMetaItem from "@components/blog-meta/meta-item";
 import { IBlog } from "@utils/types";
 import Button from "@components/ui/button";
@@ -14,7 +14,6 @@ type TProps = Pick<
     | "title"
     | "postedAt"
     | "category"
-    | "author"
     | "excerpt"
 > & {
     className?: string;
@@ -29,7 +28,6 @@ const BlogCard = forwardRef<HTMLDivElement, TProps>(
             title,
             postedAt,
             category,
-            author,
             excerpt,
         },
         ref
@@ -72,10 +70,10 @@ const BlogCard = forwardRef<HTMLDivElement, TProps>(
                     </h3>
 
                     <div className="tw-text-md tw-mt-5 tw-text-gray-300 tw-flex tw-items-center tw-flex-wrap">
-                        <AuthorMeta
+                        {/* <AuthorMeta
                             author={author}
                             className="tw-pr-5 md:tw-pr-8"
-                        />
+                        /> */}
                         <BlogMetaItem
                             className="tw-pr-5 md:tw-pr-8"
                             text={postedAt}
