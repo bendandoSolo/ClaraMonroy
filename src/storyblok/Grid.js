@@ -1,7 +1,13 @@
-import { storyblokEditable } from "@storyblok/react";
+import { storyblokEditable, StoryblokComponent } from "@storyblok/react";
  
-const Teaser = ({ blok }) => {
-  return <h2 {...storyblokEditable(blok)}>{blok.headline} So this is not showing?</h2>;
+const Grid = ({ blok }) => {
+  return (
+    <div className="grid" {...storyblokEditable(blok)}>
+      {blok.columns.map((nestedBlok) => (
+        <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
+      ))}
+    </div>
+  );
 };
  
-export default Teaser;
+export default Grid;
