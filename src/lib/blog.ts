@@ -199,3 +199,30 @@ export function getTags() {
 //     if (limit) result = result.slice(skip, skip + limit);
 //     return { posts: result, count: totalPosts };
 // }
+
+
+
+
+
+const getStoryBlokBlogs = (blogsData: BlogModel[]) => {
+    // let blogs: TcutdownBlog[] = new Array<TcutdownBlog>();
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+    // blogs = blogsData.map((arrayItem: {content: TcutdownBlog) =>  {
+    //         return{
+    //             title: arrayItem.content.title as string,
+    //             postedAt: arrayItem.content.postedAt as string,
+    //             // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+    //             image:  {"src": arrayItem.content.image.filename} as unknown as string,
+    //             excerpt: arrayItem.content.excerpt as string,
+    //         }
+    //     });
+    const mapFn: (blogModel: BlogModel) => TcutdownBlog = ({content}) => { 
+        const cutdownBlog:TcutdownBlog = {
+            ...content,
+            image: { src: content.image.filename },
+        };
+        return cutdownBlog;
+    };
+    const blogs:TcutdownBlog[] = blogsData.map<TcutdownBlog>(mapFn);
+    return { blogs, count: blogs.length };
+};

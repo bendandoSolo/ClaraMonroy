@@ -7,6 +7,9 @@ import BlogDetailsArea from "@containers/blog-details";
 import BlogNavLinks from "@containers/blog-details/nav-links";
 import DisqusComment from "@components/disqus-comment";
 import BlogSidebar from "@containers/blog-details/blog-sidebar";
+
+import { getStoryblokApi } from "@storyblok/react";  // , storyblokEditable
+
 import { IBlog } from "@utils/types";
 import { toCapitalize } from "@utils/methods";
 import {
@@ -15,6 +18,27 @@ import {
     getPrevNextPost,
     // getTags,
 } from "../../lib/blog";
+
+// type TcutdownBlog = {
+//     title: string;
+//     postedAt: string;
+//     // image: string;
+//     image: { src: string };
+//     excerpt: string;
+// };
+type BlogImage = {
+    filename: string;
+}
+type BlogContent = {
+    title: string;
+    postedAt: string;
+    image: BlogImage;
+    excerpt: string;
+}
+type BlogModel = {
+    content: BlogContent
+};
+
 
 type TProps = {
     data: {
@@ -60,6 +84,7 @@ const BlogDetails: PageProps = ({
                 title="Blog"
             />
             <p>{JSON.stringify(blog)}</p>
+            <p>So here we have the actual blog page...</p>
             <div className="tw-container tw-pb-15 md:tw-pb-20 lg:tw-pb-[100px] tw-grid tw-grid-cols-3 tw-gap-7.5 lg:tw-gap-15">
                 <div className="tw-col-span-full lg:tw-col-[1/3]">
                     <BlogDetailsArea {...blog} />
@@ -96,11 +121,20 @@ type Params = {
     };
 };
 
-export const getStaticProps = ({ params }: Params) => {
+export const getStaticProps = async ({ params }: Params) => {
 
-    
+    // we need to get the storyblok data here...
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, no-useless-concat
+    const  { data } : {data: {stories: BlogModel[]}} = await getStoryblokApi().get(`cdn/stories/blog/${params.slug}`, {
+        version: "draft", // or 'published'
+        // is_startpage: false
+      });
+
+    console.log(data, JSON.stringify(data));
 
     const blog = getPostBySlug(params.slug, "all");
+    console.log(blog, JSON.stringify(blog));
+
     const prevAndNextPost = getPrevNextPost(params.slug, [
         "title",
         "image",

@@ -316,3 +316,41 @@ export type TSection = {
     titleSize?: "default" | "large";
     className?: string;
 };
+
+
+// type RecentPost = {
+//     title: string;
+//     path: string;
+//     postedAt: string;
+// }
+
+
+// storyblok types
+
+export type RecentPost = {
+    title: string;
+    path: string;
+    postedAt: string;
+}
+
+export type TcutdownBlog = {
+    title: string;
+    postedAt: string;
+    image: { src: string };
+    excerpt: string;
+};
+
+export type BlogImage = {
+    filename: string;
+}
+
+export type BlogContent = {
+    title: string;
+    postedAt: string;
+    image: BlogImage;
+    excerpt: string;
+}
+
+export type BlogModel = {
+    content: BlogContent
+};

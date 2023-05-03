@@ -55,6 +55,8 @@ const BlogDetails = ({
                     />
                 </div>
             </div>
+            
+            {/* we need to replace this with storybloks rich content editior */}
             <MarkdownRenderer
                 className="entry-content tw-mb-[54px]"
                 content={content}

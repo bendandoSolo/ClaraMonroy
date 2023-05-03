@@ -3,37 +3,35 @@ import SEO from "@components/seo/page-seo";
 import Layout01 from "@layout/layout-01";
 import Breadcrumb from "@components/breadcrumb";
 import BlogArea from "@containers/blog-full/layout-03";
-import { IBlog } from "@utils/types";
-
+import { IBlog, TcutdownBlog, BlogModel, BlogImage, BlogContent , RecentPost} from "@utils/types"; //
 import { getStoryblokApi } from "@storyblok/react";  // , storyblokEditable
-// import { getAllBlogs } from "../../../lib/blog";
+import { getAllBlogs } from "../../../lib/blog";
 
-type RecentPost = {
-    title: string;
-    path: string;
-    postedAt: string;
-}
+// type RecentPost = {
+//     title: string;
+//     path: string;
+//     postedAt: string;
+// }
 
-type TcutdownBlog = {
-    title: string;
-    postedAt: string;
-    // image: string;
-    image: { src: string };
-    excerpt: string;
-};
-type BlogImage = {
-    filename: string;
-}
-type BlogContent = {
-    title: string;
-    postedAt: string;
-    image: BlogImage;
-    excerpt: string;
-}
-type BlogModel = {
-    content: BlogContent
-};
-
+// type TcutdownBlog = {
+//     title: string;
+//     postedAt: string;
+//     // image: string;
+//     image: { src: string };
+//     excerpt: string;
+// };
+// type BlogImage = {
+//     filename: string;
+// }
+// type BlogContent = {
+//     title: string;
+//     postedAt: string;
+//     image: BlogImage;
+//     excerpt: string;
+// }
+// type BlogModel = {
+//     content: BlogContent
+// };
 
 type TProps = {
     data: {
@@ -155,7 +153,13 @@ export async function getStaticProps() {
         // recent posts are not necessary i dont think
         
         // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-        const recentPosts = getStoryBlokRecentPosts(blogs, count < 5 ? count : 5 ); // getAllBlogs(["title"], 0, 5);
+        
+         const recentPosts = getStoryBlokRecentPosts(blogs, count < 5 ? count : 5 ); // getAllBlogs(["title"], 0, 5);
+
+        // const {blogs: recentPosts } =  getAllBlogs(["title"], 0, 5);
+
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+        // const { blogs: recentPosts } = getAllBlogs(["title"], 0, 5);
 
         console.log(JSON.stringify(recentPosts));
 
