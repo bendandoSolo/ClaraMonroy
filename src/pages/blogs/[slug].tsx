@@ -13,7 +13,7 @@ import {
     getPostBySlug,
     getAllBlogs,
     getPrevNextPost,
-    getTags,
+    // getTags,
 } from "../../lib/blog";
 
 type TProps = {
@@ -59,6 +59,7 @@ const BlogDetails: PageProps = ({
                 currentPage={blog.title}
                 title="Blog"
             />
+            <p>{JSON.stringify(blog)}</p>
             <div className="tw-container tw-pb-15 md:tw-pb-20 lg:tw-pb-[100px] tw-grid tw-grid-cols-3 tw-gap-7.5 lg:tw-gap-15">
                 <div className="tw-col-span-full lg:tw-col-[1/3]">
                     <BlogDetailsArea {...blog} />
@@ -96,6 +97,9 @@ type Params = {
 };
 
 export const getStaticProps = ({ params }: Params) => {
+
+    
+
     const blog = getPostBySlug(params.slug, "all");
     const prevAndNextPost = getPrevNextPost(params.slug, [
         "title",
@@ -103,7 +107,7 @@ export const getStaticProps = ({ params }: Params) => {
         "slug",
     ]);
     const { blogs: recentPosts } = getAllBlogs(["title"], 0, 5);
-    const tags = getTags();
+    // const tags = getTags();
 
     return {
         props: {
@@ -111,7 +115,7 @@ export const getStaticProps = ({ params }: Params) => {
                 blog,
                 prevAndNextPost,
                 recentPosts,
-                tags,
+                // tags,
             },
             layout: {
                 headerShadow: true,
