@@ -3,7 +3,7 @@ import SEO from "@components/seo/page-seo";
 import Layout01 from "@layout/layout-01";
 import Breadcrumb from "@components/breadcrumb";
 import BlogArea from "@containers/blog-full/layout-03";
-import { IBlog, TcutdownBlog, BlogModel , RecentPost} from "@utils/types"; // , BlogImage, BlogContent
+import { IBlog,  BlogModel } from "@utils/types"; // , BlogImage, BlogContent, TcutdownBlog, , RecentPost
 import { getStoryblokApi } from "@storyblok/react";  // , storyblokEditable
 import { getStoryBlokBlogs, getStoryBlokRecentPosts } from "lib/blog";
 // import { getAllBlogs } from "../../../lib/blog";

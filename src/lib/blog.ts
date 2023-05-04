@@ -230,7 +230,6 @@ export const  getStoryBlokBlogs = (blogsData: BlogModel[]) => {
 
 
 export const getStoryBlokRecentPosts = (blogs: TcutdownBlog[], count: number) => {
-
     const mapFn: (blog: TcutdownBlog) => RecentPost = ({title, postedAt}) => {
         const recentPost: RecentPost =  {
            title,

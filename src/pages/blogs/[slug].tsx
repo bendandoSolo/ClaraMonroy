@@ -10,7 +10,7 @@ import BlogSidebar from "@containers/blog-details/blog-sidebar";
 
 import { getStoryblokApi } from "@storyblok/react";  // , storyblokEditable
 
-import { IBlog } from "@utils/types";
+import { IBlog, TcutdownBlog } from "@utils/types";
 import { toCapitalize } from "@utils/methods";
 import {
     getPostBySlug,
@@ -31,14 +31,18 @@ import {
 type BlogImage = {
     filename: string;
 }
-type BlogContent = {
+type NewType = {
     title: string;
     postedAt: string;
     image: BlogImage;
     excerpt: string;
-}
+    content: any;
+};
+
+type BlogContent = NewType
 type BlogModel = {
-    content: BlogContent
+    content: BlogContent;
+    slug: string;
 };
 
 
@@ -123,6 +127,35 @@ type Params = {
     };
 };
 
+
+type BlogContent2 = {  
+image : BlogImage,
+title: string,
+postedAt: string,
+content: string,
+}
+
+
+const getStoryblockPostBySlug = (slug: string, blogs: BlogModel[]): BlogContent2 | void => {
+    const blog = blogs.find((b) => b.slug === slug);
+    // console.log('---------------------------------------------');
+    // console.log(JSON.stringify(blog));
+    // console.log('---------------------------------------------');
+    // // convert blog into cut down blog?
+
+    if (blog) {
+        const blogContent: BlogContent2 = {
+            title: blog.content.title,
+            postedAt: blog.content.postedAt,
+            image: blog.content.image,
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+            content: blog.content.content,
+        };
+        return blogContent;
+    }
+}
+
+
 export const getStaticProps = async ({ params }: Params) => {
 
     // we need to get the storyblok data here...
@@ -135,17 +168,25 @@ export const getStaticProps = async ({ params }: Params) => {
     // console.log(data, JSON.stringify(data));
 
     // get all blogs
+    
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     const  { data } : {data: {stories: BlogModel[]}} = await getStoryblokApi().get(`cdn/stories`, {
-        version: "draft", // or 'published'
+        version: "published", // or 'published'
         starts_with: 'blog/',
         // is_startpage: false
       });
 
     // get blog by slug....
-
+    // console.log(data, JSON.stringify(data));
 
     const blog = getPostBySlug(params.slug, "all");
+
     console.log(blog, JSON.stringify(blog));
+   
+     const blogContent =  getStoryblockPostBySlug(params.slug, data.stories);
+
+   // console.log(blog, JSON.stringify(blog));
+      console.log(blogContent, JSON.stringify(blogContent));
 
     const prevAndNextPost = getPrevNextPost(params.slug, [
         "title",
@@ -156,6 +197,8 @@ export const getStaticProps = async ({ params }: Params) => {
     const { blogs, count } = getStoryBlokBlogs(data.stories);
 
     const recentPosts = getStoryBlokRecentPosts(blogs, count < 5 ? count : 5 );
+
+   // console.log(blog, JSON.stringify(blog));
 
    // const { blogs: recentPosts } = getAllBlogs(["title"], 0, 5);
     // const tags = getTags();
