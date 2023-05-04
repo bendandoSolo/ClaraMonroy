@@ -2,7 +2,7 @@ import fs from "fs";
 import { join } from "path";
 import matter from "gray-matter";
 import dayjs from "dayjs";
-import { IBlog, IDType } from "@utils/types";
+import { BlogModel, IBlog, IDType, RecentPost, TcutdownBlog } from "@utils/types";
 // import { slugify, flatDeep } from "@utils/methods";
 import { getSlugs } from "./util";
 // import { getAuthorByID } from "./author";
@@ -204,7 +204,7 @@ export function getTags() {
 
 
 
-const getStoryBlokBlogs = (blogsData: BlogModel[]) => {
+export const  getStoryBlokBlogs = (blogsData: BlogModel[]) => {
     // let blogs: TcutdownBlog[] = new Array<TcutdownBlog>();
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     // blogs = blogsData.map((arrayItem: {content: TcutdownBlog) =>  {
@@ -226,3 +226,19 @@ const getStoryBlokBlogs = (blogsData: BlogModel[]) => {
     const blogs:TcutdownBlog[] = blogsData.map<TcutdownBlog>(mapFn);
     return { blogs, count: blogs.length };
 };
+
+
+
+export const getStoryBlokRecentPosts = (blogs: TcutdownBlog[], count: number) => {
+
+    const mapFn: (blog: TcutdownBlog) => RecentPost = ({title, postedAt}) => {
+        const recentPost: RecentPost =  {
+           title,
+           postedAt,
+           path: "/",
+        };
+        return recentPost;
+    };
+    const blogsOutput: RecentPost[] = blogs.map<RecentPost>(mapFn);
+    return blogsOutput.slice(0, count);
+}

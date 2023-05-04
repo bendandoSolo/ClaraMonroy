@@ -16,6 +16,8 @@ import {
     getPostBySlug,
     getAllBlogs,
     getPrevNextPost,
+    getStoryBlokBlogs,
+    getStoryBlokRecentPosts,
     // getTags,
 } from "../../lib/blog";
 
@@ -84,7 +86,7 @@ const BlogDetails: PageProps = ({
                 title="Blog"
             />
             <p>{JSON.stringify(blog)}</p>
-            <p>So here we have the actual blog page...</p>
+            <h5>blog page...[slug...]</h5>
             <div className="tw-container tw-pb-15 md:tw-pb-20 lg:tw-pb-[100px] tw-grid tw-grid-cols-3 tw-gap-7.5 lg:tw-gap-15">
                 <div className="tw-col-span-full lg:tw-col-[1/3]">
                     <BlogDetailsArea {...blog} />
@@ -125,12 +127,22 @@ export const getStaticProps = async ({ params }: Params) => {
 
     // we need to get the storyblok data here...
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, no-useless-concat
-    const  { data } : {data: {stories: BlogModel[]}} = await getStoryblokApi().get(`cdn/stories/blog/${params.slug}`, {
+    // const  { data } : {data: {stories: BlogModel[]}} = await getStoryblokApi().get(`cdn/stories/blog/${params.slug}`, {
+    //     version: "draft", // or 'published'
+    //     // is_startpage: false
+    //   });
+
+    // console.log(data, JSON.stringify(data));
+
+    // get all blogs
+    const  { data } : {data: {stories: BlogModel[]}} = await getStoryblokApi().get(`cdn/stories`, {
         version: "draft", // or 'published'
+        starts_with: 'blog/',
         // is_startpage: false
       });
 
-    console.log(data, JSON.stringify(data));
+    // get blog by slug....
+
 
     const blog = getPostBySlug(params.slug, "all");
     console.log(blog, JSON.stringify(blog));
@@ -140,7 +152,12 @@ export const getStaticProps = async ({ params }: Params) => {
         "image",
         "slug",
     ]);
-    const { blogs: recentPosts } = getAllBlogs(["title"], 0, 5);
+
+    const { blogs, count } = getStoryBlokBlogs(data.stories);
+
+    const recentPosts = getStoryBlokRecentPosts(blogs, count < 5 ? count : 5 );
+
+   // const { blogs: recentPosts } = getAllBlogs(["title"], 0, 5);
     // const tags = getTags();
 
     return {

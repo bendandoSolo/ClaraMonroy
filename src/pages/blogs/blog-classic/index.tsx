@@ -3,9 +3,10 @@ import SEO from "@components/seo/page-seo";
 import Layout01 from "@layout/layout-01";
 import Breadcrumb from "@components/breadcrumb";
 import BlogArea from "@containers/blog-full/layout-03";
-import { IBlog, TcutdownBlog, BlogModel, BlogImage, BlogContent , RecentPost} from "@utils/types"; //
+import { IBlog, TcutdownBlog, BlogModel , RecentPost} from "@utils/types"; // , BlogImage, BlogContent
 import { getStoryblokApi } from "@storyblok/react";  // , storyblokEditable
-import { getAllBlogs } from "../../../lib/blog";
+import { getStoryBlokBlogs, getStoryBlokRecentPosts } from "lib/blog";
+// import { getAllBlogs } from "../../../lib/blog";
 
 // type RecentPost = {
 //     title: string;
@@ -77,43 +78,6 @@ const BlogClassic: PageProps = ({
 
 BlogClassic.Layout = Layout01;
 
-// should move to getStoryBlokBlogs in lib/blog
-const getStoryBlokBlogs = (blogsData: BlogModel[]) => {
-    // let blogs: TcutdownBlog[] = new Array<TcutdownBlog>();
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-    // blogs = blogsData.map((arrayItem: {content: TcutdownBlog) =>  {
-    //         return{
-    //             title: arrayItem.content.title as string,
-    //             postedAt: arrayItem.content.postedAt as string,
-    //             // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-    //             image:  {"src": arrayItem.content.image.filename} as unknown as string,
-    //             excerpt: arrayItem.content.excerpt as string,
-    //         }
-    //     });
-    const mapFn: (blogModel: BlogModel) => TcutdownBlog = ({content}) => { 
-        const cutdownBlog:TcutdownBlog = {
-            ...content,
-            image: { src: content.image.filename },
-        };
-        return cutdownBlog;
-    };
-    const blogs:TcutdownBlog[] = blogsData.map<TcutdownBlog>(mapFn);
-    return { blogs, count: blogs.length };
-};
-
-const getStoryBlokRecentPosts = (blogs: TcutdownBlog[], count: number) => {
-
-    const mapFn: (blog: TcutdownBlog) => RecentPost = ({title, postedAt}) => {
-        const recentPost: RecentPost =  {
-           title,
-           postedAt,
-           path: "/",
-        };
-        return recentPost;
-    };
-    const blogsOutput: RecentPost[] = blogs.map<RecentPost>(mapFn);
-    return blogsOutput.slice(0, count);
-}
 
 export async function getStaticProps() {
 // export async const getStaticProps: GetStaticProps = () => {
