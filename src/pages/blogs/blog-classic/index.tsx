@@ -8,7 +8,6 @@ import { getStoryblokApi } from "@storyblok/react";  // , storyblokEditable
 import { getStoryBlokBlogs, getStoryBlokRecentPosts } from "lib/blog";
 // import { getAllBlogs } from "../../../lib/blog";
 
-
 type TProps = {
     data: {
         blogs: IBlog[];
@@ -35,7 +34,7 @@ const BlogClassic: PageProps = ({
                 pages={[{ path: "/", label: "home" }]}
                 currentPage="Blog Classic"
             />
-            <p>{JSON.stringify(blogs)}</p>
+            {/* <p>{JSON.stringify(blogs)}</p> */}
             <BlogArea
                 data={{
                     blogs,
@@ -56,21 +55,8 @@ BlogClassic.Layout = Layout01;
 
 export async function getStaticProps() {
 // export async const getStaticProps: GetStaticProps = () => {
-    // let { blogs, count } = getAllBlogs(
-    //     [
-    //         "title",
-    //         "image",
-    //         "postedAt",
-    //         "excerpt",
-    //     ],
-    //     0,
-    //     POSTS_PER_PAGE
-    // );
-    
 
     // const tags = getTags();
-
-         // we want to get all the blogs from storyblok
 
         // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         const  { data } : {data: {stories: BlogModel[]}} = await getStoryblokApi().get(`cdn/stories`, {
@@ -80,10 +66,7 @@ export async function getStaticProps() {
         });
 
         const { blogs, count } = getStoryBlokBlogs(data.stories);    
-        const recentPosts = getStoryBlokRecentPosts(blogs, count < 5 ? count : 5 ); // getAllBlogs(["title"], 0, 5);
-
-        // const {blogs: recentPosts } =  getAllBlogs(["title"], 0, 5);
-        // const { blogs: recentPosts } = getAllBlogs(["title"], 0, 5);
+        const recentPosts = getStoryBlokRecentPosts(blogs, count < 5 ? count : 5 ); 
 
     return {
         props: {
@@ -103,8 +86,5 @@ export async function getStaticProps() {
         },
     };
 }
-
-
-
 
 export default BlogClassic;

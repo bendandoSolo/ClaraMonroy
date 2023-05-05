@@ -39,11 +39,11 @@ const BlogCard = forwardRef<HTMLDivElement, TProps>(
                 ref={ref}
             >
                 <div className="tw-relative tw-group tw-overflow-hidden tw-rounded tw-max-h-[300px] md:tw-max-h-[400px]">
-                    {image?.src && (
+                    {image?.filename && (
                         <figure className="tw-transition-transform tw-duration-1500 tw-h-full group-hover:tw-scale-110">
                             <img
                                 className="tw-w-full tw-h-full tw-object-cover"
-                                src={image.src}
+                                src={image.filename}
                                 alt={image?.alt || title}
                                 width={image.width || 770}
                                 height={image.height || 400}
@@ -55,7 +55,7 @@ const BlogCard = forwardRef<HTMLDivElement, TProps>(
                         {title}
                     </Anchor>
                 </div>
-                <p>{JSON.stringify(path)}</p>
+                {/* <p>{JSON.stringify(path)}</p> */}
                 <div className="tw-pt-8 tw-pb-[50px]">
                     {/* <Anchor
                         path={category.path}
@@ -77,6 +77,8 @@ const BlogCard = forwardRef<HTMLDivElement, TProps>(
                             text={postedAt}
                             icon="far fa-calendar"
                         />
+                        <p>BlogMetaItem text= postedAt</p>
+
                         {/* <BlogMetaItem
                             className="tw-pr-5 md:tw-pr-8"
                             text={`${views} views`}

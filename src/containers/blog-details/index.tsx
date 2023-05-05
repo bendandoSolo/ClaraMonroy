@@ -17,11 +17,11 @@ const BlogDetails = ({
     return (
         <article className="blog-details tw-pb-7.5 tw-mb-10 tw-border-b tw-border-b-gray-500">
             <div className="entry-header tw-mb-5">
-                {image?.src && (
+                {image?.filename && (
                     <figure className="tw-mb-7">
                         <img
                             className="tw-w-full tw-object-cover tw-rounded"
-                            src={image.src}
+                            src={image.filename}
                             alt={image?.alt || title}
                             width="770"
                         />
@@ -33,8 +33,7 @@ const BlogDetails = ({
                 </div> */}
 
                 <h2 className="tw-mb-5">{title}</h2>
-                <h3>We need to show the image...</h3>
-                <p>{JSON.stringify(image)}</p>
+                {/* <p>Image: {JSON.stringify(image)}</p> */}
                 <div className="tw-text-md tw-mt-5 tw-text-gray-300 tw-flex tw-items-center tw-flex-wrap">
                     {/* <AuthorMeta
                         author={author}

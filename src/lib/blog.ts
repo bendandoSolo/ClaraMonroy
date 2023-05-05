@@ -205,49 +205,26 @@ export function getTags() {
 
 
 export const  getStoryBlokBlogs = (blogsData: BlogModel[]) => {
-
-
-    console.log(blogsData);
-    console.log(blogsData[0].slug);
-    console.log('--------------------------------------');
-    // let blogs: TcutdownBlog[] = new Array<TcutdownBlog>();
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-    // blogs = blogsData.map((arrayItem: {content: TcutdownBlog) =>  {
-    //         return{
-    //             title: arrayItem.content.title as string,
-    //             postedAt: arrayItem.content.postedAt as string,
-    //             // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-    //             image:  {"src": arrayItem.content.image.filename} as unknown as string,
-    //             excerpt: arrayItem.content.excerpt as string,
-    //         }
-    //     });
     const mapFn: (blogModel: BlogModel) => TcutdownBlog = ({slug, content}) => { 
         const cutdownBlog:TcutdownBlog = {
             ...content,
-            image: { src: content.image.filename },
+            image: { filename: content.image.filename },
             // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
             path: slug,
         };
         return cutdownBlog;
     };
 
-    
-
     const blogs:TcutdownBlog[] = blogsData.map<TcutdownBlog>(mapFn);
-
-    console.log('blogs', blogs);
-
     return { blogs, count: blogs.length };
 };
 
-
-
 export const getStoryBlokRecentPosts = (blogs: TcutdownBlog[], count: number) => {
-    const mapFn: (blog: TcutdownBlog) => RecentPost = ({title, postedAt}) => {
+    const mapFn: (blog: TcutdownBlog) => RecentPost = ({title, postedAt, path}) => {
         const recentPost: RecentPost =  {
            title,
            postedAt,
-           path: "/",
+           path
         };
         return recentPost;
     };

@@ -1,7 +1,7 @@
 export type IDType = string | number;
 
 export interface ImageType {
-    src: string;
+    filename: string;
     alt?: string;
     width?: number;
     height?: number;
@@ -336,7 +336,7 @@ export type RecentPost = {
 export type TcutdownBlog = {
     title: string;
     postedAt: string;
-    image: { src: string };
+    image: { filename: string };
     excerpt: string;
     path: string;
 };
