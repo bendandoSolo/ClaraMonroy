@@ -114,6 +114,8 @@
 //     };
 // };
 
-const BlogCategoryPage = () => (<h1>Blog categories no longer apply</h1>);
+const BlogCategoryPage = () => {
+    return (<h1>Blog categories no longer apply</h1>);
+};
 
 export default BlogCategoryPage;
