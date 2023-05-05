@@ -92,7 +92,7 @@ export const getStaticProps: GetStaticProps<TProps, Params> = ({ params }) => {
             data: {
                 blogs,
                 recentPosts,
-                // tags,
+                tags: null,
                 currentPage,
                 numberOfPages: Math.ceil(count / POSTS_PER_PAGE),
             },
