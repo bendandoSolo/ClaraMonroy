@@ -4,22 +4,27 @@ import Layout01 from "@layout/layout-01";
 import Breadcrumb from "@components/breadcrumb";
 import BlogDetailsArea from "@containers/blog-details";
 // import BlogAuthor from "@containers/blog-details/blog-author";
-import BlogNavLinks from "@containers/blog-details/nav-links";
-import DisqusComment from "@components/disqus-comment";
+// import BlogNavLinks from "@containers/blog-details/nav-links";
+// import DisqusComment from "@components/disqus-comment";
 import BlogSidebar from "@containers/blog-details/blog-sidebar";
 
 import { getStoryblokApi } from "@storyblok/react";  // , storyblokEditable
 
-import { IBlog, TcutdownBlog } from "@utils/types";
+import { IBlog } from "@utils/types";
 import { toCapitalize } from "@utils/methods";
 import {
-    getPostBySlug,
+   // getPostBySlug,
     getAllBlogs,
+    getPostBySlug,
+    // getPostBySlug,
     getPrevNextPost,
     getStoryBlokBlogs,
     getStoryBlokRecentPosts,
+    // getStoryBlokBlogs,
+    // getStoryBlokRecentPosts,
     // getTags,
 } from "../../lib/blog";
+import { CollectionPageJsonLd } from "next-seo";
 
 // type TcutdownBlog = {
 //     title: string;
@@ -63,7 +68,7 @@ type PageProps = NextPage<TProps> & {
 };
 
 const BlogDetails: PageProps = ({
-    data: { blog, prevAndNextPost, recentPosts},
+    data: { blog, recentPosts}, // prevAndNextPost, 
 }) => {
     return (
         <>
@@ -89,13 +94,11 @@ const BlogDetails: PageProps = ({
                 currentPage={blog.title}
                 title="Blog"
             />
-            <p>{JSON.stringify(blog)}</p>
-            <h5>blog page...[slug...]</h5>
             <div className="tw-container tw-pb-15 md:tw-pb-20 lg:tw-pb-[100px] tw-grid tw-grid-cols-3 tw-gap-7.5 lg:tw-gap-15">
                 <div className="tw-col-span-full lg:tw-col-[1/3]">
                     <BlogDetailsArea {...blog} />
-                    <BlogNavLinks {...prevAndNextPost} />
-                    <DisqusComment id={blog.slug} title={blog.title} />
+                    {/* <BlogNavLinks {...prevAndNextPost} /> */}
+                    {/* <DisqusComment id={blog.slug} title={blog.title} /> */}
                 </div>
                 <div className="tw-col-span-full lg:tw-col-[3/-1]">
                     <BlogSidebar recentPosts={recentPosts}  />
@@ -107,9 +110,37 @@ const BlogDetails: PageProps = ({
 
 BlogDetails.Layout = Layout01;
 
-export const getStaticPaths: GetStaticPaths = () => {
+export const getStaticPaths: GetStaticPaths = async () => {
+
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+    const  { data } : {data: {stories: BlogModel[]}} = await getStoryblokApi().get(`cdn/stories`, {
+        version: "published", // or 'published'
+        starts_with: 'blog/',
+        // is_startpage: false
+      });
+
+    console.log('data', JSON.stringify(data));
+
+    // const { blogs } = getStoryblokBlogPaths(["slug"]);
+    
+    const storyblokBlogPaths = {
+    
+    paths: data.stories.map(({ slug }) => {
+        return {
+            params: {
+                slug,
+            },      
+        };  
+    }), 
+    fallback: false,
+    };
+
+    console.log('--------------------------------------------');
+    console.log('storyblokBlogPaths', JSON.stringify(storyblokBlogPaths));
+    console.log('--------------------------------------------');
+
     const { blogs } = getAllBlogs(["slug"]);
-    return {
+    const params = {
         paths: blogs.map(({ slug }) => {
             return {
                 params: {
@@ -119,6 +150,13 @@ export const getStaticPaths: GetStaticPaths = () => {
         }),
         fallback: false,
     };
+
+    console.log('--------------------------------------------');
+    console.log('params', JSON.stringify(params));
+    console.log('--------------------------------------------');
+
+    return storyblokBlogPaths;
+
 };
 
 type Params = {
@@ -136,12 +174,11 @@ content: string,
 }
 
 
-const getStoryblockPostBySlug = (slug: string, blogs: BlogModel[]): BlogContent2 | void => {
+const getStoryblokPostBySlug = (slug: string, blogs: BlogModel[]): BlogContent2 | void => {
+
+    console.log(slug);
+
     const blog = blogs.find((b) => b.slug === slug);
-    // console.log('---------------------------------------------');
-    // console.log(JSON.stringify(blog));
-    // console.log('---------------------------------------------');
-    // // convert blog into cut down blog?
 
     if (blog) {
         const blogContent: BlogContent2 = {
@@ -157,6 +194,8 @@ const getStoryblockPostBySlug = (slug: string, blogs: BlogModel[]): BlogContent2
 
 
 export const getStaticProps = async ({ params }: Params) => {
+
+    console.log('params', params);
 
     // we need to get the storyblok data here...
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, no-useless-concat
@@ -175,18 +214,13 @@ export const getStaticProps = async ({ params }: Params) => {
         starts_with: 'blog/',
         // is_startpage: false
       });
-
-    // get blog by slug....
-    // console.log(data, JSON.stringify(data));
-
-    const blog = getPostBySlug(params.slug, "all");
-
-    console.log(blog, JSON.stringify(blog));
    
-     const blogContent =  getStoryblockPostBySlug(params.slug, data.stories);
+     console.log('data', JSON.stringify(data));
 
-   // console.log(blog, JSON.stringify(blog));
-      console.log(blogContent, JSON.stringify(blogContent));
+      const blog =  getStoryblokPostBySlug(params.slug, data.stories);
+
+     // const blogWeWant =  getStoryblokPostBySlug("test", data.stories);
+     // console.log('blogWeWant', JSON.stringify(blogWeWant));
 
     const prevAndNextPost = getPrevNextPost(params.slug, [
         "title",
@@ -194,13 +228,17 @@ export const getStaticProps = async ({ params }: Params) => {
         "slug",
     ]);
 
-    const { blogs, count } = getStoryBlokBlogs(data.stories);
-
+          const { blogs, count } = getStoryBlokBlogs(data.stories);
+     
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     const recentPosts = getStoryBlokRecentPosts(blogs, count < 5 ? count : 5 );
 
-   // console.log(blog, JSON.stringify(blog));
+     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+    
+     console.log('params.slug', params.slug) 
 
-   // const { blogs: recentPosts } = getAllBlogs(["title"], 0, 5);
+    // const blog = getPostBySlug(params.slug, "all"); 
+    // const {blogs: recentPosts } =  getAllBlogs(["title"], 0, 5);
     // const tags = getTags();
 
     return {

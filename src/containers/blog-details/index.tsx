@@ -33,6 +33,8 @@ const BlogDetails = ({
                 </div> */}
 
                 <h2 className="tw-mb-5">{title}</h2>
+                <h3>We need to show the image...</h3>
+                <p>{JSON.stringify(image)}</p>
                 <div className="tw-text-md tw-mt-5 tw-text-gray-300 tw-flex tw-items-center tw-flex-wrap">
                     {/* <AuthorMeta
                         author={author}
@@ -48,15 +50,15 @@ const BlogDetails = ({
                         text={`${views} views`}
                         icon="far fa-eye"
                     /> */}
-                    <BlogMetaItem
+                    {/* <BlogMetaItem
                         text="2 commentss"
                         icon="far fa-comment-alt-lines"
                         path="#comments"
-                    />
+                    /> */}
                 </div>
             </div>
             
-            {/* we need to replace this with storybloks rich content editior */}
+            {/* we should replace this with storyblok rich content editor */}
             <MarkdownRenderer
                 className="entry-content tw-mb-[54px]"
                 content={content}

@@ -55,7 +55,7 @@ const BlogCard = forwardRef<HTMLDivElement, TProps>(
                         {title}
                     </Anchor>
                 </div>
-
+                <p>{JSON.stringify(path)}</p>
                 <div className="tw-pt-8 tw-pb-[50px]">
                     {/* <Anchor
                         path={category.path}

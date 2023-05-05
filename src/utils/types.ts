@@ -338,6 +338,7 @@ export type TcutdownBlog = {
     postedAt: string;
     image: { src: string };
     excerpt: string;
+    path: string;
 };
 
 export type BlogImage = {
@@ -352,5 +353,6 @@ export type BlogContent = {
 }
 
 export type BlogModel = {
-    content: BlogContent
+    content: BlogContent;
+    slug: string;
 };
