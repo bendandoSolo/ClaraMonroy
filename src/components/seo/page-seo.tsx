@@ -75,6 +75,7 @@ const PageSeo = ({
                     url={href}
                     title={title as string}
                     images={[image as string]}
+                    authorName={"Clara Monroy" as string}
                     datePublished={article.publishedTime}
                     dateModified={article.modifiedTime}
                     description={description as string}
