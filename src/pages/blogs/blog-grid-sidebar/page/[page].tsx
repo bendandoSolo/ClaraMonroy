@@ -86,13 +86,13 @@ export const getStaticProps: GetStaticProps<TProps, Params> = ({ params }) => {
     );
 
     const { blogs: recentPosts } = getAllBlogs(["title"], 0, 5);
-    // const tags = getTags();
+    const tags = null; //getTags();
     return {
         props: {
             data: {
                 blogs,
                 recentPosts,
-                tags: null,
+                tags,
                 currentPage,
                 numberOfPages: Math.ceil(count / POSTS_PER_PAGE),
             },
