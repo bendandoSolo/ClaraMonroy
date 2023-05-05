@@ -5,7 +5,7 @@ import Layout01 from "@layout/layout-01";
 import Breadcrumb from "@components/breadcrumb";
 import BlogArea from "@containers/blog-full/layout-03";
 import {  IBlog } from "@utils/types";
-import { getAllBlogs, getTags } from "../../../../lib/blog";
+import { getAllBlogs,  } from "../../../../lib/blog";   // getTags
 
 type TProps = {
     data: {
@@ -91,13 +91,13 @@ export const getStaticProps: GetStaticProps<TProps, Params> = ({ params }) => {
     );
 
     const { blogs: recentPosts } = getAllBlogs(["title"], 0, 5);
-    const tags = getTags();
+    // const tags = getTags();
     return {
         props: {
             data: {
                 blogs,
                 recentPosts,
-                tags,
+                // tags,
                 currentPage,
                 numberOfPages: Math.ceil(count / POSTS_PER_PAGE),
             },
