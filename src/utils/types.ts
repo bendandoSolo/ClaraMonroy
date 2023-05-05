@@ -171,11 +171,11 @@ export interface ICourse {
     curriculum: IDType[];
 }
 
-// export interface BlogMetaType {
-//     title: string;
-//     slug: string;
-//     path: string;
-// }
+export interface BlogMetaType {
+    title: string;
+    slug: string;
+    path: string;
+}
 
 export interface IBlogOriginal {
     title: string;
