@@ -1,3 +1,5 @@
+import React from "react";
+
 // import type { GetStaticPaths, NextPage } from "next";
 // import SEO from "@components/seo/page-seo";
 // import Layout01 from "@layout/layout-01";
