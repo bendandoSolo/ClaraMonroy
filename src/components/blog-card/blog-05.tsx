@@ -6,6 +6,7 @@ import BlogMetaItem from "@components/blog-meta/meta-item";
 import { IBlog } from "@utils/types";
 import Button from "@components/ui/button";
 import SocialShare from "@components/social-share/layout-03";
+import dayjs from "dayjs";
 
 type TProps = Pick<
     IBlog,
@@ -72,12 +73,17 @@ const BlogCard = forwardRef<HTMLDivElement, TProps>(
                             author={author}
                             className="tw-pr-5 md:tw-pr-8"
                         /> */}
-                        <BlogMetaItem
+                        {/* <BlogMetaItem
                             className="tw-pr-5 md:tw-pr-8"
                             text={postedAt}
                             icon="far fa-calendar"
-                        />
-                        <p>BlogMetaItem text= postedAt</p>
+                        /> */}
+                         <BlogMetaItem
+                        className="tw-pr-5 md:tw-pr-8"
+                        text={dayjs(postedAt).format("MMM DD, YYYY")}
+                        icon="far fa-calendar"
+                    />
+                        {/* <p>BlogMetaItem text= postedAt</p> */}
 
                         {/* <BlogMetaItem
                             className="tw-pr-5 md:tw-pr-8"
