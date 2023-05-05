@@ -208,7 +208,7 @@ export const  getStoryBlokBlogs = (blogsData: BlogModel[]) => {
     const mapFn: (blogModel: BlogModel) => TcutdownBlog = ({slug, content}) => { 
         const cutdownBlog:TcutdownBlog = {
             ...content,
-            image: { filename: content.image.filename },
+            image: { src: content.image.filename },
             // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
             path: slug,
         };

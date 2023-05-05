@@ -12,7 +12,7 @@ import { getStoryblokApi } from "@storyblok/react";  // , storyblokEditable
 
 // import { CollectionPageJsonLd } from "next-seo";
 
-import { IBlog } from "@utils/types";
+import { IBlog, BlogImage, BlogModel, StoryblokImage } from "@utils/types";
 import { toCapitalize } from "@utils/methods";
 
 import {
@@ -25,22 +25,20 @@ import {
     // getTags,
 } from "../../lib/blog";
 
-type BlogImage = {
-    filename: string;
-}
-type NewType = {
-    title: string;
-    postedAt: string;
-    image: BlogImage;
-    excerpt: string;
-    content: any;
-};
+// type NewType = {
+//     title: string;
+//     postedAt: string;
+//     image: BlogImage;
+//     excerpt: string;
+//     // eslint-disable-next-line @typescript-eslint/no-explicit-any
+//     content: any;
+// };
 
-type BlogContent = NewType
-type BlogModel = {
-    content: BlogContent;
-    slug: string;
-};
+// type BlogContent = NewType
+// type BlogModel = {
+//     content: BlogContent;
+//     slug: string;
+// };
 
 type TProps = {
     data: {
@@ -72,7 +70,7 @@ const BlogDetails: PageProps = ({
                     modifiedTime: blog.postedAt,
                     // tags: tags.map((tag) => tag.title),
                 }}
-                image={`https://maxcoach-react.pages.dev${blog.image.src}`}
+                image={blog.image.src}
             />
             <Breadcrumb
                 pages={[
@@ -142,24 +140,27 @@ type Params = {
     };
 };
 
-
 type BlogContent2 = {  
 image : BlogImage,
 title: string,
 postedAt: string,
-content: string,
+content: unknown,
 }
 
-
 const getStoryblokPostBySlug = (slug: string, blogs: BlogModel[]): BlogContent2 | void => {
+    const storyBlockImageToBlogImage = (image: StoryblokImage): BlogImage => {
+        return {
+            src: image.filename,
+        };
+    };
+    
     const blog = blogs.find((b) => b.slug === slug);
 
     if (blog) {
         const blogContent: BlogContent2 = {
             title: blog.content.title,
             postedAt: blog.content.postedAt,
-            image: blog.content.image,
-            // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+            image: storyBlockImageToBlogImage(blog.content.image),
             content: blog.content.content,
         };
         return blogContent;

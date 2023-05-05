@@ -17,11 +17,11 @@ const BlogDetails = ({
     return (
         <article className="blog-details tw-pb-7.5 tw-mb-10 tw-border-b tw-border-b-gray-500">
             <div className="entry-header tw-mb-5">
-                {image?.filename && (
+                {image?.src && (
                     <figure className="tw-mb-7">
                         <img
                             className="tw-w-full tw-object-cover tw-rounded"
-                            src={image.filename}
+                            src={image.src}
                             alt={image?.alt || title}
                             width="770"
                         />
