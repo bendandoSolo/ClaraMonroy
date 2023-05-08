@@ -62,11 +62,11 @@ const BlogDetails: PageProps = ({
                     { path: "/", label: "home" },
                     {
                         path: "/blogs/blog-grid-sidebar",
-                        label: "London International Lesbian Clara Monroy",
+                        label: "blogs",
                     },
                 ]}
                 currentPage={blog.title}
-                title="London International Lesbian Clara Monroy's Blog"
+                title="Clara's Recommendation"
             />
             <div className="tw-container tw-pb-15 md:tw-pb-20 lg:tw-pb-[100px] tw-grid tw-grid-cols-3 tw-gap-7.5 lg:tw-gap-15">
                 <div className="tw-col-span-full lg:tw-col-[1/3]">
@@ -89,7 +89,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     const  { data } : {data: {stories: BlogModel[]}} = await getStoryblokApi().get(`cdn/stories`, {
         version: "published", // or 'published'
-        starts_with: 'london-international-lesbians-blog/',
+        starts_with: 'lesbian-recommendations-london/',
         // is_startpage: false
       });
     
@@ -158,7 +158,7 @@ export const getStaticProps = async ({ params }: Params) => {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     const  { data } : {data: {stories: BlogModel[]}} = await getStoryblokApi().get(`cdn/stories`, {
         version: "published", // or 'published'
-        starts_with: 'london-international-lesbians-blog/',
+        starts_with: 'lesbian-recommendations-london/',
         // is_startpage: false
       });
 

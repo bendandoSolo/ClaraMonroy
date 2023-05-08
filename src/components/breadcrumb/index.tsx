@@ -31,7 +31,7 @@ const Breadcrumb = ({
         >
             {showTitle && (
                 <div className="tw-container">
-                    <h1 className="title tw-capitalize tw-mt-5 tw-mb-0 tw-text-3xl md:tw-text-4xl lg:tw-text-5xl tw-text-center">
+                    <h1 className="title tw-capitalize tw-mt-5 tw-mb-0 tw-text-2xl md:tw-text-3xl lg:tw-text-4xl tw-text-center">
                         {title || currentPage}
                     </h1>
                 </div>
