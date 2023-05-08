@@ -118,9 +118,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
     //     fallback: false,
     // };
 
-    // eslint-disable-next-line no-console
-    console.log('storyblokBlogPaths', JSON.stringify(storyblokBlogPaths));
-
     return storyblokBlogPaths;
 };
 
