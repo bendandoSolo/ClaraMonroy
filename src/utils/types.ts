@@ -360,6 +360,6 @@ export type BlogContent = {
 export type BlogModel = {
     content: BlogContent;
     first_published_at: string;
-    // full_slug: string;
+    full_slug: string;
     slug: string;
 };

@@ -68,9 +68,6 @@ const BlogDetails: PageProps = ({
                 currentPage={blog.title}
                 title="Blog"
             />
-
-            <p>{JSON.stringify(recentPosts)}</p>
-
             <div className="tw-container tw-pb-15 md:tw-pb-20 lg:tw-pb-[100px] tw-grid tw-grid-cols-3 tw-gap-7.5 lg:tw-gap-15">
                 <div className="tw-col-span-full lg:tw-col-[1/3]">
                     <BlogDetailsArea {...blog} />

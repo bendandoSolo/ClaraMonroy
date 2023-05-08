@@ -35,8 +35,6 @@ const BlogClassic: PageProps = ({
                 currentPage="London International Lesbians Blog"
             />
 
-        <p>{JSON.stringify(recentPosts)}</p>
-
             <BlogArea
                 data={{
                     blogs,
@@ -66,8 +64,6 @@ export async function getStaticProps() {
           starts_with: 'london-international-lesbians-blog/',
           // is_startpage: false
         });
-
-
 
         const { blogs, count } = getStoryBlokBlogs(data.stories);    
         const recentPosts = getStoryBlokRecentPosts(blogs, count < 5 ? count : 5 ); 

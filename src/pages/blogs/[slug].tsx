@@ -108,11 +108,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
         // is_startpage: false
       });
     
+
+    
     const storyblokBlogPaths = {
     paths: data.stories.map(({ slug }) => {
         return {
             params: {
-                slug,
+                slug,    // `/${full_slug}`
             },      
         };  
     }), 
