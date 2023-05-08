@@ -29,14 +29,11 @@ const BlogClassic: PageProps = ({
 }) => {
     return (
         <>
-            <SEO title="Blog Classic" />
+            <SEO title="London International Lesbians Blog" />
             <Breadcrumb
                 pages={[{ path: "/", label: "home" }]}
-                currentPage="Blog Classic"
+                currentPage="London International Lesbians Blog"
             />
-
-            <h1>We need to change the text at the top and ensure the except is being displayed in a pretty way ideally</h1>
-            {/* <p>{JSON.stringify(blogs)}</p> */}
             <BlogArea
                 data={{
                     blogs,
