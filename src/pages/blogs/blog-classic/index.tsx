@@ -66,7 +66,6 @@ export async function getStaticProps() {
 
        //  console.log('data', data);
 
-
         const { blogs, count } = getStoryBlokBlogs(data.stories);    
         const recentPosts = getStoryBlokRecentPosts(blogs, count < 5 ? count : 5 ); 
 
