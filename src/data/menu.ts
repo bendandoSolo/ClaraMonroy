@@ -27,7 +27,7 @@ export default [
     {
         id: 6,
         label: "Recommendations",
-        path: "/lesbian-recommendations-london",
+        path: "/blogs/blog-grid" // "/lesbian-recommendations-london",
     },
     {
         id: 7,
