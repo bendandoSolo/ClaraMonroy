@@ -230,5 +230,6 @@ export const getStoryBlokRecentPosts = (blogs: TcutdownBlog[], count: number) =>
         return recentPost;
     };
     const blogsOutput: RecentPost[] = blogs.map<RecentPost>(mapFn);
+
     return blogsOutput.slice(0, count);
 }

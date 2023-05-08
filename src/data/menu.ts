@@ -22,7 +22,7 @@ export default [
     {
         id: 5,
         label: "Blog",
-        path: "/blogs/blog-classic",
+        path: "/london-international-lesbians-blog",
     },
     {
         id: 6,
