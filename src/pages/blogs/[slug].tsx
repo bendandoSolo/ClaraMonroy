@@ -159,14 +159,13 @@ const getStoryblokPostBySlug = (slug: string, blogs: BlogModel[]): BlogContent2 
     if (blog) {
         const blogContent: BlogContent2 = {
             title: blog.content.title,
-            postedAt: blog.content.postedAt,
+            postedAt: blog.first_published_at,
             image: storyBlockImageToBlogImage(blog.content.image),
             content: blog.content.content,
         };
         return blogContent;
     }
 }
-
 
 export const getStaticProps = async ({ params }: Params) => {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment

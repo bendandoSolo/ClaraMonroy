@@ -351,7 +351,7 @@ export type StoryblokImage = {
 
 export type BlogContent = {
     title: string;
-    postedAt: string;
+    // postedAt: string;
     image: StoryblokImage;
     excerpt: string;
     content: string;
@@ -359,5 +359,6 @@ export type BlogContent = {
 
 export type BlogModel = {
     content: BlogContent;
+    first_published_at: string;
     slug: string;
 };

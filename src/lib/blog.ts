@@ -205,9 +205,10 @@ export function getTags() {
 
 
 export const  getStoryBlokBlogs = (blogsData: BlogModel[]) => {
-    const mapFn: (blogModel: BlogModel) => TcutdownBlog = ({slug, content}) => { 
+    const mapFn: (blogModel: BlogModel) => TcutdownBlog = ({slug, first_published_at, content}) => { 
         const cutdownBlog:TcutdownBlog = {
             ...content,
+            postedAt: first_published_at,
             image: { src: content.image.filename },
             // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
             path: slug,

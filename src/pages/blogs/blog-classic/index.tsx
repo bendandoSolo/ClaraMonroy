@@ -65,6 +65,9 @@ export async function getStaticProps() {
           // is_startpage: false
         });
 
+       //  console.log('data', data);
+
+
         const { blogs, count } = getStoryBlokBlogs(data.stories);    
         const recentPosts = getStoryBlokRecentPosts(blogs, count < 5 ? count : 5 ); 
 
