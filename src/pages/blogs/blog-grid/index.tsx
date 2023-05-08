@@ -4,7 +4,7 @@ import Layout01 from "@layout/layout-01";
 import Breadcrumb from "@components/breadcrumb";
 import BlogArea from "@containers/blog-full/layout-01";
 import { BlogModel, IBlog } from "@utils/types";
-import {getStoryBlokBlogs, getStoryBlokRecentPosts } from "lib/blog";
+import {getStoryBlokBlogs } from "lib/blog";
 import { getStoryblokApi } from "@storyblok/react";
 
 type TProps = {
@@ -58,10 +58,10 @@ export const getStaticProps: GetStaticProps = async () => {
       });
 
        // eslint-disable-next-line no-console
-       console.log('data', data);
+       // console.log('data', data);
 
        const { blogs, count } = getStoryBlokBlogs(data.stories);    
-        const recentPosts = getStoryBlokRecentPosts(blogs, count < POSTS_PER_PAGE ? count : POSTS_PER_PAGE );
+       // const recentPosts = getStoryBlokRecentPosts(blogs, count < POSTS_PER_PAGE ? count : POSTS_PER_PAGE );
 
     return {
         props: {
