@@ -34,6 +34,8 @@ const BlogClassic: PageProps = ({
                 pages={[{ path: "/", label: "home" }]}
                 currentPage="Blog Classic"
             />
+
+            <h1>We need to change the text at the top and ensure the except is being displayed in a pretty way ideally</h1>
             {/* <p>{JSON.stringify(blogs)}</p> */}
             <BlogArea
                 data={{

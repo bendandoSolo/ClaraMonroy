@@ -27,7 +27,7 @@ const BlogCard = forwardRef<HTMLDivElement, TProps>(
             path,
             title,
             postedAt,
-            excerpt,
+          //  excerpt,
         },
         ref
     ) => {
@@ -91,10 +91,10 @@ const BlogCard = forwardRef<HTMLDivElement, TProps>(
                             icon="far fa-eye"
                         /> */}
                     </div>
-                    <p
+                    {/* <p
                         className="tw-mt-4"
                         dangerouslySetInnerHTML={{ __html: excerpt }}
-                    />
+                    /> */}
                     <div className="tw-flex tw-items-center tw-justify-between tw-mt-7.5">
                         <Button path={path}>
                             Read More

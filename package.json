@@ -38,6 +38,7 @@
     "react-dom": "18.2.0",
     "react-hook-form": "^7.39.4",
     "react-simple-typewriter": "^4.0.5",
+    "storyblok-rich-text-react-renderer": "^2.8.0",
     "swiper": "^8.4.4"
   },
   "devDependencies": {

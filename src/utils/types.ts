@@ -354,7 +354,7 @@ export type BlogContent = {
     // postedAt: string;
     image: StoryblokImage;
     excerpt: string;
-    content: string;
+    content: string;  // incorrect is an object but works as a string!
 }
 
 export type BlogModel = {

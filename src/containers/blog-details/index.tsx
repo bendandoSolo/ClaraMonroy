@@ -3,7 +3,9 @@ import dayjs from "dayjs";
 import BlogMetaItem from "@components/blog-meta/meta-item";
 import SocialShare from "@components/social-share/layout-03";
 // import TagMeta from "@components/blog-meta/tags";
-import MarkdownRenderer from "@components/markdown-renderer";
+// import MarkdownRenderer from "@components/markdown-renderer";
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { render } from 'storyblok-rich-text-react-renderer';
 import { IBlog } from "@utils/types";
 
 const BlogDetails = ({
@@ -58,10 +60,11 @@ const BlogDetails = ({
             </div>
             
             {/* we should replace this with storyblok rich content editor */}
-            <MarkdownRenderer
+            <div className="mb-8 leading-relaxed text-justify">{render(content)}</div>
+            {/* <MarkdownRenderer
                 className="entry-content tw-mb-[54px]"
                 content={content}
-            />
+            /> */}
             <div className="entry-footer tw-flex tw-items-center tw-justify-center sm:tw-justify-between tw-flex-wrap">
                 {/* <TagMeta tags={tags} /> */}
                 <SocialShare
