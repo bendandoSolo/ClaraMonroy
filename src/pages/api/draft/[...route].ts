@@ -10,12 +10,12 @@ export default function  (request: any, response: any) {//GET(request: Request) 
     console.log(JSON.stringify(query));
     console.log(request.body);
     console.log("we have a request");
+    console.log(JSON.stringify(query.route));
 
   // console.log(request);
   response.setDraftMode({ enable: true });
   //return new Response('Draft mode is enabled');
-  //response.status(200).json({ name: 'Not implemented at this time' });
-  response.redirect("/");
+  response.redirect(`/${query.route[0]}/${query.route[1]}/`);
 }
 
 /* eslint-enable */
