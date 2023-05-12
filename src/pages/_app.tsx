@@ -31,7 +31,7 @@ const components = {
 };
 
 storyblokInit({
-  accessToken: "baAvqHAR7V25EUZ81m933gtt",
+  accessToken:  process.env.STORYBLOK_API_KEY, // "baAvqHAR7V25EUZ81m933gtt",
   use: [apiPlugin],
   apiOptions: {
     region: "eu",
